@@ -10,7 +10,7 @@ Read this whole file before changing anything. **Figma is the source of truth**:
 
 | Need | Why | Who provides it |
 |---|---|---|
-| **This repository** (github.com/ariajadidi/wallhack-3d-v2) | Theme sections/blocks/CSS + the conversion tools in `_tools/` | Design lead |
+| **This repository** (github.com/ariajadidi/wallhack-website-components) | Theme sections/blocks/CSS + the conversion tools in `_tools/` | Design lead |
 | **The photo + SVG files** (`_content/upload*/`, ~170 MB) | Not in the repository (it is public); needed to upload to the live store's Files | Design lead |
 | **Figma file link** — “WH-Website-Component” in the WALLHACK Figma team | Source of every page | Design lead |
 | **Figma account with a Full (editor) or Dev seat** on that team | The Figma MCP is limited to ~6 calls/month on a View seat — far too few | WALLHACK Figma admin |
