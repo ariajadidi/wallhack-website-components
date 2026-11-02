@@ -1,0 +1,380 @@
+{
+  "sections": {
+    "top_bar_1": {
+      "type": "wh-top-bar",
+      "settings": {
+        "breadcrumbs": "products / mouse / m-001",
+        "color_scheme": "light"
+      }
+    },
+    "product_header_2": {
+      "type": "wh-product-header",
+      "settings": {
+        "title": "M-001",
+        "description": "<p>The WALLHACK M-001 is a premium wireless gaming mouse built around a die-cast magnesium alloy shell. Its wireless receiver doubles as a charging dock and control interface, and a hot-swappable battery system means the mouse never has to stop for charging.</p>",
+        "show_reviews": true,
+        "review_count": "(125)",
+        "reviews_link": "see all reviews",
+        "color_scheme": "light"
+      },
+      "blocks": {
+        "photo_1": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/wh-pdp-m001-1.png",
+            "shape": "1:1"
+          }
+        },
+        "photo_2": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/wh-pdp-m001-2.png",
+            "shape": "2:1"
+          }
+        },
+        "photo_3": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/wh-pdp-m001-3.png",
+            "shape": "1:1"
+          }
+        }
+      },
+      "block_order": [
+        "photo_1",
+        "photo_2",
+        "photo_3"
+      ]
+    },
+    "drawing_callouts_3": {
+      "type": "wh-drawing-callouts",
+      "settings": {
+        "layout": "callouts",
+        "drawing": "shopify://shop_images/wh-drawing-k001-top-down.svg",
+        "drawing_mobile": "",
+        "color_scheme": "light"
+      },
+      "blocks": {
+        "callout_1": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>3,3 mm thickness</p>",
+            "position": "top",
+            "type": "callout"
+          }
+        },
+        "callout_2": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>Tempered uncoated glass surface</p>",
+            "position": "top",
+            "type": "callout"
+          }
+        },
+        "callout_3": {
+          "type": "callout",
+          "settings": {
+            "text": "<p></p>",
+            "position": "top",
+            "type": "empty"
+          }
+        },
+        "callout_4": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>Concave grid pattern silicon base</p>",
+            "position": "top",
+            "type": "callout"
+          }
+        },
+        "callout_5": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>CR (Control) surface for more stopping power</p>",
+            "position": "bottom",
+            "type": "callout"
+          }
+        },
+        "callout_6": {
+          "type": "callout",
+          "settings": {
+            "text": "<p></p>",
+            "position": "bottom",
+            "type": "empty"
+          }
+        }
+      },
+      "block_order": [
+        "callout_1",
+        "callout_2",
+        "callout_3",
+        "callout_4",
+        "callout_5",
+        "callout_6"
+      ]
+    },
+    "specs_contents_4": {
+      "type": "wh-specs-contents",
+      "settings": {
+        "label": "contents",
+        "color_scheme": "light"
+      },
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-k001-box-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-k001-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-usba-usbc-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-keyswitch-puller-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "spec_row_5": {
+          "type": "spec_row",
+          "settings": {
+            "specs": "1",
+            "label_1": "weight",
+            "value_1": "1450g"
+          }
+        },
+        "spec_row_6": {
+          "type": "spec_row",
+          "settings": {
+            "specs": "2",
+            "label_1": "weight",
+            "value_1": "1450g",
+            "label_2": "weight",
+            "value_2": "1450g"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "spec_row_5",
+        "spec_row_6"
+      ]
+    },
+    "faq_5": {
+      "type": "wh-faq",
+      "settings": {
+        "color_scheme": "light"
+      },
+      "blocks": {
+        "faq_item_1": {
+          "type": "wh-faq-item",
+          "settings": {
+            "question": "Why would I use a glass mousepad?",
+            "answer": "<p>Glass mousepads offer truly unparalleled surface experiences and performance, whether you prefer speed or control. While maintaining their quickness for an incredibly long time. Since it’s hardened glass, the consistency of the surface will be unmatched, making it stand the test of time with significantly longer lifespan than cloth.</p>"
+          }
+        },
+        "faq_item_2": {
+          "type": "wh-faq-item",
+          "settings": {
+            "question": "Is the surface coated?",
+            "answer": "<p>No. The texture is etched into the glass itself, not applied on top. Coatings wear through where you use them most, which is how a pad ends up feeling different in the middle than at the edges. Uncoated glass doesn't do that. What it feels like out of the box is what it feels like in two years</p>"
+          }
+        },
+        "faq_item_3": {
+          "type": "wh-faq-item",
+          "settings": {
+            "question": "Are glass mousepads fragile?",
+            "answer": "<p>Our mousepads are built using tempered glass, making them extremely resistant to cracks, chips and long-term wear. Even though we’ve made the glass thinner for ergonomics, it's stil made of tough, tempered glass. The surface is also stain-proof and immune to issues like edge fraying or humidity damage.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_1",
+        "faq_item_2",
+        "faq_item_3"
+      ]
+    },
+    "text_media_6": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": true,
+        "heading": "Spill it, wipe it, keep playing",
+        "body": "<p>Glass is non-porous, and so is the silicone under it. Sweat, condensation, a knocked-over drink: none of it soaks in. Cleaning involves just a microfibre cloth and water, or a glass-safe cleaner if something has dried on. No stains, no edge fraying, no soft patches where your palm sits.</p>",
+        "image": "shopify://shop_images/wh-camp-34e00e1d.png",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "solid",
+        "image_mobile_shape": "",
+        "image_fit": "fill",
+        "image_fit_mobile": "same",
+        "color_scheme": "light",
+        "spacing": "large",
+        "image_shape": "16:9"
+      }
+    },
+    "split_7": {
+      "type": "wh-split",
+      "settings": {
+        "image_side": "right",
+        "heading": "precision in every detail",
+        "body": "<p>Three layers, 3.3mm in total. The top is tempered glass, micro-etched so the texture is cut into the surface rather than applied to it, and left uncoated so there's nothing to wear through.</p><p>The color is printed on the underside, where your mouse never reaches it.</p><p>The bottom is 60A silicone running the full width of the pad, so the glass is supported across its whole area and grips the desk instead of resting on it.</p>",
+        "image": "shopify://shop_images/wh-split-m001.jpg",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "solid",
+        "image_mobile_shape": "",
+        "image_fit": "fill",
+        "image_fit_mobile": "same",
+        "color_scheme": "light",
+        "spacing": "regular",
+        "image_shape": "1:1"
+      }
+    },
+    "split_8": {
+      "type": "wh-split",
+      "settings": {
+        "image_side": "left",
+        "heading": "precision in every detail",
+        "body": "<p>Three layers, 3.3mm in total. The top is tempered glass, micro-etched so the texture is cut into the surface rather than applied to it, and left uncoated so there's nothing to wear through.</p><p>The color is printed on the underside, where your mouse never reaches it.</p><p>The bottom is 60A silicone running the full width of the pad, so the glass is supported across its whole area and grips the desk instead of resting on it.</p>",
+        "image": "shopify://shop_images/wh-split-m001.jpg",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "solid",
+        "image_mobile_shape": "",
+        "image_fit": "fill",
+        "image_fit_mobile": "same",
+        "color_scheme": "light",
+        "spacing": "regular",
+        "image_shape": "1:1"
+      }
+    },
+    "text_media_9": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": true,
+        "heading": "Spill it, wipe it, keep playing",
+        "body": "<p>Glass is non-porous, and so is the silicone under it. Sweat, condensation, a knocked-over drink: none of it soaks in. Cleaning involves just a microfibre cloth and water, or a glass-safe cleaner if something has dried on. No stains, no edge fraying, no soft patches where your palm sits.</p>",
+        "image": "shopify://shop_images/wh-camp-34e00e1d.png",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "solid",
+        "image_mobile_shape": "",
+        "image_fit": "fill",
+        "image_fit_mobile": "same",
+        "color_scheme": "light",
+        "spacing": "large",
+        "image_shape": "16:9"
+      }
+    },
+    "cards_10": {
+      "type": "wh-cards",
+      "settings": {
+        "show_heading": true,
+        "heading": "WAllhack ks-tr\nlinear switch series",
+        "show_intro": true,
+        "intro_1": "<p>Our keyboard comes with our brand new series of custom hall effect switches, the Wallhack KS-TR Linear switch. Made in collaboration with the industry leaders in keyboard switch manufacturing, Gateron.</p>",
+        "intro_2": "<p>The KS-TR series features three spring weights: Light, Medium and Heavy, giving our users the option to mix and match different spring weights to achieve the perfect combination for your exact needs.</p>",
+        "color_scheme": "light",
+        "spacing": "large"
+      },
+      "blocks": {
+        "card_1": {
+          "type": "wh-card",
+          "settings": {
+            "name": "KS-TR Light",
+            "description": "<p>Light is the fastest, lightest touch, built for quick actuation and repeated input.</p>",
+            "image": "shopify://shop_images/wh-camp-538b5aed.png",
+            "image_fit": "fill",
+            "image_background": "solid",
+            "image_shape": "1:1"
+          }
+        },
+        "card_2": {
+          "type": "wh-card",
+          "settings": {
+            "name": "KS-TR Light",
+            "description": "<p>Medium is slightly heavier than average, and is a nice balance between speed and control with its firm keypress feel.</p>",
+            "image": "shopify://shop_images/wh-camp-538b5aed.png",
+            "image_fit": "fill",
+            "image_background": "solid",
+            "image_shape": "1:1"
+          }
+        },
+        "card_3": {
+          "type": "wh-card",
+          "settings": {
+            "name": "KS-TR Light",
+            "description": "<p>Heavy is more deliberate, giving you fewer accidental presses. A great typing feel and nice for users who enjoy a more substantial and precise keypress feel.</p>",
+            "image": "shopify://shop_images/wh-camp-538b5aed.png",
+            "image_fit": "fill",
+            "image_background": "solid",
+            "image_shape": "1:1"
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3"
+      ]
+    },
+    "text_media_11": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": true,
+        "heading": "Spill it, wipe it, keep playing",
+        "body": "<p>Glass is non-porous, and so is the silicone under it. Sweat, condensation, a knocked-over drink: none of it soaks in. Cleaning involves just a microfibre cloth and water, or a glass-safe cleaner if something has dried on. No stains, no edge fraying, no soft patches where your palm sits.</p>",
+        "image": "shopify://shop_images/wh-camp-34e00e1d.png",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "solid",
+        "image_mobile_shape": "",
+        "image_fit": "fill",
+        "image_fit_mobile": "same",
+        "color_scheme": "light",
+        "spacing": "large",
+        "image_shape": "1:1"
+      }
+    }
+  },
+  "order": [
+    "top_bar_1",
+    "product_header_2",
+    "drawing_callouts_3",
+    "specs_contents_4",
+    "faq_5",
+    "text_media_6",
+    "split_7",
+    "split_8",
+    "text_media_9",
+    "cards_10",
+    "text_media_11"
+  ]
+}

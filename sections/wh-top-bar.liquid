@@ -1,0 +1,72 @@
+{%- comment -%}
+  Menu/Top Bar (Figma: the "top bar" inside Section/Product Header). Its own section so it can stay stuck to the top of the
+  window while the whole page scrolls (a sticky element can only stick inside its parent — here that is the page).
+{%- endcomment -%}
+<div class="wh-section wh-topbar wh-scheme-{{ section.settings.color_scheme }}" style="{% render 'wh-colors', s: section.settings %}">
+  <p class="wh-topbar__crumbs wh-glass-breadcrumbs">{{ section.settings.breadcrumbs | escape }}</p>
+  {%- if section.settings.show_close -%}
+    <a class="wh-glass wh-glass--small wh-glass-button-subheading" href="{{ section.settings.close_url | default: routes.root_url }}">{{ section.settings.close_label | escape }}</a>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "WH Top Bar",
+  "class": "wh-sticky",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Stays at the top of the screen while the page scrolls."
+    },
+    {
+      "type": "text",
+      "id": "breadcrumbs",
+      "label": "Breadcrumbs",
+      "default": "products / mouse / m-001"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_close",
+      "label": "Show close button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "close_label",
+      "label": "Close button text",
+      "default": "close"
+    },
+    {
+      "type": "url",
+      "id": "close_url",
+      "label": "Close button link",
+      "info": "Empty = home page"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Colour mode",
+      "default": "light",
+      "options": [
+        { "value": "light", "label": "Light" },
+        { "value": "dark", "label": "Dark" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Custom colours (collaboration pages)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Leave empty to use the colour mode above. Filled in = this section uses these colours instead."
+    },
+    { "type": "color", "id": "custom_background", "label": "Background" },
+    { "type": "color", "id": "custom_foreground", "label": "Text + icons" },
+    { "type": "color", "id": "custom_border", "label": "Borders" }
+  ],
+  "tag": "div",
+  "presets": [
+    { "name": "WH Top Bar" }
+  ]
+}
+{% endschema %}

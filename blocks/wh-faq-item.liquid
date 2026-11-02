@@ -1,0 +1,15 @@
+<div class="wh-faq-item" data-wh-block="{{ block.id }}" {{ block.shopify_attributes }}>
+  <p class="wh-p1-bold">{{ block.settings.question | escape }}</p>
+  <div class="wh-p2">{{ block.settings.answer }}</div>
+</div>
+
+{% schema %}
+{
+  "name": "FAQ entry",
+  "settings": [
+    { "type": "text", "id": "question", "label": "Question", "default": "Why would I use a glass mousepad?" },
+    { "type": "richtext", "id": "answer", "label": "Answer", "default": "<p>Glass offers a consistent surface that lasts far longer than cloth.</p>" }
+  ],
+  "presets": [ { "name": "FAQ entry" } ]
+}
+{% endschema %}

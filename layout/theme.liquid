@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page_title }}</title>
+    <style>
+      {{ settings.wh_font_body | font_modify: 'weight', '300' | font_face: font_display: 'swap' }}
+      {{ settings.wh_font_body | font_modify: 'weight', '700' | font_face: font_display: 'swap' }}
+      {%- comment -%} NB Architekt: add the licensed .woff2 files to assets/ and declare @font-face here. {%- endcomment -%}
+    </style>
+    {{ 'wh-tokens.css' | asset_url | stylesheet_tag }}
+    {{ 'wh-sections.css' | asset_url | stylesheet_tag }}
+    {{ content_for_header }}
+  </head>
+  <body class="wh-canvas">
+    {%- comment -%} The page window: its width drives the scaling + the Mobile switch. {%- endcomment -%}
+    <main class="wh-window" id="MainContent">
+      <div class="wh-page">
+        {{ content_for_layout }}
+      </div>
+    </main>
+  </body>
+</html>

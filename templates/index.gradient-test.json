@@ -1,0 +1,134 @@
+{
+  "sections": {
+    "tm_fade": {
+      "type": "wh-text-media",
+      "settings": {
+        "show_heading": true,
+        "heading": "fade top + bottom",
+        "body": "<p>Photo melts into the page at both edges.</p>",
+        "image": "shopify://shop_images/wh-text-media-test-1.jpg",
+        "image_shape": "16:9",
+        "image_fade": "both",
+        "color_scheme": "light"
+      }
+    },
+    "tm_fade_dark": {
+      "type": "wh-text-media",
+      "settings": {
+        "show_heading": true,
+        "heading": "fade bottom (dark)",
+        "body": "<p>Same, in Dark mode.</p>",
+        "image": "shopify://shop_images/wh-text-media-test-1.jpg",
+        "image_shape": "16:9",
+        "image_fade": "bottom",
+        "color_scheme": "dark"
+      }
+    },
+    "img_gradient_dark": {
+      "type": "wh-image",
+      "settings": {
+        "image": "shopify://shop_images/wh-pdp-m001-1.png",
+        "image_shape": "16:9",
+        "color_scheme": "dark",
+        "image_background": "gradient"
+      }
+    },
+    "cf_gradient_dark": {
+      "type": "wh-content-frame",
+      "settings": {
+        "orientation": "landscape",
+        "background_gradient": true,
+        "color_scheme": "dark"
+      }
+    },
+    "img_fit": {
+      "type": "wh-image",
+      "settings": {
+        "image": "shopify://shop_images/wh-text-media-test-1.jpg",
+        "image_shape": "1:1",
+        "image_fit": "fit",
+        "color_scheme": "light"
+      }
+    },
+    "img_nobg": {
+      "type": "wh-image",
+      "settings": {
+        "image": "shopify://shop_images/wh-pdp-m001-1.png",
+        "image_shape": "16:9",
+        "image_fit": "fit",
+        "image_background": "none",
+        "color_scheme": "light"
+      }
+    },
+    "img_solid": {
+      "type": "wh-image",
+      "settings": {
+        "image": "shopify://shop_images/wh-pdp-m001-1.png",
+        "image_shape": "16:9",
+        "image_fit": "fit",
+        "image_background": "solid",
+        "custom_image_background": "#e8d9c8",
+        "color_scheme": "light"
+      }
+    },
+    "tm_regular": {
+      "type": "wh-text-media",
+      "settings": {
+        "show_heading": true,
+        "heading": "regular spacing",
+        "body": "<p>Spacing: Regular</p>",
+        "image": "shopify://shop_images/wh-text-media-test-1.jpg",
+        "image_shape": "21:9",
+        "spacing": "regular",
+        "color_scheme": "light"
+      }
+    },
+    "cards_phone": {
+      "type": "wh-cards",
+      "settings": {
+        "heading": "Phone photo test",
+        "show_heading": true,
+        "color_scheme": "dark"
+      },
+      "blocks": {
+        "card_1": {
+          "type": "wh-card",
+          "settings": {
+            "name": "Card with phone photo",
+            "description": "<p>Desktop: carry case. Phone: keyboard.</p>",
+            "image": "shopify://shop_images/wh-camp-a50f8d38.png",
+            "image_mobile": "shopify://shop_images/wh-camp-1b5c6923.jpg",
+            "image_mobile_shape": "4:5",
+            "image_shape": "4:3",
+            "image_fit": "fill",
+            "image_fit_mobile": "fit"
+          }
+        }
+      },
+      "block_order": [
+        "card_1"
+      ]
+    },
+    "frame_phone": {
+      "type": "wh-content-frame",
+      "settings": {
+        "orientation": "landscape",
+        "image": "shopify://shop_images/wh-camp-a50f8d38.png",
+        "image_mobile": "shopify://shop_images/wh-camp-1b5c6923.jpg",
+        "color_scheme": "dark"
+      }
+    }
+  },
+  "order": [
+    "tm_regular",
+    "img_solid",
+    "img_nobg",
+    "img_fit",
+    "tm_fade",
+    "tm_fade_dark",
+    "img_gradient_dark",
+    "cf_gradient_dark",
+    "cards_phone",
+    "frame_phone"
+  ]
+}

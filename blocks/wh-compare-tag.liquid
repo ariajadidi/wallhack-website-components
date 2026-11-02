@@ -1,0 +1,21 @@
+<span class="wh-tag wh-p2" data-wh-block="{{ block.id }}" {{ block.shopify_attributes }}>{{ block.settings.label | escape }}</span>
+
+
+{% schema %}
+{
+  "name": "Tag",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label",
+      "default": "tracking-heavy games"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tag"
+    }
+  ]
+}
+{% endschema %}

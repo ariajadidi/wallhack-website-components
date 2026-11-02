@@ -1,0 +1,21 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "WH Token Test",
+    "theme_version": "0.1.0",
+    "theme_author": "WALLHACK",
+    "theme_documentation_url": "https://wallhack.com",
+    "theme_support_url": "https://wallhack.com"
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "font_picker",
+        "id": "wh_font_body",
+        "label": "Body font (Figma: Inter)",
+        "default": "inter_n4"
+      }
+    ]
+  }
+]

@@ -1,0 +1,95 @@
+<section class="wh-section{% if section.settings.spacing == 'regular' %} wh-spacing-regular{% endif %} wh-text-cards wh-scheme-{{ section.settings.color_scheme }}" style="{% render 'wh-colors', s: section.settings %}">
+  <div class="wh-cards__cards">{% content_for 'blocks' %}</div>
+</section>
+
+{% schema %}
+{
+  "name": "WH Text Cards",
+  "tag": "div",
+  "blocks": [
+    {
+      "type": "wh-text-card"
+    }
+  ],
+  "settings": [
+    {
+      "type": "select",
+      "id": "spacing",
+      "label": "Spacing",
+      "default": "large",
+      "info": "Space above and below the section. Figma: section padding linked to layout/block-padding-y = Regular.",
+      "options": [
+        {
+          "value": "large",
+          "label": "Large"
+        },
+        {
+          "value": "regular",
+          "label": "Regular"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Colour mode",
+      "default": "light",
+      "options": [
+        {
+          "value": "light",
+          "label": "Light"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Custom colours (collaboration pages)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Leave empty to use the colour mode above. Filled in = this section uses these colours instead."
+    },
+    {
+      "type": "color",
+      "id": "custom_background",
+      "label": "Background"
+    },
+    {
+      "type": "color",
+      "id": "custom_foreground",
+      "label": "Text + icons"
+    },
+    {
+      "type": "color",
+      "id": "custom_border",
+      "label": "Borders"
+    },
+    {
+      "type": "color",
+      "id": "custom_image_background",
+      "label": "Photo background colour",
+      "info": "Behind photos (Solid). Figma: change the photo frame’s fill colour."
+    }
+  ],
+  "presets": [
+    {
+      "name": "WH Text Cards",
+      "blocks": [
+        {
+          "type": "wh-text-card"
+        },
+        {
+          "type": "wh-text-card"
+        },
+        {
+          "type": "wh-text-card"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,759 @@
+{
+  "sections": {
+    "cover_1": {
+      "type": "wh-cover",
+      "settings": {
+        "heading": "our best surfaces yet",
+        "subheading": "WALLHACK SP-005 & CR-005",
+        "show_subheading": false,
+        "subtitle_position": "top",
+        "image": "shopify://shop_images/wh-cover-sp005.jpg",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "solid",
+        "image_mobile_shape": "",
+        "image_fit": "fill",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "image_shape": "16:9"
+      }
+    },
+    "intro_usps_2": {
+      "type": "wh-intro-usps",
+      "settings": {
+        "heading": "a legacy, sharpened",
+        "body": "<p>Five years after the original skypad redefined the glass mousepad, the 005 generation arrives. Two surfaces, engineered against each other. One tuned for speed. One tuned for control. built on the legacy of precision and finish that made wallhack the most respected glass pad on the market.</p>",
+        "show_cta": true,
+        "cta_label": "Choose your pad",
+        "color_scheme": "dark"
+      },
+      "blocks": {
+        "usp_1": {
+          "type": "wh-usp",
+          "settings": {
+            "icon": "shopify://shop_images/wh-usp-3mm-v2.svg"
+          }
+        },
+        "usp_2": {
+          "type": "wh-usp",
+          "settings": {
+            "icon": "shopify://shop_images/wh-usp-random-v2.svg"
+          }
+        },
+        "usp_3": {
+          "type": "wh-usp",
+          "settings": {
+            "icon": "shopify://shop_images/wh-usp-cnd-edge-v2.svg"
+          }
+        },
+        "usp_4": {
+          "type": "wh-usp",
+          "settings": {
+            "icon": "shopify://shop_images/wh-usp-laser-etched-v2.svg"
+          }
+        },
+        "usp_5": {
+          "type": "wh-usp",
+          "settings": {
+            "icon": "shopify://shop_images/wh-usp-tempered-glass-v2.svg"
+          }
+        }
+      },
+      "block_order": [
+        "usp_1",
+        "usp_2",
+        "usp_3",
+        "usp_4",
+        "usp_5"
+      ]
+    },
+    "drawing_callouts_3": {
+      "type": "wh-drawing-callouts",
+      "settings": {
+        "layout": "callouts",
+        "drawing": "shopify://shop_images/wh-drawing-k001-top-down.svg",
+        "drawing_mobile": "",
+        "color_scheme": "dark"
+      },
+      "blocks": {
+        "callout_1": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>3,3 mm thickness</p>",
+            "position": "top",
+            "type": "callout"
+          }
+        },
+        "callout_2": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>Tempered uncoated glass surface</p>",
+            "position": "top",
+            "type": "callout"
+          }
+        },
+        "callout_3": {
+          "type": "callout",
+          "settings": {
+            "text": "<p></p>",
+            "position": "top",
+            "type": "empty"
+          }
+        },
+        "callout_4": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>Concave grid pattern silicon base</p>",
+            "position": "top",
+            "type": "callout"
+          }
+        },
+        "callout_5": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>CR (Control) surface for more stopping power</p>",
+            "position": "bottom",
+            "type": "callout"
+          }
+        },
+        "callout_6": {
+          "type": "callout",
+          "settings": {
+            "text": "<p></p>",
+            "position": "bottom",
+            "type": "empty"
+          }
+        }
+      },
+      "block_order": [
+        "callout_1",
+        "callout_2",
+        "callout_3",
+        "callout_4",
+        "callout_5",
+        "callout_6"
+      ]
+    },
+    "specs_contents_4": {
+      "type": "wh-specs-contents",
+      "settings": {
+        "label": "contents",
+        "color_scheme": "dark"
+      },
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-k001-box-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-k001-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-usba-usbc-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-keyswitch-puller-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "item_5": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-keycap-puller-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "item_6": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-4d-riser-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "item_7": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-7d-riser-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "item_8": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-4d-screws-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "item_9": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-7d-screws-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "item_10": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-screwdriver-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "spec_row_11": {
+          "type": "spec_row",
+          "settings": {
+            "specs": "1",
+            "label_1": "weight",
+            "value_1": "1450g"
+          }
+        },
+        "spec_row_12": {
+          "type": "spec_row",
+          "settings": {
+            "specs": "2",
+            "label_1": "Dimensions",
+            "value_1": "1450g",
+            "label_2": "Gram Weight volume",
+            "value_2": "1450g"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "item_5",
+        "item_6",
+        "item_7",
+        "item_8",
+        "item_9",
+        "item_10",
+        "spec_row_11",
+        "spec_row_12"
+      ]
+    },
+    "faq_5": {
+      "type": "wh-faq",
+      "settings": {
+        "color_scheme": "dark"
+      },
+      "blocks": {
+        "faq_item_1": {
+          "type": "wh-faq-item",
+          "settings": {
+            "question": "Why would I use a glass mousepad?",
+            "answer": "<p>Glass mousepads offer truly unparalleled surface experiences and performance, whether you prefer speed or control. While maintaining their quickness for an incredibly long time. Since it’s hardened glass, the consistency of the surface will be unmatched, making it stand the test of time with significantly longer lifespan than cloth.</p>"
+          }
+        },
+        "faq_item_2": {
+          "type": "wh-faq-item",
+          "settings": {
+            "question": "Is the surface coated?",
+            "answer": "<p>No. The texture is etched into the glass itself, not applied on top. Coatings wear through where you use them most, which is how a pad ends up feeling different in the middle than at the edges. Uncoated glass doesn't do that. What it feels like out of the box is what it feels like in two years</p>"
+          }
+        },
+        "faq_item_3": {
+          "type": "wh-faq-item",
+          "settings": {
+            "question": "Are glass mousepads fragile?",
+            "answer": "<p>Our mousepads are built using tempered glass, making them extremely resistant to cracks, chips and long-term wear. Even though we’ve made the glass thinner for ergonomics, it's stil made of tough, tempered glass. The surface is also stain-proof and immune to issues like edge fraying or humidity damage.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_1",
+        "faq_item_2",
+        "faq_item_3"
+      ]
+    },
+    "compare_6": {
+      "type": "wh-compare",
+      "settings": {
+        "heading": "choose your friction",
+        "body": "<p>The choice between the SP-005 and the CR-005 ultimately comes down to play style, type of game and preference of feel. Both pads are the same tempered glass. What differs is the etch, and what that does at the end of a movement. One surface lets the mouse run, the other gives you something to push against when you stop. The right one depends on whether your aim is built on tracking movements or flicking fast.</p>",
+        "color_scheme": "dark",
+        "spacing": "large"
+      },
+      "blocks": {
+        "compare_item_1": {
+          "type": "wh-compare-item",
+          "settings": {
+            "name": "SP-005",
+            "show_tags": true,
+            "suitable_label": "suitable for",
+            "description": "<p>The faster of the two. A slight texture gives you enough feedback to feel</p>",
+            "image": "shopify://shop_images/wh-compare-surface.jpg",
+            "image_fit": "fill",
+            "image_background": "solid",
+            "image_shape": "16:9"
+          },
+          "blocks": {
+            "compare_tag_1": {
+              "type": "wh-compare-tag",
+              "settings": {
+                "label": "tracking-heavy games"
+              }
+            },
+            "compare_tag_2": {
+              "type": "wh-compare-tag",
+              "settings": {
+                "label": "hero shooters"
+              }
+            }
+          },
+          "block_order": [
+            "compare_tag_1",
+            "compare_tag_2"
+          ]
+        },
+        "compare_item_2": {
+          "type": "wh-compare-item",
+          "settings": {
+            "name": "CR-005",
+            "show_tags": true,
+            "suitable_label": "suitable for",
+            "description": "<p>The faster of the two. A slight texture gives you enough feedback to feel</p>",
+            "image": "shopify://shop_images/wh-compare-surface.jpg",
+            "image_fit": "fill",
+            "image_background": "solid",
+            "image_shape": "16:9"
+          },
+          "blocks": {
+            "compare_tag_1": {
+              "type": "wh-compare-tag",
+              "settings": {
+                "label": "flick-intensive games"
+              }
+            },
+            "compare_tag_2": {
+              "type": "wh-compare-tag",
+              "settings": {
+                "label": "tactical shooters"
+              }
+            }
+          },
+          "block_order": [
+            "compare_tag_1",
+            "compare_tag_2"
+          ]
+        },
+        "compare_item_3": {
+          "type": "wh-compare-item",
+          "settings": {
+            "name": "CR-005",
+            "show_tags": true,
+            "suitable_label": "suitable for",
+            "description": "<p>The faster of the two. A slight texture gives you enough feedback to feel</p>",
+            "image": "shopify://shop_images/wh-compare-surface.jpg",
+            "image_fit": "fill",
+            "image_background": "solid",
+            "image_shape": "16:9"
+          },
+          "blocks": {
+            "compare_tag_1": {
+              "type": "wh-compare-tag",
+              "settings": {
+                "label": "flick-intensive games"
+              }
+            },
+            "compare_tag_2": {
+              "type": "wh-compare-tag",
+              "settings": {
+                "label": "tactical shooters"
+              }
+            }
+          },
+          "block_order": [
+            "compare_tag_1",
+            "compare_tag_2"
+          ]
+        },
+        "compare_item_4": {
+          "type": "wh-compare-item",
+          "settings": {
+            "name": "CR-005",
+            "show_tags": true,
+            "suitable_label": "suitable for",
+            "description": "<p>The faster of the two. A slight texture gives you enough feedback to feel</p>",
+            "image": "shopify://shop_images/wh-compare-surface.jpg",
+            "image_fit": "fill",
+            "image_background": "solid",
+            "image_shape": "16:9"
+          },
+          "blocks": {
+            "compare_tag_1": {
+              "type": "wh-compare-tag",
+              "settings": {
+                "label": "flick-intensive games"
+              }
+            },
+            "compare_tag_2": {
+              "type": "wh-compare-tag",
+              "settings": {
+                "label": "tactical shooters"
+              }
+            }
+          },
+          "block_order": [
+            "compare_tag_1",
+            "compare_tag_2"
+          ]
+        }
+      },
+      "block_order": [
+        "compare_item_1",
+        "compare_item_2",
+        "compare_item_3",
+        "compare_item_4"
+      ]
+    },
+    "text_media_7": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": true,
+        "heading": "Spill it, wipe it, keep playing",
+        "body": "<p>Glass is non-porous, and so is the silicone under it. Sweat, condensation, a knocked-over drink: none of it soaks in. Cleaning involves just a microfibre cloth and water, or a glass-safe cleaner if something has dried on. No stains, no edge fraying, no soft patches where your palm sits.</p>",
+        "image": "shopify://shop_images/wh-text-media-test-1.jpg",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "solid",
+        "image_mobile_shape": "",
+        "image_fit": "fill",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "large",
+        "image_shape": "16:9"
+      }
+    },
+    "text_media_8": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": true,
+        "heading": "Another Heading",
+        "body": "<p>Glass is non-porous, and so is the silicone under it. Sweat, condensation, a knocked-over drink: none of it soaks in. Cleaning involves just a microfibre cloth and water, or a glass-safe cleaner if something has dried on. No stains, no edge fraying, no soft patches where your palm sits.</p>",
+        "image": "shopify://shop_images/wh-camp-34e00e1d.png",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "solid",
+        "image_mobile_shape": "",
+        "image_fit": "fill",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "large",
+        "image_shape": "16:9"
+      }
+    },
+    "split_9": {
+      "type": "wh-split",
+      "settings": {
+        "image_side": "right",
+        "heading": "precision in every detail",
+        "body": "<p>Three layers, 3.3mm in total. The top is tempered glass, micro-etched so the texture is cut into the surface rather than applied to it, and left uncoated so there's nothing to wear through.</p><p>The color is printed on the underside, where your mouse never reaches it.</p><p>The bottom is 60A silicone running the full width of the pad, so the glass is supported across its whole area and grips the desk instead of resting on it.</p>",
+        "image": "shopify://shop_images/wh-camp-27d4ad4e.png",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "solid",
+        "image_mobile_shape": "",
+        "image_fit": "fill",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "regular",
+        "image_shape": "1:1"
+      }
+    },
+    "split_10": {
+      "type": "wh-split",
+      "settings": {
+        "image_side": "left",
+        "heading": "precision in every detail",
+        "body": "<p>Three layers, 3.3mm in total. The top is tempered glass, micro-etched so the texture is cut into the surface rather than applied to it, and left uncoated so there's nothing to wear through.</p><p>The color is printed on the underside, where your mouse never reaches it.</p><p>The bottom is 60A silicone running the full width of the pad, so the glass is supported across its whole area and grips the desk instead of resting on it.</p>",
+        "image": "shopify://shop_images/wh-camp-27d4ad4e.png",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "solid",
+        "image_mobile_shape": "",
+        "image_fit": "fill",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "regular",
+        "image_shape": "1:1"
+      }
+    },
+    "compare_11": {
+      "type": "wh-compare",
+      "settings": {
+        "heading": "choose your friction",
+        "body": "<p>The choice between the SP-005 and the CR-005 ultimately comes down to play style, type of game and preference of feel. Both pads are the same tempered glass. What differs is the etch, and what that does at the end of a movement. One surface lets the mouse run, the other gives you something to push against when you stop. The right one depends on whether your aim is built on tracking movements or flicking fast.</p>",
+        "color_scheme": "dark",
+        "spacing": "large"
+      },
+      "blocks": {
+        "compare_item_1": {
+          "type": "wh-compare-item",
+          "settings": {
+            "name": "SP-005",
+            "show_tags": false,
+            "suitable_label": "suitable for",
+            "description": "<p>The faster of the two. A slight texture gives you enough feedback to feel where the mouse is without slowing it down, which puts it in the middle of the range rather than at either extreme. Pick it if you prefer a low-friction, fast mouse gilde.</p>",
+            "image": "shopify://shop_images/wh-compare-surface.jpg",
+            "image_fit": "fill",
+            "image_background": "solid",
+            "image_shape": "16:9"
+          }
+        },
+        "compare_item_2": {
+          "type": "wh-compare-item",
+          "settings": {
+            "name": "CR-005",
+            "show_tags": false,
+            "suitable_label": "suitable for",
+            "description": "<p>The control surface. Press harder and it responds, slowing the glide instead of letting the mouse carry past the target. It's the closest thing we make to a cloth pad's stopping power, which makes it the straightforward choice if you're moving over from cloth and don't want to relearn how you aim.</p>",
+            "image": "shopify://shop_images/wh-compare-surface.jpg",
+            "image_fit": "fill",
+            "image_background": "solid",
+            "image_shape": "16:9"
+          }
+        }
+      },
+      "block_order": [
+        "compare_item_1",
+        "compare_item_2"
+      ]
+    },
+    "text_12": {
+      "type": "wh-text",
+      "settings": {
+        "columns": "2",
+        "show_heading": true,
+        "heading": "form and function",
+        "body": "<p>The underside of the keyboard features 4 mounting holes for attaching a 4-degree or a 7-degree riser made from a solid block of machined aluminium. To mount it, simply screw the preferred riser on using the included screws and custom screwdriver.</p>",
+        "body_1": "<p>The K-001 is our first keyboard, built for competitive gaming and made to last. Every part is chosen for how it performs and how it holds up.</p>",
+        "body_2": "<p>The housing of the K-001 is made from CNC machined 6063 aluminium, that has been bead blasted and anodized for a smooth and durable finish.</p>",
+        "color_scheme": "dark"
+      }
+    },
+    "image_13": {
+      "type": "wh-image",
+      "settings": {
+        "image": "shopify://shop_images/wh-camp-d2bee6b4.png",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "solid",
+        "image_mobile_shape": "",
+        "image_fit": "fill",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "image_shape": "16:9"
+      }
+    },
+    "text_14": {
+      "type": "wh-text",
+      "settings": {
+        "columns": "1",
+        "show_heading": false,
+        "heading": "form and function",
+        "body": "<p>The underside of the keyboard features 4 mounting holes for attaching a 4-degree or a 7-degree riser made from a solid block of machined aluminium. To mount it, simply screw the preferred riser on using the included screws and custom screwdriver.</p>",
+        "body_1": "<p>The K-001 is our first keyboard, built for competitive gaming and made to last. Every part is chosen for how it performs and how it holds up.</p>",
+        "body_2": "<p>The housing of the K-001 is made from CNC machined 6063 aluminium, that has been bead blasted and anodized for a smooth and durable finish.</p>",
+        "color_scheme": "dark"
+      }
+    },
+    "image_15": {
+      "type": "wh-image",
+      "settings": {
+        "image": "shopify://shop_images/wh-image-test-2.jpg",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "solid",
+        "image_mobile_shape": "",
+        "image_fit": "fill",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "image_shape": "16:9"
+      }
+    },
+    "cards_16": {
+      "type": "wh-cards",
+      "settings": {
+        "show_heading": true,
+        "heading": "WAllhack ks-tr\nlinear switch series",
+        "show_intro": true,
+        "intro_1": "<p>Our keyboard comes with our brand new series of custom hall effect switches, the Wallhack KS-TR Linear switch. Made in collaboration with the industry leaders in keyboard switch manufacturing, Gateron.</p>",
+        "intro_2": "<p>The KS-TR series features three spring weights: Light, Medium and Heavy, giving our users the option to mix and match different spring weights to achieve the perfect combination for your exact needs.</p>",
+        "color_scheme": "dark",
+        "spacing": "large"
+      },
+      "blocks": {
+        "card_1": {
+          "type": "wh-card",
+          "settings": {
+            "name": "KS-TR Light",
+            "description": "<p>Light is the fastest, lightest touch, built for quick actuation and repeated input.</p>",
+            "image": "shopify://shop_images/wh-camp-538b5aed.png",
+            "image_fit": "fill",
+            "image_background": "solid",
+            "image_shape": "1:1"
+          }
+        },
+        "card_2": {
+          "type": "wh-card",
+          "settings": {
+            "name": "KS-TR Light",
+            "description": "<p>Medium is slightly heavier than average, and is a nice balance between speed and control with its firm keypress feel.</p>",
+            "image": "shopify://shop_images/wh-camp-bd77829c.png",
+            "image_fit": "fill",
+            "image_background": "solid",
+            "image_shape": "1:1"
+          }
+        },
+        "card_3": {
+          "type": "wh-card",
+          "settings": {
+            "name": "KS-TR Light",
+            "description": "<p>Heavy is more deliberate, giving you fewer accidental presses. A great typing feel and nice for users who enjoy a more substantial and precise keypress feel.</p>",
+            "image": "shopify://shop_images/wh-camp-47391fb2.png",
+            "image_fit": "fill",
+            "image_background": "solid",
+            "image_shape": "1:1"
+          }
+        },
+        "card_4": {
+          "type": "wh-card",
+          "settings": {
+            "name": "KS-TR Light",
+            "description": "<p>Heavy is more deliberate, giving you fewer accidental presses. A great typing feel and nice for users who enjoy a more substantial and precise keypress feel.</p>",
+            "image": "shopify://shop_images/wh-camp-47391fb2.png",
+            "image_fit": "fill",
+            "image_background": "solid",
+            "image_shape": "1:1"
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3",
+        "card_4"
+      ]
+    },
+    "faq_17": {
+      "type": "wh-faq",
+      "settings": {
+        "color_scheme": "dark"
+      },
+      "blocks": {
+        "faq_item_1": {
+          "type": "wh-faq-item",
+          "settings": {
+            "question": "Why would I use a glass mousepad?",
+            "answer": "<p>Glass mousepads offer truly unparalleled surface experiences and performance, whether you prefer speed or control. While maintaining their quickness for an incredibly long time. Since it’s hardened glass, the consistency of the surface will be unmatched, making it stand the test of time with significantly longer lifespan than cloth.</p>"
+          }
+        },
+        "faq_item_2": {
+          "type": "wh-faq-item",
+          "settings": {
+            "question": "Is the surface coated?",
+            "answer": "<p>No. The texture is etched into the glass itself, not applied on top. Coatings wear through where you use them most, which is how a pad ends up feeling different in the middle than at the edges. Uncoated glass doesn't do that. What it feels like out of the box is what it feels like in two years</p>"
+          }
+        },
+        "faq_item_3": {
+          "type": "wh-faq-item",
+          "settings": {
+            "question": "Are glass mousepads fragile?",
+            "answer": "<p>Our mousepads are built using tempered glass, making them extremely resistant to cracks, chips and long-term wear. Even though we’ve made the glass thinner for ergonomics, it's stil made of tough, tempered glass. The surface is also stain-proof and immune to issues like edge fraying or humidity damage.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_1",
+        "faq_item_2",
+        "faq_item_3"
+      ]
+    },
+    "text_media_18": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": true,
+        "heading": "Spill it, wipe it, keep playing",
+        "body": "<p>Glass is non-porous, and so is the silicone under it. Sweat, condensation, a knocked-over drink: none of it soaks in. Cleaning involves just a microfibre cloth and water, or a glass-safe cleaner if something has dried on. No stains, no edge fraying, no soft patches where your palm sits.</p>",
+        "image": "shopify://shop_images/wh-text-media-test-2.jpg",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "solid",
+        "image_mobile_shape": "",
+        "image_fit": "fill",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "large",
+        "image_shape": "16:9"
+      }
+    },
+    "cover_19": {
+      "type": "wh-cover",
+      "settings": {
+        "heading": "our best surfaces yet",
+        "subheading": "WALLHACK SP-005 & CR-005",
+        "show_subheading": false,
+        "subtitle_position": "top",
+        "image": "shopify://shop_images/wh-cover-test-2.jpg",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "solid",
+        "image_mobile_shape": "",
+        "image_fit": "fill",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "image_shape": "16:9"
+      }
+    }
+  },
+  "order": [
+    "cover_1",
+    "intro_usps_2",
+    "drawing_callouts_3",
+    "specs_contents_4",
+    "faq_5",
+    "compare_6",
+    "text_media_7",
+    "text_media_8",
+    "split_9",
+    "split_10",
+    "compare_11",
+    "text_12",
+    "image_13",
+    "text_14",
+    "image_15",
+    "cards_16",
+    "faq_17",
+    "text_media_18",
+    "cover_19"
+  ]
+}

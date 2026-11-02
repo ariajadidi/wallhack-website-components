@@ -1,0 +1,170 @@
+<section class="wh-section wh-specs-contents wh-scheme-{{ section.settings.color_scheme }}" style="{% render 'wh-colors', s: section.settings %}">
+  <div class="wh-contents">
+    <div class="wh-contents__label-top wh-h2">{{ section.settings.label | escape }}</div>
+    <div class="wh-contents__row">
+      <div class="wh-contents__label wh-h2">{{ section.settings.label | escape }}</div>
+      <div class="wh-contents__items">
+        {%- for block in section.blocks -%}{%- if block.type == 'item' -%}{% render 'wh-contents-item', block: block %}{%- endif -%}{%- endfor -%}
+      </div>
+    </div>
+  </div>
+  <div class="wh-specs-contents__specs">
+    {%- for block in section.blocks -%}{%- if block.type == 'spec_row' -%}{% render 'wh-spec-row', block: block %}{%- endif -%}{%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "WH Specs + Contents",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Contents label",
+      "default": "Contents"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Colour mode",
+      "default": "light",
+      "options": [
+        {
+          "value": "light",
+          "label": "Light"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Custom colours (collaboration pages)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Leave empty to use the colour mode above. Filled in = this section uses these colours instead."
+    },
+    {
+      "type": "color",
+      "id": "custom_background",
+      "label": "Background"
+    },
+    {
+      "type": "color",
+      "id": "custom_foreground",
+      "label": "Text + icons"
+    },
+    {
+      "type": "color",
+      "id": "custom_border",
+      "label": "Borders"
+    },
+    {
+      "type": "color",
+      "id": "custom_image_background",
+      "label": "Photo background colour",
+      "info": "Behind photos (Solid). Figma: change the photo frame’s fill colour."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Contents item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon (SVG from the Contents library)"
+        },
+        {
+          "type": "text",
+          "id": "caption",
+          "label": "Caption",
+          "default": "1x carry case"
+        }
+      ]
+    },
+    {
+      "type": "spec_row",
+      "name": "Spec line",
+      "settings": [
+        {
+          "type": "select",
+          "id": "specs",
+          "label": "Specs on this line",
+          "default": "2",
+          "options": [
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "label_1",
+          "label": "Label 1",
+          "default": "Weight"
+        },
+        {
+          "type": "text",
+          "id": "value_1",
+          "label": "Value 1",
+          "default": "1450g"
+        },
+        {
+          "type": "text",
+          "id": "label_2",
+          "label": "Label 2",
+          "default": "Size"
+        },
+        {
+          "type": "text",
+          "id": "value_2",
+          "label": "Value 2",
+          "default": "490 × 420 mm"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "WH Specs + Contents",
+      "blocks": [
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "spec_row",
+          "settings": {
+            "specs": "1"
+          }
+        },
+        {
+          "type": "spec_row",
+          "settings": {
+            "specs": "2"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

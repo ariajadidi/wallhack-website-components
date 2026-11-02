@@ -1,0 +1,121 @@
+{%- liquid
+  assign s = section.settings
+  assign ratio = '16 / 9'
+  if s.orientation == 'portrait'
+    assign ratio = '9 / 16'
+  endif
+-%}
+<section class="wh-section wh-content-frame{% if s.background_gradient %} wh-content-frame--gradient{% endif %} wh-scheme-{{ s.color_scheme }}" style="{% render 'wh-colors', s: s %}">
+  <div class="wh-content-frame__glass wh-glass">
+    <div class="wh-content-frame__header">{% render 'wh-rune', id: section.id %}</div>
+    <div class="wh-content-frame__video{% if s.image_mobile != blank %} wh-content-frame__video--has-mobile{% endif %}" style="--ratio: {{ ratio }};">
+      {%- if s.video != blank -%}
+        {{ s.video | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, controls: false, image_size: '1600x' }}
+      {%- elsif s.video_url != blank -%}
+        {%- if s.video_url.type == 'youtube' -%}
+          {{ s.video_url | external_video_url: autoplay: true, loop: true, mute: true, playlist: s.video_url.id, controls: false | external_video_tag }}
+        {%- else -%}
+          {{ s.video_url | external_video_url: autoplay: true, loop: true, muted: true, background: true | external_video_tag }}
+        {%- endif -%}
+      {%- elsif s.image != blank -%}
+        {{ s.image | image_url: width: 3000 | image_tag: loading: 'lazy', sizes: '100vw', widths: '600,900,1200,1600,2200,3000', class: 'wh-content-frame__desktop' }}
+        {%- if s.image_mobile != blank -%}
+          {{ s.image_mobile | image_url: width: 1500 | image_tag: loading: 'lazy', sizes: '100vw', widths: '400,750,1100,1500', class: 'wh-content-frame__mobile' }}
+        {%- endif -%}
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "WH Content Frame",
+  "settings": [
+    {
+      "type": "select",
+      "id": "orientation",
+      "label": "Orientation",
+      "default": "landscape",
+      "options": [
+        {
+          "value": "landscape",
+          "label": "Landscape (16:9)"
+        },
+        {
+          "value": "portrait",
+          "label": "Portrait (9:16)"
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Video",
+      "info": "Plays muted on a loop. It is cropped to fill the frame."
+    },
+    {
+      "type": "video_url",
+      "id": "video_url",
+      "label": "Or a YouTube / Vimeo link",
+      "accept": [
+        "youtube",
+        "vimeo"
+      ]
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Or a photo",
+      "info": "Used when there is no video. Empty = black box."
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Image (mobile)",
+      "info": "Optional: a different photo for phones. Empty = the photo above."
+    },
+    {
+      "type": "checkbox",
+      "id": "background_gradient",
+      "label": "Gradient background",
+      "default": false,
+      "info": "Page colour at the top, glowing light towards the bottom."
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Colour mode",
+      "default": "light",
+      "options": [
+        {
+          "value": "light",
+          "label": "Light"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Custom colours (collaboration pages)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Leave empty to use the colour mode above. Filled in = this section uses these colours instead."
+    },
+    {
+      "type": "color",
+      "id": "custom_background",
+      "label": "Background"
+    }
+  ],
+  "tag": "div",
+  "presets": [
+    {
+      "name": "WH Content Frame"
+    }
+  ]
+}
+{% endschema %}

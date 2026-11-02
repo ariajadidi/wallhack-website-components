@@ -1,0 +1,79 @@
+{%- comment -%}
+  Full-bleed (or in-column) image with an optional phone crop.
+  Params: image, image_mobile, ratio (the component's default frame shape), shape (21:9 · 2:1 · 16:9 · 3:2 · 4:3 · 1:1 · 4:5 · 2:3 · 9:16 · custom — the Figma Media container's Ratio), force_ratio (used when shape is custom), sizes, loading. The photo is always cropped to fill the frame.
+  fade (none · top · bottom · both) and fade_mobile (same · none · top · bottom · both): the photo and its background fade to see-through at that edge — an opacity mask, so it works on any background colour (Figma Media/Image “fade top / fade bottom”).
+  background: solid (default, color/image-background) · none (transparent: the section shows through) · gradient (page colour → color/gradient-end) — Figma Media/Image “Background”. gradient: true = background gradient (older pages).
+  mobile_shape: the phone photo's frame shape (Figma “image (mobile)” Ratio); empty = the phone photo's own shape.
+  fit ('fit' = show the whole photo inside the frame, Figma image scale mode Fit; default = crop to fill).
+  fit_mobile (same · fill · fit): the phone photo's own Fill / Fit (Figma “image (mobile)” photo scale mode).
+{%- endcomment -%}
+{%- liquid
+  assign r = ratio | default: 1.5
+  case shape
+    when '21:9'
+      assign r = 2.3333
+    when '2:1'
+      assign r = 2
+    when '16:9'
+      assign r = 1.7778
+    when '3:2'
+      assign r = 1.5
+    when '4:3'
+      assign r = 1.3333
+    when '4:5'
+      assign r = 0.8
+    when '2:3'
+      assign r = 0.6667
+    when '9:16'
+      assign r = 0.5625
+    when '1:1'
+      assign r = 1
+    when 'custom'
+      if force_ratio != blank
+        assign r = force_ratio
+      endif
+  endcase
+  assign load = loading | default: 'lazy'
+  assign f = fade | default: 'none'
+  assign fm = fade_mobile | default: 'same'
+  capture fade_classes
+    if f == 'top' or f == 'both'
+      echo ' wh-media--fade-top'
+    endif
+    if f == 'bottom' or f == 'both'
+      echo ' wh-media--fade-bottom'
+    endif
+    if image_mobile and fm != 'same'
+      echo ' wh-media--mfade'
+      if fm == 'top' or fm == 'both'
+        echo ' wh-media--mfade-top'
+      endif
+      if fm == 'bottom' or fm == 'both'
+        echo ' wh-media--mfade-bottom'
+      endif
+    endif
+    if background == 'gradient' or gradient
+      echo ' wh-media--gradient'
+    elsif background == 'none'
+      echo ' wh-media--no-bg'
+    endif
+    if fit == 'fit'
+      echo ' wh-media--fit'
+    endif
+    if image_mobile
+      if fit_mobile == 'fit' or fit_mobile == 'fill'
+        echo ' wh-media--mfit-' | append: fit_mobile
+      endif
+    endif
+  endcapture
+-%}
+<div class="wh-media{% if image_mobile %} wh-media--has-mobile{% endif %}{{ fade_classes }}" style="--ratio: {{ r }};{% if image_mobile %} --ratio-mobile: {% render 'wh-ratio', shape: mobile_shape, fallback: image_mobile.aspect_ratio %};{% endif %}">
+  {%- if image -%}
+    {{ image | image_url: width: 3000 | image_tag: class: 'wh-media__desktop', loading: load, sizes: sizes, widths: '600,900,1200,1600,2200,3000' }}
+  {%- else -%}
+    {{ 'image' | placeholder_svg_tag: 'wh-media__desktop' }}
+  {%- endif -%}
+  {%- if image_mobile -%}
+    {{ image_mobile | image_url: width: 1500 | image_tag: class: 'wh-media__mobile', loading: load, sizes: '100vw', widths: '400,750,1100,1500' }}
+  {%- endif -%}
+</div>

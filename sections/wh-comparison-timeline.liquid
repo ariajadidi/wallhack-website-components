@@ -1,0 +1,128 @@
+<section class="wh-section{% if section.settings.spacing == 'regular' %} wh-spacing-regular{% endif %} wh-timeline wh-scheme-{{ section.settings.color_scheme }}" style="{% render 'wh-colors', s: section.settings %}">
+  <div class="wh-timeline__main">
+    {%- if section.settings.show_scale -%}
+      <div class="wh-timeline__scale-mobile" aria-hidden="true">
+        <span class="wh-h4">{{ section.settings.scale_start | escape }}</span><hr><span class="wh-h4">{{ section.settings.scale_end | escape }}</span>
+      </div>
+    {%- endif -%}
+    <div class="wh-timeline__cards">{% content_for 'blocks' %}</div>
+  </div>
+  {%- if section.settings.show_scale -%}
+    <div class="wh-timeline__scale">
+      <span class="wh-h4">{{ section.settings.scale_start | escape }}</span><hr><span class="wh-h4">{{ section.settings.scale_end | escape }}</span>
+    </div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "WH Comparison Timeline",
+  "blocks": [
+    {
+      "type": "wh-variant-card"
+    }
+  ],
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_scale",
+      "label": "Scale (Speed ↔ Control line)",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "scale_start",
+      "label": "Scale start",
+      "default": "Speed"
+    },
+    {
+      "type": "text",
+      "id": "scale_end",
+      "label": "Scale end",
+      "default": "Control"
+    },
+    {
+      "type": "select",
+      "id": "spacing",
+      "label": "Spacing",
+      "default": "large",
+      "info": "Space above and below the section. Figma: section padding linked to layout/block-padding-y = Regular.",
+      "options": [
+        {
+          "value": "large",
+          "label": "Large"
+        },
+        {
+          "value": "regular",
+          "label": "Regular"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Colour mode",
+      "default": "light",
+      "options": [
+        {
+          "value": "light",
+          "label": "Light"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Custom colours (collaboration pages)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Leave empty to use the colour mode above. Filled in = this section uses these colours instead."
+    },
+    {
+      "type": "color",
+      "id": "custom_background",
+      "label": "Background"
+    },
+    {
+      "type": "color",
+      "id": "custom_foreground",
+      "label": "Text + icons"
+    },
+    {
+      "type": "color",
+      "id": "custom_border",
+      "label": "Borders"
+    },
+    {
+      "type": "color",
+      "id": "custom_image_background",
+      "label": "Photo background colour",
+      "info": "Behind photos (Solid). Figma: change the photo frame’s fill colour."
+    }
+  ],
+  "presets": [
+    {
+      "name": "WH Comparison Timeline",
+      "blocks": [
+        {
+          "type": "wh-variant-card"
+        },
+        {
+          "type": "wh-variant-card"
+        },
+        {
+          "type": "wh-variant-card"
+        },
+        {
+          "type": "wh-variant-card"
+        }
+      ]
+    }
+  ],
+  "tag": "div"
+}
+{% endschema %}

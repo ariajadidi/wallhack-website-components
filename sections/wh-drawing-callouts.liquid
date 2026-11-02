@@ -1,0 +1,159 @@
+<section class="wh-section wh-drawing{% if section.settings.drawing_mobile %} wh-drawing--has-mobile{% endif %} wh-scheme-{{ section.settings.color_scheme }}" style="{% render 'wh-colors', s: section.settings %}">
+  <div class="wh-drawing__layout">
+    {%- liquid
+      # Figma Type=Illustration: the drawing only — no callout rows (and no gaps for them)
+      assign with_callouts = true
+      if section.settings.layout == 'illustration'
+        assign with_callouts = false
+      endif
+    -%}
+    {%- if with_callouts -%}
+    <div class="wh-callouts wh-callouts--top">
+      {%- for block in section.blocks -%}{%- if block.settings.position == 'top' -%}{% render 'wh-callout', block: block %}{%- endif -%}{%- endfor -%}
+    </div>
+    {%- endif -%}
+    {%- if section.settings.drawing_mobile -%}
+      <div class="wh-drawing__art wh-drawing__art--mobile">{% render 'wh-icon', image: section.settings.drawing_mobile %}</div>
+    {%- endif -%}
+    <div class="wh-drawing__art wh-drawing__art--desktop">{% render 'wh-icon', image: section.settings.drawing %}</div>
+    {%- if with_callouts -%}
+    <div class="wh-callouts wh-callouts--bottom">
+      {%- for block in section.blocks -%}{%- if block.settings.position == 'bottom' -%}{% render 'wh-callout', block: block %}{%- endif -%}{%- endfor -%}
+    </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "WH Drawing + callouts",
+  "settings": [
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "default": "callouts",
+      "options": [
+        { "value": "callouts", "label": "Drawing with callouts" },
+        { "value": "illustration", "label": "Illustration only (no callouts)" }
+      ],
+      "info": "Illustration only shows just the drawing — any callouts below are hidden."
+    },
+    {
+      "type": "image_picker",
+      "id": "drawing",
+      "label": "Line drawing"
+    },
+    {
+      "type": "image_picker",
+      "id": "drawing_mobile",
+      "label": "Line drawing (mobile, optional)"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Colour mode",
+      "default": "light",
+      "options": [
+        {
+          "value": "light",
+          "label": "Light"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Custom colours (collaboration pages)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Leave empty to use the colour mode above. Filled in = this section uses these colours instead."
+    },
+    {
+      "type": "color",
+      "id": "custom_background",
+      "label": "Background"
+    },
+    {
+      "type": "color",
+      "id": "custom_foreground",
+      "label": "Text + icons"
+    },
+    {
+      "type": "color",
+      "id": "custom_border",
+      "label": "Borders"
+    },
+    {
+      "type": "color",
+      "id": "custom_image_background",
+      "label": "Photo background colour",
+      "info": "Behind photos (Solid). Figma: change the photo frame’s fill colour."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "callout",
+      "name": "Callout",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>3,3 mm thickness</p>"
+        },
+        {
+          "type": "select",
+          "id": "position",
+          "label": "Row",
+          "default": "top",
+          "options": [
+            {
+              "value": "top",
+              "label": "Above the drawing"
+            },
+            {
+              "value": "bottom",
+              "label": "Below the drawing"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "type",
+          "label": "Type",
+          "default": "callout",
+          "options": [
+            {
+              "value": "callout",
+              "label": "Callout"
+            },
+            {
+              "value": "empty",
+              "label": "Empty (spacer)"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "WH Drawing + callouts",
+      "blocks": [
+        {
+          "type": "callout"
+        },
+        {
+          "type": "callout"
+        }
+      ]
+    }
+  ],
+  "tag": "div"
+}
+{% endschema %}

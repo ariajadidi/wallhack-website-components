@@ -1,0 +1,192 @@
+{%- liquid
+  assign s = section.settings
+  assign title = s.title
+  if title == blank and product
+    assign title = product.title
+  endif
+  assign description = s.description
+  if description == blank and product
+    assign description = product.description
+  endif
+-%}
+<section class="wh-section wh-pdp wh-scheme-{{ s.color_scheme }}" style="{% render 'wh-colors', s: s %}">
+  <wh-gallery class="wh-pdp__gallery" tabindex="0" aria-label="{{ title | escape }} photos">
+    {%- for block in section.blocks -%}
+      <div class="wh-pdp__photo{% if block.settings.shape == '2:1' %} wh-pdp__photo--wide{% endif %}" {{ block.shopify_attributes }}>
+        {%- if block.settings.image != blank -%}
+          {{ block.settings.image | image_url: width: 2600 | image_tag: loading: 'lazy', sizes: '90vw', widths: '600,900,1300,1900,2600', alt: block.settings.image.alt | default: title }}
+        {%- endif -%}
+      </div>
+    {%- else -%}
+      {%- if product -%}
+        {%- for media in product.media -%}
+          {%- if media.media_type == 'image' -%}
+            <div class="wh-pdp__photo">{{ media | image_url: width: 1900 | image_tag: loading: 'lazy', sizes: '90vw', widths: '600,900,1300,1900' }}</div>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+    {%- endfor -%}
+  </wh-gallery>
+  <script src="{{ 'wh-gallery.js' | asset_url }}" defer></script>
+
+  <div class="wh-pdp__info">
+    <div class="wh-pdp__title-col">
+      <h1 class="wh-h5 wh-pdp__title">{{ title | escape }}</h1>
+    </div>
+    <div class="wh-pdp__text-col">
+      <div class="wh-p1 wh-pdp__description">{{ description }}</div>
+      {%- if s.show_reviews -%}
+        <div class="wh-pdp__reviews">
+          <span class="wh-p1-bold" aria-hidden="true">*****</span>
+          <span class="wh-pdp__reviews-info wh-p2">
+            <span>{{ s.review_count | escape }}</span>
+            <a href="{{ s.reviews_url | default: '#reviews' }}">{{ s.reviews_link | escape }}</a>
+          </span>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "WH Product Header",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "The top bar (breadcrumbs + close button) is its own section, WH Top Bar, so it can stay at the top of the screen."
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Product name",
+      "info": "Empty on a product page = the product's own name."
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "info": "Empty on a product page = the product's own description."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_reviews",
+      "label": "Show reviews",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "review_count",
+      "label": "Review count",
+      "default": "(125)"
+    },
+    {
+      "type": "text",
+      "id": "reviews_link",
+      "label": "Reviews link text",
+      "default": "see all reviews"
+    },
+    {
+      "type": "url",
+      "id": "reviews_url",
+      "label": "Reviews link",
+      "info": "Empty = jumps to #reviews on the page"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Colour mode",
+      "default": "light",
+      "options": [
+        {
+          "value": "light",
+          "label": "Light"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Custom colours (collaboration pages)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Leave empty to use the colour mode above. Filled in = this section uses these colours instead."
+    },
+    {
+      "type": "color",
+      "id": "custom_background",
+      "label": "Background"
+    },
+    {
+      "type": "color",
+      "id": "custom_foreground",
+      "label": "Text + icons"
+    },
+    {
+      "type": "color",
+      "id": "custom_border",
+      "label": "Borders"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "photo",
+      "name": "Gallery photo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Photo"
+        },
+        {
+          "type": "select",
+          "id": "shape",
+          "label": "Shape",
+          "default": "1:1",
+          "info": "Every photo in the row has the same height; wide photos are twice as wide.",
+          "options": [
+            {
+              "value": "1:1",
+              "label": "1:1 square"
+            },
+            {
+              "value": "2:1",
+              "label": "2:1 wide"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tag": "div",
+  "presets": [
+    {
+      "name": "WH Product Header",
+      "blocks": [
+        {
+          "type": "photo",
+          "settings": {
+            "shape": "1:1"
+          }
+        },
+        {
+          "type": "photo",
+          "settings": {
+            "shape": "2:1"
+          }
+        },
+        {
+          "type": "photo",
+          "settings": {
+            "shape": "1:1"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

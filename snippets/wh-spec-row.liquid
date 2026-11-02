@@ -1,0 +1,9 @@
+{%- comment -%} Shared markup: used by blocks/wh-spec-row.liquid and sections/wh-specs-contents.liquid. Param: block {%- endcomment -%}
+<div class="wh-spec-row wh-spec-row--{{ block.settings.specs }}" data-wh-block="{{ block.id }}" {{ block.shopify_attributes }}>
+  <div class="wh-spec-row__row">
+    <div class="wh-spec"><div class="wh-spec__cell wh-spec__label wh-h2">{{ block.settings.label_1 | escape }}</div><div class="wh-spec__cell wh-spec__value wh-h3">{{ block.settings.value_1 | escape }}</div></div>
+    {%- if block.settings.specs == '2' -%}
+      <div class="wh-spec"><div class="wh-spec__cell wh-spec__label wh-h2">{{ block.settings.label_2 | escape }}</div><div class="wh-spec__cell wh-spec__value wh-h3">{{ block.settings.value_2 | escape }}</div></div>
+    {%- endif -%}
+  </div>
+</div>

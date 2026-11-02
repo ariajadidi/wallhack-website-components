@@ -1,0 +1,5 @@
+{%- comment -%} Card name (H5) + description (P1). Used by blocks/wh-card.liquid and blocks/wh-text-card.liquid. Param: block {%- endcomment -%}
+<div class="wh-card__text">
+  <h3 class="wh-h5">{{ block.settings.name | escape }}</h3>
+  <div class="wh-p1">{{ block.settings.description }}</div>
+</div>

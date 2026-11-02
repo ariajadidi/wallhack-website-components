@@ -1,0 +1,116 @@
+<section class="wh-section wh-text wh-scheme-{{ section.settings.color_scheme }}" style="{% render 'wh-colors', s: section.settings %}">
+  {%- if section.settings.show_heading -%}<h2 class="wh-h1">{{ section.settings.heading | escape | newline_to_br }}</h2>{%- endif -%}
+  {%- if section.settings.columns == '2' -%}
+    <div class="wh-text__columns">
+      <div class="wh-p1">{{ section.settings.body_1 }}</div>
+      <div class="wh-p1">{{ section.settings.body_2 }}</div>
+    </div>
+  {%- else -%}
+    <div class="wh-text__body wh-p1 wh-mobile-left">{{ section.settings.body }}</div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "WH Text",
+  "settings": [
+    {
+      "type": "select",
+      "id": "columns",
+      "label": "Columns",
+      "default": "2",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "show_heading",
+      "label": "Show heading",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Form and function"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body (1 column)",
+      "default": "<p>Text</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "body_1",
+      "label": "Column 1",
+      "default": "<p>Text</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "body_2",
+      "label": "Column 2",
+      "default": "<p>Text</p>"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Colour mode",
+      "default": "light",
+      "options": [
+        {
+          "value": "light",
+          "label": "Light"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Custom colours (collaboration pages)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Leave empty to use the colour mode above. Filled in = this section uses these colours instead."
+    },
+    {
+      "type": "color",
+      "id": "custom_background",
+      "label": "Background"
+    },
+    {
+      "type": "color",
+      "id": "custom_foreground",
+      "label": "Text + icons"
+    },
+    {
+      "type": "color",
+      "id": "custom_border",
+      "label": "Borders"
+    },
+    {
+      "type": "color",
+      "id": "custom_image_background",
+      "label": "Photo background colour",
+      "info": "Behind photos (Solid). Figma: change the photo frame’s fill colour."
+    }
+  ],
+  "tag": "div",
+  "presets": [
+    {
+      "name": "WH Text"
+    }
+  ]
+}
+{% endschema %}

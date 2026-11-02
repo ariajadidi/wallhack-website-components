@@ -1,0 +1,6 @@
+{%- comment -%} SVG icon / line drawing drawn in the text colour (color/foreground) via a CSS mask. Params: image {%- endcomment -%}
+{%- if image -%}
+  <span class="wh-icon" role="img" aria-label="{{ image.alt | escape }}" style="--wh-icon: url('{{ image | image_url: width: 1600 }}'); --ratio: {{ image.aspect_ratio }};"></span>
+{%- else -%}
+  <span class="wh-icon wh-icon--empty" aria-hidden="true"></span>
+{%- endif -%}

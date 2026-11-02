@@ -1,0 +1,114 @@
+{%- assign sizes = section.settings.sizes | split: ',' -%}
+<section class="wh-section wh-size wh-scheme-{{ section.settings.color_scheme }}" style="{% render 'wh-colors', s: section.settings %}">
+  <table>
+    <thead><tr><th aria-hidden="true"></th>{%- for s in sizes -%}<th class="wh-h2" scope="col">{{ s | strip | escape }}</th>{%- endfor -%}</tr></thead>
+    <tbody>
+      {%- for block in section.blocks -%}
+        {%- assign values = block.settings.values | split: ',' -%}
+        <tr data-wh-block="{{ block.id }}" {{ block.shopify_attributes }}>
+          <th class="wh-h2" scope="row">{{ block.settings.label | escape }}{% if block.settings.letter != blank %}<br>({{ block.settings.letter | escape }}){% endif %}</th>
+          {%- for s in sizes -%}<td class="wh-h3">{{ values[forloop.index0] | strip | escape }}</td>{%- endfor -%}
+        </tr>
+      {%- endfor -%}
+    </tbody>
+  </table>
+</section>
+
+{% schema %}
+{
+  "name": "WH Size table",
+  "settings": [
+    {
+      "type": "text",
+      "id": "sizes",
+      "label": "Sizes (comma-separated)",
+      "default": "XS, S, M, L, XL"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Colour mode",
+      "default": "light",
+      "options": [
+        {
+          "value": "light",
+          "label": "Light"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Custom colours (collaboration pages)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Leave empty to use the colour mode above. Filled in = this section uses these colours instead."
+    },
+    {
+      "type": "color",
+      "id": "custom_background",
+      "label": "Background"
+    },
+    {
+      "type": "color",
+      "id": "custom_foreground",
+      "label": "Text + icons"
+    },
+    {
+      "type": "color",
+      "id": "custom_border",
+      "label": "Borders"
+    },
+    {
+      "type": "color",
+      "id": "custom_image_background",
+      "label": "Photo background colour",
+      "info": "Behind photos (Solid). Figma: change the photo frame’s fill colour."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Measurement row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Length"
+        },
+        {
+          "type": "text",
+          "id": "letter",
+          "label": "Letter (optional)",
+          "default": "A"
+        },
+        {
+          "type": "text",
+          "id": "values",
+          "label": "Values (comma-separated, one per size)",
+          "default": "38cm, 39cm, 40cm, 41cm, 42cm"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "WH Size table",
+      "blocks": [
+        {
+          "type": "row"
+        },
+        {
+          "type": "row"
+        }
+      ]
+    }
+  ],
+  "tag": "div"
+}
+{% endschema %}

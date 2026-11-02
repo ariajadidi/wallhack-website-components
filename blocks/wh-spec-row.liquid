@@ -1,0 +1,54 @@
+{% render 'wh-spec-row', block: block %}
+
+{% schema %}
+{
+  "name": "Spec line",
+  "settings": [
+    {
+      "type": "select",
+      "id": "specs",
+      "label": "Specs on this line",
+      "default": "2",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "label_1",
+      "label": "Label 1",
+      "default": "Weight"
+    },
+    {
+      "type": "text",
+      "id": "value_1",
+      "label": "Value 1",
+      "default": "1450g"
+    },
+    {
+      "type": "text",
+      "id": "label_2",
+      "label": "Label 2",
+      "default": "Size"
+    },
+    {
+      "type": "text",
+      "id": "value_2",
+      "label": "Value 2",
+      "default": "490 × 420 mm"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Spec line"
+    }
+  ]
+}
+{% endschema %}

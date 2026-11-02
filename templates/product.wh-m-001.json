@@ -1,0 +1,556 @@
+{
+  "sections": {
+    "top_bar_1": {
+      "type": "wh-top-bar",
+      "settings": {
+        "breadcrumbs": "products / mouse / m-001",
+        "color_scheme": "light"
+      }
+    },
+    "product_header_2": {
+      "type": "wh-product-header",
+      "settings": {
+        "title": "M-001",
+        "description": "<p>The WALLHACK M-001 is a premium wireless gaming mouse built around a die-cast magnesium alloy shell. Its wireless receiver doubles as a charging dock and control interface, and a hot-swappable battery system means the mouse never has to stop for charging.</p>",
+        "show_reviews": true,
+        "review_count": "(125)",
+        "reviews_link": "see all reviews",
+        "color_scheme": "light"
+      },
+      "blocks": {
+        "photo_1": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/wh-pdp-m001-1.png",
+            "shape": "1:1"
+          }
+        },
+        "photo_2": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/wh-pdp-m001-2.png",
+            "shape": "2:1"
+          }
+        },
+        "photo_3": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/wh-pdp-m001-3.png",
+            "shape": "1:1"
+          }
+        }
+      },
+      "block_order": [
+        "photo_1",
+        "photo_2",
+        "photo_3"
+      ]
+    },
+    "product_bar_3": {
+      "type": "wh-product-bar",
+      "settings": {
+        "title": "M-001",
+        "color_scheme": "light"
+      }
+    },
+    "drawing_callouts_4": {
+      "type": "wh-drawing-callouts",
+      "settings": {
+        "layout": "callouts",
+        "drawing": "shopify://shop_images/wh-drawing-m001-side.svg",
+        "drawing_mobile": "",
+        "color_scheme": "light"
+      },
+      "blocks": {
+        "callout_1": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>AZ91D magnesium-aluminum-zinc alloy, die-cast and CNC post-processed</p>",
+            "position": "top",
+            "type": "callout"
+          }
+        },
+        "callout_2": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>PixArt PAW3950 + nRF54L15</p>",
+            "position": "top",
+            "type": "callout"
+          }
+        },
+        "callout_3": {
+          "type": "callout",
+          "settings": {
+            "text": "<p></p>",
+            "position": "top",
+            "type": "empty"
+          }
+        },
+        "callout_4": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>Up to 8,000 Hz wireless polling with ~2 ms wireless latency</p>",
+            "position": "top",
+            "type": "callout"
+          }
+        },
+        "callout_5": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>Omron D2FP-FN2 optical main switches, no double-clicking, no debounce latency</p>",
+            "position": "bottom",
+            "type": "callout"
+          }
+        },
+        "callout_6": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>TTC Gold (tactile, dust-proof) scrollwheel encoder</p>",
+            "position": "bottom",
+            "type": "callout"
+          }
+        },
+        "callout_7": {
+          "type": "callout",
+          "settings": {
+            "text": "<p></p>",
+            "position": "bottom",
+            "type": "empty"
+          }
+        },
+        "callout_8": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>2× 250 mAh hot-swap batteries included (1 in mouse, 1 in receiver)</p>",
+            "position": "bottom",
+            "type": "callout"
+          }
+        }
+      },
+      "block_order": [
+        "callout_1",
+        "callout_2",
+        "callout_3",
+        "callout_4",
+        "callout_5",
+        "callout_6",
+        "callout_7",
+        "callout_8"
+      ]
+    },
+    "drawing_callouts_5": {
+      "type": "wh-drawing-callouts",
+      "settings": {
+        "layout": "callouts",
+        "drawing": "shopify://shop_images/wh-drawing-m001-receiver.svg",
+        "drawing_mobile": "",
+        "color_scheme": "light"
+      },
+      "blocks": {
+        "callout_1": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>DPI switch up to 25600 DPI</p>",
+            "position": "top",
+            "type": "callout"
+          }
+        },
+        "callout_2": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>Hz switch up to 8000 hz</p>",
+            "position": "top",
+            "type": "callout"
+          }
+        },
+        "callout_3": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>Battery charging status &amp; connection strength LED array</p>",
+            "position": "top",
+            "type": "callout"
+          }
+        },
+        "callout_4": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>2.4 ghz antenna</p>",
+            "position": "bottom",
+            "type": "callout"
+          }
+        },
+        "callout_5": {
+          "type": "callout",
+          "settings": {
+            "text": "<p></p>",
+            "position": "bottom",
+            "type": "empty"
+          }
+        },
+        "callout_6": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>Battery charging port</p>",
+            "position": "bottom",
+            "type": "callout"
+          }
+        }
+      },
+      "block_order": [
+        "callout_1",
+        "callout_2",
+        "callout_3",
+        "callout_4",
+        "callout_5",
+        "callout_6"
+      ]
+    },
+    "specs_contents_6": {
+      "type": "wh-specs-contents",
+      "settings": {
+        "label": "contents",
+        "color_scheme": "light"
+      },
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-m001-box.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-m001.svg",
+            "caption": "1x m-001 mouse"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-m001-receiver.svg",
+            "caption": "1x reciever"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-m001-usba-usbc.svg",
+            "caption": "1x usb-c cable"
+          }
+        },
+        "item_5": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-m001-battery.svg",
+            "caption": "2x batteries"
+          }
+        },
+        "spec_row_6": {
+          "type": "spec_row",
+          "settings": {
+            "specs": "1",
+            "label_1": "material",
+            "value_1": "magnesium-zinc alloy"
+          }
+        },
+        "spec_row_7": {
+          "type": "spec_row",
+          "settings": {
+            "specs": "2",
+            "label_1": "polling rate",
+            "value_1": "125 → 8000hz",
+            "label_2": "dpi range",
+            "value_2": "100 → 30000"
+          }
+        },
+        "spec_row_8": {
+          "type": "spec_row",
+          "settings": {
+            "specs": "2",
+            "label_1": "sensor and mcu",
+            "value_1": "paw3950 + nrfs4l1s",
+            "label_2": "dimensions",
+            "value_2": "120 × 64 × 39 mm"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "item_5",
+        "spec_row_6",
+        "spec_row_7",
+        "spec_row_8"
+      ]
+    },
+    "image_7": {
+      "type": "wh-image",
+      "settings": {
+        "image": "shopify://shop_images/wh-camp-a8ed9938.png",
+        "image_mobile": "shopify://shop_images/wh-camp-c800cf84.png",
+        "image_fade": "none",
+        "image_fade_mobile": "none",
+        "image_background": "none",
+        "image_mobile_shape": "9:16",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "image_shape": "16:9",
+        "custom_background": "#0e0e0e"
+      }
+    },
+    "intro_usps_8": {
+      "type": "wh-intro-usps",
+      "settings": {
+        "heading": "INTRODUCING THE M-001",
+        "body": "<p>The WALLHACK M-001 is a premium wireless gaming mouse built around a die-cast magnesium alloy shell. Its wireless receiver doubles as a charging dock and control interface, and a hot-swappable battery system means the mouse never has to stop for charging.</p><p>The M-001 is available for *PRICE*</p>",
+        "show_cta": true,
+        "cta_label": "get notified",
+        "color_scheme": "dark",
+        "custom_background": "#0e0e0e"
+      },
+      "blocks": {},
+      "block_order": []
+    },
+    "text_media_9": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": true,
+        "heading": "weight-optimized\nconstruction",
+        "body": "<p>For the main structural components of the M-001, we chose AZ91 magnesium alloy, a material with an exceptional strength-to-weight ratio. The result is a mouse that feels remarkably light in the hand while remaining impressively rigid and solid.</p>",
+        "image": "shopify://shop_images/wh-camp-4b0c6af1.png",
+        "image_mobile": "shopify://shop_images/wh-camp-0c967573.png",
+        "image_fade": "none",
+        "image_fade_mobile": "bottom",
+        "image_background": "none",
+        "image_mobile_shape": "2:3",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "regular",
+        "image_shape": "2:1",
+        "custom_background": "#0e0e0e"
+      }
+    },
+    "text_media_10": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": false,
+        "heading": "Spill it, wipe it, keep playing",
+        "body": "<p>To keep the top surface of the mouse solid we opted to carve out the entire underside, exposing the inner structure.</p>",
+        "image": "shopify://shop_images/wh-camp-5ec02089.png",
+        "image_mobile": "shopify://shop_images/wh-camp-263bc705.png",
+        "image_fade": "none",
+        "image_fade_mobile": "both",
+        "image_background": "none",
+        "image_mobile_shape": "3:2",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "regular",
+        "image_shape": "2:1",
+        "custom_background": "#0e0e0e"
+      }
+    },
+    "text_media_11": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": true,
+        "heading": "Small-to-medium Neutral SHAPE",
+        "body": "<p>The M-001 features a custom symmetrical and small–to-medium-sized shape that allows for a wide range of grip styles, because of its neutral and safe features.</p><p>The clicks surface are grooved by slight divots that centre the fingers while still allowing for irregular finger placement. The shape is great for claw grip, with the possibility of palm grip for smaller hands, and fingertip grip for larger hands.</p>",
+        "image": "shopify://shop_images/wh-camp-9f28b224.png",
+        "image_mobile": "shopify://shop_images/wh-camp-f5ff9151.png",
+        "image_fade": "none",
+        "image_fade_mobile": "bottom",
+        "image_background": "none",
+        "image_mobile_shape": "2:1",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "regular",
+        "image_shape": "3:2",
+        "custom_background": "#0e0e0e"
+      }
+    },
+    "text_media_12": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": true,
+        "heading": "Switches and encoder",
+        "body": "<p>The M-001’s clicks are supported by Omron D2FP-FN2 optical switches that eliminate double clicking and debounce latency, and are rated for a 70 million click life span.</p><p>For the scroll wheel, we made a fluted piece of extruded aluminium connected to a TTC gold dustproof encoder, for more tactile scroll steps.</p>",
+        "image": "shopify://shop_images/wh-camp-aaba2638.png",
+        "image_mobile": "shopify://shop_images/wh-camp-3fec34ee.png",
+        "image_fade": "none",
+        "image_fade_mobile": "both",
+        "image_background": "none",
+        "image_mobile_shape": "3:2",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "regular",
+        "image_shape": "3:2",
+        "custom_background": "#0e0e0e"
+      }
+    },
+    "text_media_13": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": true,
+        "heading": "instantaneous in game",
+        "body": "<p>Our mouse features the Pixart 3950 and the latest MCU from Nordic, the nRF54L15, a combination that allows our mouse to reach a stable 8000 hz polling rate as well as a 30000 max DPI.</p>",
+        "image": "shopify://shop_images/wh-camp-6c12e025.png",
+        "image_mobile": "shopify://shop_images/wh-camp-8ce18af8.png",
+        "image_fade": "none",
+        "image_fade_mobile": "bottom",
+        "image_background": "none",
+        "image_mobile_shape": "4:3",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "regular",
+        "image_shape": "3:2",
+        "custom_background": "#0e0e0e"
+      }
+    },
+    "text_media_14": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": true,
+        "heading": "battery",
+        "body": "<p>The M-001 comes with 2 batteries included, so while the one battery is in use, the other is charging via the M-001 receiver.</p><p>This allows you to go from a dead battery to 100% charge in seconds by swapping out your battery for a fully charged one. This is especially effective for users who prefer higher polling rates, that consume more power and would otherwise have to play tethered while charging.</p>",
+        "image": "shopify://shop_images/wh-camp-a5376e83.png",
+        "image_mobile": "shopify://shop_images/wh-camp-229c2351.png",
+        "image_fade": "none",
+        "image_fade_mobile": "bottom",
+        "image_background": "none",
+        "image_mobile_shape": "21:9",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "regular",
+        "image_shape": "21:9",
+        "custom_background": "#0e0e0e"
+      }
+    },
+    "text_media_15": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": true,
+        "heading": "reciever",
+        "body": "<p>For the M-001, we wanted to take a different approach to the wireless receiver.</p><p>The M-001 Receiver features a battery charging port, a 2.4ghz antenna, and quick settings for reliable adjustment of DPI and Polling rate.</p>",
+        "image": "shopify://shop_images/wh-camp-a48d6247.png",
+        "image_mobile": "shopify://shop_images/wh-camp-14838744.png",
+        "image_fade": "none",
+        "image_fade_mobile": "bottom",
+        "image_background": "none",
+        "image_mobile_shape": "21:9",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "regular",
+        "image_shape": "21:9",
+        "custom_background": "#0e0e0e"
+      }
+    },
+    "text_16": {
+      "type": "wh-text",
+      "settings": {
+        "columns": "1",
+        "show_heading": true,
+        "heading": "software",
+        "body": "<p>The M-001 features no downloadable software, instead using the WALLHACK Terminal to enable fine control of the M-001 internal settings.<br><br>Here you can adjust motion sync, the sleep state timer, as well as custom values for DPI and Polling rate to tailor the M-001 to your exact playstyle.</p>",
+        "body_1": "<p>The K-001 is our first keyboard, built for competitive gaming and made to last. Every part is chosen for how it performs and how it holds up.</p>",
+        "body_2": "<p>The housing of the K-001 is made from CNC machined 6063 aluminium, that has been bead blasted and anodized for a smooth and durable finish.</p>",
+        "color_scheme": "dark",
+        "custom_background": "#0e0e0e"
+      }
+    },
+    "content_frame_17": {
+      "type": "wh-content-frame",
+      "settings": {
+        "orientation": "landscape",
+        "image": "",
+        "image_mobile": "",
+        "background_gradient": true,
+        "color_scheme": "dark",
+        "custom_background": "#0e0e0e"
+      }
+    },
+    "cover_18": {
+      "type": "wh-cover",
+      "settings": {
+        "heading": "Safe from prying Paws",
+        "subheading": "The K-001 ships in a rugged and protective carry case that you can use to transport the K-001 as well as all the included accessories.",
+        "show_subheading": true,
+        "subtitle_position": "top",
+        "image": "shopify://shop_images/wh-camp-a50f8d38.png",
+        "image_mobile": "shopify://shop_images/wh-camp-d222ec77.png",
+        "image_fade": "none",
+        "image_fade_mobile": "none",
+        "image_background": "none",
+        "image_mobile_shape": "4:5",
+        "image_fit": "fill",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "image_shape": "4:3",
+        "custom_background": "#0e0e0e",
+        "custom_foreground": "#0e0e0e"
+      }
+    },
+    "image_19": {
+      "type": "wh-image",
+      "settings": {
+        "image": "shopify://shop_images/wh-camp-0b63d38d.png",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "none",
+        "image_mobile_shape": "",
+        "image_fit": "fill",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "image_shape": "2:1",
+        "custom_background": "#0e0e0e"
+      }
+    }
+  },
+  "order": [
+    "top_bar_1",
+    "product_header_2",
+    "product_bar_3",
+    "drawing_callouts_4",
+    "drawing_callouts_5",
+    "specs_contents_6",
+    "image_7",
+    "intro_usps_8",
+    "text_media_9",
+    "text_media_10",
+    "text_media_11",
+    "text_media_12",
+    "text_media_13",
+    "text_media_14",
+    "text_media_15",
+    "text_16",
+    "content_frame_17",
+    "cover_18",
+    "image_19"
+  ]
+}

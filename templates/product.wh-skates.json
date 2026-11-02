@@ -1,0 +1,455 @@
+{
+  "sections": {
+    "top_bar_1": {
+      "type": "wh-top-bar",
+      "settings": {
+        "breadcrumbs": "products / skates",
+        "color_scheme": "light"
+      }
+    },
+    "product_header_2": {
+      "type": "wh-product-header",
+      "settings": {
+        "title": "Skates",
+        "description": "<p>Wallhack Mouse Skates are designed to provide unparalleled speed, applicable within seconds to most gaming mice to maximise gameplay performance. Flick, swipe and track your opponents with ease.</p>",
+        "show_reviews": true,
+        "review_count": "(125)",
+        "reviews_link": "see all reviews",
+        "color_scheme": "light"
+      },
+      "blocks": {
+        "photo_1": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/wh-pdp-m001-1.png",
+            "shape": "1:1"
+          }
+        },
+        "photo_2": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/wh-pdp-m001-2.png",
+            "shape": "2:1"
+          }
+        },
+        "photo_3": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/wh-pdp-m001-3.png",
+            "shape": "1:1"
+          }
+        }
+      },
+      "block_order": [
+        "photo_1",
+        "photo_2",
+        "photo_3"
+      ]
+    },
+    "product_bar_3": {
+      "type": "wh-product-bar",
+      "settings": {
+        "title": "Skates",
+        "color_scheme": "light"
+      }
+    },
+    "intro_usps_4": {
+      "type": "wh-intro-usps",
+      "settings": {
+        "heading": "Designed for Glass",
+        "body": "<p>Wallhack Mouse Skates are designed to provide unparalleled speed, applicable within seconds to most gaming mice to maximise gameplay performance. Flick, swipe and track your opponents with ease.</p><p>Available in different materials and shapes, pick your preferred combination of glide speed, or  durability.</p>",
+        "show_cta": true,
+        "cta_label": "see all skates",
+        "color_scheme": "light"
+      },
+      "blocks": {},
+      "block_order": []
+    },
+    "comparison_timeline_5": {
+      "type": "wh-comparison-timeline",
+      "settings": {
+        "show_scale": true,
+        "scale_start": "Speed",
+        "scale_end": "Control",
+        "color_scheme": "light",
+        "spacing": "regular"
+      },
+      "blocks": {
+        "variant_card_1": {
+          "type": "wh-variant-card",
+          "settings": {
+            "name": "PTFE DOTS",
+            "icon": "shopify://shop_images/wh-drawing-dot-skates-v2.svg"
+          },
+          "blocks": {
+            "variant_attribute_1": {
+              "type": "wh-variant-attribute",
+              "settings": {
+                "label": "Glide",
+                "value": "Speed"
+              }
+            },
+            "variant_attribute_2": {
+              "type": "wh-variant-attribute",
+              "settings": {
+                "label": "Sound",
+                "value": "Neutral or Silent"
+              }
+            },
+            "variant_attribute_3": {
+              "type": "wh-variant-attribute",
+              "settings": {
+                "label": "Quantity",
+                "value": "40 Pcs"
+              }
+            }
+          },
+          "block_order": [
+            "variant_attribute_1",
+            "variant_attribute_2",
+            "variant_attribute_3"
+          ]
+        },
+        "variant_card_2": {
+          "type": "wh-variant-card",
+          "settings": {
+            "name": "PTFE Pills",
+            "icon": "shopify://shop_images/wh-drawing-pill-skates-v2.svg"
+          },
+          "blocks": {
+            "variant_attribute_1": {
+              "type": "wh-variant-attribute",
+              "settings": {
+                "label": "Glide",
+                "value": "Speed"
+              }
+            },
+            "variant_attribute_2": {
+              "type": "wh-variant-attribute",
+              "settings": {
+                "label": "Sound",
+                "value": "Neutral"
+              }
+            },
+            "variant_attribute_3": {
+              "type": "wh-variant-attribute",
+              "settings": {
+                "label": "Quantity",
+                "value": "24 Pcs"
+              }
+            }
+          },
+          "block_order": [
+            "variant_attribute_1",
+            "variant_attribute_2",
+            "variant_attribute_3"
+          ]
+        },
+        "variant_card_3": {
+          "type": "wh-variant-card",
+          "settings": {
+            "name": "UHMW DOTS",
+            "icon": "shopify://shop_images/wh-drawing-dot-skates-v2.svg"
+          },
+          "blocks": {
+            "variant_attribute_1": {
+              "type": "wh-variant-attribute",
+              "settings": {
+                "label": "Glide",
+                "value": "Control"
+              }
+            },
+            "variant_attribute_2": {
+              "type": "wh-variant-attribute",
+              "settings": {
+                "label": "Sound",
+                "value": "Neutral or Silent"
+              }
+            },
+            "variant_attribute_3": {
+              "type": "wh-variant-attribute",
+              "settings": {
+                "label": "Quantity",
+                "value": "40 Pcs"
+              }
+            }
+          },
+          "block_order": [
+            "variant_attribute_1",
+            "variant_attribute_2",
+            "variant_attribute_3"
+          ]
+        },
+        "variant_card_4": {
+          "type": "wh-variant-card",
+          "settings": {
+            "name": "UHMW Pills",
+            "icon": "shopify://shop_images/wh-drawing-pill-skates-v2.svg"
+          },
+          "blocks": {
+            "variant_attribute_1": {
+              "type": "wh-variant-attribute",
+              "settings": {
+                "label": "Glide",
+                "value": "Control"
+              }
+            },
+            "variant_attribute_2": {
+              "type": "wh-variant-attribute",
+              "settings": {
+                "label": "Sound",
+                "value": "Neutral"
+              }
+            },
+            "variant_attribute_3": {
+              "type": "wh-variant-attribute",
+              "settings": {
+                "label": "Quantity",
+                "value": "24 Pcs"
+              }
+            }
+          },
+          "block_order": [
+            "variant_attribute_1",
+            "variant_attribute_2",
+            "variant_attribute_3"
+          ]
+        }
+      },
+      "block_order": [
+        "variant_card_1",
+        "variant_card_2",
+        "variant_card_3",
+        "variant_card_4"
+      ]
+    },
+    "faq_6": {
+      "type": "wh-faq",
+      "settings": {
+        "color_scheme": "light"
+      },
+      "blocks": {
+        "faq_item_1": {
+          "type": "wh-faq-item",
+          "settings": {
+            "question": "Why would I use mouse skates?",
+            "answer": "<p>Skates are the only part of your mouse that touches the pad, so they decide how it feels to move. Stock feet wear down and can't be adjusted. The difference is biggest on glass and other hard pads.</p>"
+          }
+        },
+        "faq_item_2": {
+          "type": "wh-faq-item",
+          "settings": {
+            "question": "What mouse can I use mouse skates with?",
+            "answer": "<p>Almost any. Our skates aren't cut to a specific model. They go where your existing feet sit and flex to whatever base layout your mouse has. A dot set contains 40 pieces and a pill set 24, so there's enough for more than one mouse, or to try a few layouts before settling on one. Remove the stock feet first. The adhesive comes off clean, so nothing you try leaves a mark.</p>"
+          }
+        },
+        "faq_item_3": {
+          "type": "wh-faq-item",
+          "settings": {
+            "question": "How often should I replace my skates?",
+            "answer": "<p>There's no set interval. It depends on your pad, how hard you press, and how much you play. Watch for the glide slowing down, or the mouse starting to wobble instead of sitting flat. Both mean the contact surface has worn unevenly. Swap them then. The old ones lift off residue-free, so there's nothing to clean up</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_1",
+        "faq_item_2",
+        "faq_item_3"
+      ]
+    },
+    "compare_7": {
+      "type": "wh-compare",
+      "settings": {
+        "heading": "choose your friction",
+        "body": "<p>The choice between PTFE and UHMWPE mouse skates ultimately comes down to personal preference. If ultra-low friction and a buttery smooth glide are top priorities, PTFE might be the preferred option. On the other hand, if durability and low-friction performance are crucial, UHMWPE mouse skates are a solid choice.</p>",
+        "color_scheme": "light",
+        "spacing": "large"
+      },
+      "blocks": {
+        "compare_item_1": {
+          "type": "wh-compare-item",
+          "settings": {
+            "name": "PTFE",
+            "show_tags": true,
+            "suitable_label": "",
+            "description": "<p>Polytetrafluoroethylene, commonly known as PTFE, is a synthetic fluoropolymer of tetrafluoroethylene. PTFE is well-known for its low friction properties, making it an ideal material for mouse skates. The smooth surface of PTFE allows the mouse to glide effortlessly across the mouse pad, reducing friction and providing a more responsive feel.</p>",
+            "image": "shopify://shop_images/wh-camp-768049e7.png",
+            "image_fit": "fit",
+            "image_background": "solid",
+            "image_shape": "3:2"
+          },
+          "blocks": {
+            "compare_tag_1": {
+              "type": "wh-compare-tag",
+              "settings": {
+                "label": "fast"
+              }
+            }
+          },
+          "block_order": [
+            "compare_tag_1"
+          ]
+        },
+        "compare_item_2": {
+          "type": "wh-compare-item",
+          "settings": {
+            "name": "UHMW-PE",
+            "show_tags": true,
+            "suitable_label": "",
+            "description": "<p>UHMW-PE mouse skates provide a controlled glide experience along with a high level of robustness. The material’s high molecular weight contributes to its excellent wear resistance, ensuring that the skates maintain their smooth glide even after prolonged use. Gamers who prefer a combination of control and durability often opt for UHMW-PE mouse skates.</p>",
+            "image": "shopify://shop_images/wh-camp-3d023b85.png",
+            "image_fit": "fit",
+            "image_background": "solid",
+            "image_shape": "3:2"
+          },
+          "blocks": {
+            "compare_tag_1": {
+              "type": "wh-compare-tag",
+              "settings": {
+                "label": "durable"
+              }
+            },
+            "compare_tag_2": {
+              "type": "wh-compare-tag",
+              "settings": {
+                "label": "balanced"
+              }
+            }
+          },
+          "block_order": [
+            "compare_tag_1",
+            "compare_tag_2"
+          ]
+        }
+      },
+      "block_order": [
+        "compare_item_1",
+        "compare_item_2"
+      ]
+    },
+    "text_media_8": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": true,
+        "heading": "silent skates",
+        "body": "<p>WALLHACK PTFE skates are available in a silent variant.</p><p>Silent Skates are the standard skates with a 0.15mm PU foam layer between the skate and your mouse. Most of the noise a mouse makes on glass isn't the skate sliding, it's vibration travelling up through the shell and out as sound. The foam sits in that path and absorbs it before it gets there.</p>",
+        "image": "shopify://shop_images/wh-camp-696576ba.png",
+        "image_mobile": "",
+        "image_fade": "both",
+        "image_fade_mobile": "same",
+        "image_background": "none",
+        "image_mobile_shape": "",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "light",
+        "spacing": "large",
+        "image_shape": "16:9"
+      }
+    },
+    "compare_9": {
+      "type": "wh-compare",
+      "settings": {
+        "heading": "shape",
+        "body": "<p>Go Dot for a smaller footprint and the lowest possible contact area, or Pill for a larger pad that spreads pressure and adds a touch more control underhand.</p>",
+        "color_scheme": "light",
+        "spacing": "large"
+      },
+      "blocks": {
+        "compare_item_1": {
+          "type": "wh-compare-item",
+          "settings": {
+            "name": "dots",
+            "show_tags": true,
+            "suitable_label": "",
+            "description": "<p>Dots keep the contact patch as small as it goes. Each one is 7mm across, so there's less material touching the pad and less friction to work against. They're also the adjustable shape: you tune the feel dot by dot, adding one for more control or pulling one for more speed. A 2x2 or 3x3 layout is the usual starting point. Pick Dots if you want the fastest glide and the freedom to dial it in.</p>",
+            "image": "shopify://shop_images/wh-camp-c7ba63f5.png",
+            "image_fit": "fit",
+            "image_background": "solid",
+            "image_shape": "3:2"
+          },
+          "blocks": {
+            "compare_tag_1": {
+              "type": "wh-compare-tag",
+              "settings": {
+                "label": "fast"
+              }
+            }
+          },
+          "block_order": [
+            "compare_tag_1"
+          ]
+        },
+        "compare_item_2": {
+          "type": "wh-compare-item",
+          "settings": {
+            "name": "pills",
+            "show_tags": true,
+            "suitable_label": "",
+            "description": "<p>A Pill is 14x7mm, roughly double a Dot, so it takes fewer of them to reach the same level of control. The larger footprint spreads the load. Your mouse sits flatter, sinks less into softer pads, and the skates wear down more slowly under pressure. Long swipes stay planted and predictable. Pick Pills if you want stability and longevity over outright top speed, or you'd rather fit them once and forget about them.</p>",
+            "image": "shopify://shop_images/wh-camp-17e949f3.png",
+            "image_fit": "fit",
+            "image_background": "solid",
+            "image_shape": "3:2"
+          },
+          "blocks": {
+            "compare_tag_1": {
+              "type": "wh-compare-tag",
+              "settings": {
+                "label": "durable"
+              }
+            },
+            "compare_tag_2": {
+              "type": "wh-compare-tag",
+              "settings": {
+                "label": "balanced"
+              }
+            }
+          },
+          "block_order": [
+            "compare_tag_1",
+            "compare_tag_2"
+          ]
+        }
+      },
+      "block_order": [
+        "compare_item_1",
+        "compare_item_2"
+      ]
+    },
+    "text_media_10": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": true,
+        "heading": "easily applied within seconds",
+        "body": "<p>Peel, wipe, stick. Fits most mouse shapes and comes off residue-free.</p>",
+        "image": "shopify://shop_images/wh-camp-50f79ce5.png",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "none",
+        "image_mobile_shape": "",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "light",
+        "spacing": "large",
+        "image_shape": "16:9"
+      }
+    }
+  },
+  "order": [
+    "top_bar_1",
+    "product_header_2",
+    "product_bar_3",
+    "intro_usps_4",
+    "comparison_timeline_5",
+    "faq_6",
+    "compare_7",
+    "text_media_8",
+    "compare_9",
+    "text_media_10"
+  ]
+}

@@ -1,0 +1,27 @@
+<div class="wh-attr" data-wh-block="{{ block.id }}" {{ block.shopify_attributes }}><span>{{ block.settings.label | escape }}</span><span>{{ block.settings.value | escape }}</span></div>
+
+
+{% schema %}
+{
+  "name": "Attribute",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label",
+      "default": "Glide:"
+    },
+    {
+      "type": "text",
+      "id": "value",
+      "label": "Value",
+      "default": "Speed"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Attribute"
+    }
+  ]
+}
+{% endschema %}

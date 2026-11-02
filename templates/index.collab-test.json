@@ -1,0 +1,95 @@
+{
+  "sections": {
+    "faq_1": {
+      "type": "wh-faq",
+      "settings": {
+        "color_scheme": "light",
+        "custom_background": "#1b2a4a",
+        "custom_foreground": "#f2c14e"
+      },
+      "blocks": {
+        "faq_item_1": {
+          "type": "wh-faq-item",
+          "settings": {
+            "question": "Why would I use a glass mousepad?",
+            "answer": "<p>Glass mousepads offer truly unparalleled surface experiences and performance, whether you prefer speed or control. While maintaining their quickness for an incredibly long time. Since it’s hardened glass, the consistency of the surface will be unmatched, making it stand the test of time with significantly longer lifespan than cloth.</p>"
+          }
+        },
+        "faq_item_2": {
+          "type": "wh-faq-item",
+          "settings": {
+            "question": "Is the surface coated?",
+            "answer": "<p>No. The texture is etched into the glass itself, not applied on top. Coatings wear through where you use them most, which is how a pad ends up feeling different in the middle than at the edges. Uncoated glass doesn't do that. What it feels like out of the box is what it feels like in two years</p>"
+          }
+        },
+        "faq_item_3": {
+          "type": "wh-faq-item",
+          "settings": {
+            "question": "Are glass mousepads fragile?",
+            "answer": "<p>Our mousepads are built using tempered glass, making them extremely resistant to cracks, chips and long-term wear. Even though we’ve made the glass thinner for ergonomics, it's stil made of tough, tempered glass. The surface is also stain-proof and immune to issues like edge fraying or humidity damage.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_1",
+        "faq_item_2",
+        "faq_item_3"
+      ]
+    },
+    "intro_usps_2": {
+      "type": "wh-intro-usps",
+      "settings": {
+        "heading": "a legacy, sharpened",
+        "body": "<p>Five years after the original skypad redefined the glass mousepad, the 005 generation arrives. Two surfaces, engineered against each other. One tuned for speed. One tuned for control. built on the legacy of precision and finish that made wallhack the most respected glass pad on the market.</p>",
+        "show_cta": true,
+        "cta_label": "Choose your pad",
+        "color_scheme": "light",
+        "custom_background": "#f2c14e",
+        "custom_foreground": "#1b2a4a"
+      },
+      "blocks": {
+        "usp_1": {
+          "type": "wh-usp",
+          "settings": {
+            "icon": "shopify://shop_images/wh-usp-3mm-v2.svg"
+          }
+        },
+        "usp_2": {
+          "type": "wh-usp",
+          "settings": {
+            "icon": "shopify://shop_images/wh-usp-random-v2.svg"
+          }
+        },
+        "usp_3": {
+          "type": "wh-usp",
+          "settings": {
+            "icon": "shopify://shop_images/wh-usp-cnd-edge-v2.svg"
+          }
+        },
+        "usp_4": {
+          "type": "wh-usp",
+          "settings": {
+            "icon": "shopify://shop_images/wh-usp-laser-etched-v2.svg"
+          }
+        },
+        "usp_5": {
+          "type": "wh-usp",
+          "settings": {
+            "icon": "shopify://shop_images/wh-usp-tempered-glass-v2.svg"
+          }
+        }
+      },
+      "block_order": [
+        "usp_1",
+        "usp_2",
+        "usp_3",
+        "usp_4",
+        "usp_5"
+      ]
+    }
+  },
+  "order": [
+    "faq_1",
+    "intro_usps_2"
+  ]
+}

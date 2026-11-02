@@ -1,0 +1,53 @@
+{%- comment -%}
+  Floating buy button (Figma: Menu Mobile/Product Bar) — product name + Add to Cart with the price, over the page content:
+  lower right corner on wide screens, across the bottom on phones. Name, price and the variant come from the Shopify product.
+  assets/wh-shop.js moves it out of the page window so it can stay fixed to the screen.
+{%- endcomment -%}
+{%- liquid
+  assign s = section.settings
+  assign title = s.title | default: product.title
+  assign current = product.selected_or_first_available_variant
+-%}
+{%- if product -%}
+<div class="wh-pbar wh-page wh-scheme-{{ s.color_scheme }}" data-wh-pbar>
+  <form class="wh-glass wh-glass--outline wh-pbar__bar" action="{{ routes.cart_add_url }}" method="post" data-wh-product-form>
+    <input type="hidden" name="id" value="{{ current.id }}">
+    <span class="wh-glass-product-name wh-pbar__name">{{ title | escape }}</span>
+    <button class="wh-shopbtn wh-shopbtn--filled wh-pbar__add wh-glass-button-subheading" type="submit" {% unless current.available %}disabled{% endunless %} data-wh-add>
+      <span data-wh-add-label data-label="{{ s.add_label | escape }}">{% if current.available %}{{ s.add_label | escape }}{% else %}Sold out{% endif %}</span>
+      <span>{{ current.price | money }}</span>
+    </button>
+  </form>
+</div>
+<script src="{{ 'wh-shop.js' | asset_url }}" defer></script>
+{%- else -%}
+  <p class="wh-p2" style="padding: 16px;">WH Product Bar shows on product pages.</p>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "WH Product Bar",
+  "class": "wh-product-bar-section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Floating buy button: the product name and Add to Cart with the price. It floats over the page in the lower right corner (across the bottom on phones). Name and price come from the product."
+    },
+    { "type": "text", "id": "title", "label": "Name", "info": "Empty = the product title" },
+    { "type": "text", "id": "add_label", "label": "Button text", "default": "Add to Cart" },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Colour mode",
+      "default": "light",
+      "options": [
+        { "value": "light", "label": "Light" },
+        { "value": "dark", "label": "Dark" }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "WH Product Bar" }
+  ]
+}
+{% endschema %}

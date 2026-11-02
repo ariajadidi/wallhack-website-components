@@ -1,0 +1,5 @@
+{%- comment -%} Shared markup: used by blocks/wh-contents-item.liquid and sections/wh-specs-contents.liquid. Param: block {%- endcomment -%}
+<div class="wh-contents-item" data-wh-block="{{ block.id }}" {{ block.shopify_attributes }}>
+  {% render 'wh-icon', image: block.settings.icon %}
+  <p class="wh-h4">{{ block.settings.caption | escape }}</p>
+</div>

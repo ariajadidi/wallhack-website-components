@@ -1,0 +1,25 @@
+{% render 'wh-contents-item', block: block %}
+
+{% schema %}
+{
+  "name": "Contents item",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "icon",
+      "label": "Icon (SVG from the Contents library)"
+    },
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "Caption",
+      "default": "1x carry case"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Contents item"
+    }
+  ]
+}
+{% endschema %}

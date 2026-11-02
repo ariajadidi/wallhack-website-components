@@ -1,0 +1,1376 @@
+{
+ "Primitives": {
+  "modes": [
+   "Value"
+  ],
+  "vars": [
+   {
+    "name": "color/wh-black",
+    "css": "--wh-black",
+    "type": "COLOR",
+    "vals": [
+     "#0e0e0e"
+    ]
+   },
+   {
+    "name": "color/wh-black-75",
+    "css": "--wh-black-75",
+    "type": "COLOR",
+    "vals": [
+     "rgb(14 14 14 / 0.75)"
+    ]
+   },
+   {
+    "name": "color/wh-white",
+    "css": "--wh-white",
+    "type": "COLOR",
+    "vals": [
+     "#f9f9f9"
+    ]
+   },
+   {
+    "name": "color/wh-white-75",
+    "css": "--wh-white-75",
+    "type": "COLOR",
+    "vals": [
+     "rgb(249 249 249 / 0.75)"
+    ]
+   },
+   {
+    "name": "color/grey-300",
+    "css": "--wh-grey-300",
+    "type": "COLOR",
+    "vals": [
+     "#c3c3c3"
+    ]
+   },
+   {
+    "name": "color/grey-100",
+    "css": "--wh-grey-100",
+    "type": "COLOR",
+    "vals": [
+     "#e6e6e6"
+    ]
+   },
+   {
+    "name": "space/8",
+    "css": "--wh-space-8",
+    "type": "FLOAT",
+    "vals": [
+     8
+    ]
+   },
+   {
+    "name": "space/12",
+    "css": "--wh-space-12",
+    "type": "FLOAT",
+    "vals": [
+     12
+    ]
+   },
+   {
+    "name": "space/16",
+    "css": "--wh-space-16",
+    "type": "FLOAT",
+    "vals": [
+     16
+    ]
+   },
+   {
+    "name": "space/32",
+    "css": "--wh-space-32",
+    "type": "FLOAT",
+    "vals": [
+     32
+    ]
+   },
+   {
+    "name": "space/64",
+    "css": "--wh-space-64",
+    "type": "FLOAT",
+    "vals": [
+     64
+    ]
+   },
+   {
+    "name": "font/heading",
+    "css": "--wh-font-heading",
+    "type": "STRING",
+    "vals": [
+     "NB Architekt"
+    ]
+   },
+   {
+    "name": "font/body",
+    "css": "--wh-font-body",
+    "type": "STRING",
+    "vals": [
+     "Inter"
+    ]
+   },
+   {
+    "name": "color/campaign-black",
+    "css": "--wh-campaign-black",
+    "type": "COLOR",
+    "vals": [
+     "#090909"
+    ]
+   },
+   {
+    "name": "space/24",
+    "css": "--wh-space-24",
+    "type": "FLOAT",
+    "vals": [
+     24
+    ]
+   },
+   {
+    "name": "radius/2",
+    "css": "--wh-radius-2",
+    "type": "FLOAT",
+    "vals": [
+     2
+    ]
+   },
+   {
+    "name": "radius/8",
+    "css": "--wh-radius-8",
+    "type": "FLOAT",
+    "vals": [
+     8
+    ]
+   },
+   {
+    "name": "space/128",
+    "css": "--wh-space-128",
+    "type": "FLOAT",
+    "vals": [
+     128
+    ]
+   },
+   {
+    "name": "space/4",
+    "css": "--wh-space-4",
+    "type": "FLOAT",
+    "vals": [
+     4
+    ]
+   }
+  ]
+ },
+ "Color": {
+  "modes": [
+   "Light",
+   "Dark"
+  ],
+  "vars": [
+   {
+    "name": "color/background",
+    "css": "--wh-color-background",
+    "type": "COLOR",
+    "vals": [
+     {
+      "ref": "--wh-white"
+     },
+     {
+      "ref": "--wh-campaign-black"
+     }
+    ]
+   },
+   {
+    "name": "color/foreground",
+    "css": "--wh-color-foreground",
+    "type": "COLOR",
+    "vals": [
+     {
+      "ref": "--wh-black"
+     },
+     {
+      "ref": "--wh-grey-300"
+     }
+    ]
+   },
+   {
+    "name": "color/foreground-muted",
+    "css": "--wh-color-foreground-muted",
+    "type": "COLOR",
+    "vals": [
+     {
+      "ref": "--wh-black-75"
+     },
+     {
+      "ref": "--wh-white-75"
+     }
+    ]
+   },
+   {
+    "name": "color/border",
+    "css": "--wh-color-border",
+    "type": "COLOR",
+    "vals": [
+     {
+      "ref": "--wh-grey-300"
+     },
+     {
+      "ref": "--wh-grey-300"
+     }
+    ]
+   },
+   {
+    "name": "color/image-background",
+    "css": "--wh-color-image-background",
+    "type": "COLOR",
+    "vals": [
+     {
+      "ref": "--wh-grey-100"
+     },
+     {
+      "ref": "--wh-black"
+     }
+    ]
+   }
+  ]
+ },
+ "Responsive": {
+  "modes": [
+   "Desktop",
+   "Mobile"
+  ],
+  "vars": [
+   {
+    "name": "layout/window-width",
+    "css": "--wh-layout-window-width",
+    "type": "FLOAT",
+    "vals": [
+     1464,
+     390
+    ]
+   },
+   {
+    "name": "layout/side-padding",
+    "css": "--wh-layout-side-padding",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-64"
+     },
+     {
+      "ref": "--wh-space-16"
+     }
+    ]
+   },
+   {
+    "name": "layout/text-max-width",
+    "css": "--wh-layout-text-max-width",
+    "type": "FLOAT",
+    "vals": [
+     900,
+     700
+    ]
+   },
+   {
+    "name": "font-size/display",
+    "css": "--wh-font-size-display",
+    "type": "FLOAT",
+    "vals": [
+     57,
+     28
+    ]
+   },
+   {
+    "name": "font-size/subtitle",
+    "css": "--wh-font-size-subtitle",
+    "type": "FLOAT",
+    "vals": [
+     24,
+     16
+    ]
+   },
+   {
+    "name": "font-size/body",
+    "css": "--wh-font-size-body",
+    "type": "FLOAT",
+    "vals": [
+     18,
+     12
+    ]
+   },
+   {
+    "name": "font-size/small",
+    "css": "--wh-font-size-small",
+    "type": "FLOAT",
+    "vals": [
+     13.5,
+     12
+    ]
+   },
+   {
+    "name": "font-size/title",
+    "css": "--wh-font-size-title",
+    "type": "FLOAT",
+    "vals": [
+     32,
+     21
+    ]
+   },
+   {
+    "name": "layout/content-media-gap",
+    "css": "--wh-layout-content-media-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-64"
+     },
+     {
+      "ref": "--wh-space-32"
+     }
+    ]
+   },
+   {
+    "name": "component/button-padding-y",
+    "css": "--wh-component-button-padding-y",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-16"
+     }
+    ]
+   },
+   {
+    "name": "component/button-padding-x",
+    "css": "--wh-component-button-padding-x",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-16"
+     }
+    ]
+   },
+   {
+    "name": "component/cover-padding-top",
+    "css": "--wh-component-cover-padding-top",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-64"
+     },
+     {
+      "ref": "--wh-space-8"
+     }
+    ]
+   },
+   {
+    "name": "component/cover-gap",
+    "css": "--wh-component-cover-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-16"
+     },
+     0
+    ]
+   },
+   {
+    "name": "component/usp-icon-height",
+    "css": "--wh-component-usp-icon-height",
+    "type": "FLOAT",
+    "vals": [
+     114,
+     62
+    ]
+   },
+   {
+    "name": "component/usp-gap",
+    "css": "--wh-component-usp-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-16"
+     }
+    ]
+   },
+   {
+    "name": "component/callout-height",
+    "css": "--wh-component-callout-height",
+    "type": "FLOAT",
+    "vals": [
+     160,
+     0
+    ]
+   },
+   {
+    "name": "component/spec-row-height",
+    "css": "--wh-component-spec-row-height",
+    "type": "FLOAT",
+    "vals": [
+     128,
+     65
+    ]
+   },
+   {
+    "name": "component/spec-cell-padding-x",
+    "css": "--wh-component-spec-cell-padding-x",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-12"
+     }
+    ]
+   },
+   {
+    "name": "component/spec-cell-padding-y",
+    "css": "--wh-component-spec-cell-padding-y",
+    "type": "FLOAT",
+    "vals": [
+     0,
+     {
+      "ref": "--wh-space-12"
+     }
+    ]
+   },
+   {
+    "name": "component/spec-label-width",
+    "css": "--wh-component-spec-label-width",
+    "type": "FLOAT",
+    "vals": [
+     280,
+     179
+    ]
+   },
+   {
+    "name": "component/compare-item-gap",
+    "css": "--wh-component-compare-item-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-16"
+     }
+    ]
+   },
+   {
+    "name": "layout/column-min-width",
+    "css": "--wh-layout-column-min-width",
+    "type": "FLOAT",
+    "vals": [
+     200,
+     200
+    ]
+   },
+   {
+    "name": "layout/block-padding-y",
+    "css": "--wh-layout-block-padding-y",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-64"
+     },
+     {
+      "ref": "--wh-space-32"
+     }
+    ]
+   },
+   {
+    "name": "layout/block-padding-y-large",
+    "css": "--wh-layout-block-padding-y-large",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-128"
+     },
+     {
+      "ref": "--wh-space-64"
+     }
+    ]
+   },
+   {
+    "name": "component/drawing-inset-x",
+    "css": "--wh-component-drawing-inset-x",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-64"
+     },
+     0
+    ]
+   },
+   {
+    "name": "component/drawing-inset-y",
+    "css": "--wh-component-drawing-inset-y",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-64"
+     },
+     0
+    ]
+   },
+   {
+    "name": "component/button-small-padding-y",
+    "css": "--wh-component-button-small-padding-y",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-12"
+     },
+     {
+      "ref": "--wh-space-8"
+     }
+    ]
+   },
+   {
+    "name": "component/button-small-padding-x",
+    "css": "--wh-component-button-small-padding-x",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-12"
+     }
+    ]
+   },
+   {
+    "name": "component/cover-bottom-padding-y",
+    "css": "--wh-component-cover-bottom-padding-y",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-32"
+     }
+    ]
+   },
+   {
+    "name": "component/cover-bottom-padding-x",
+    "css": "--wh-component-cover-bottom-padding-x",
+    "type": "FLOAT",
+    "vals": [
+     0,
+     {
+      "ref": "--wh-space-16"
+     }
+    ]
+   },
+   {
+    "name": "component/size-cell-height",
+    "css": "--wh-component-size-cell-height",
+    "type": "FLOAT",
+    "vals": [
+     100,
+     75
+    ]
+   },
+   {
+    "name": "component/variant-card-min-width",
+    "css": "--wh-component-variant-card-min-width",
+    "type": "FLOAT",
+    "vals": [
+     150,
+     180
+    ]
+   },
+   {
+    "name": "component/contents/item-width",
+    "css": "--wh-component-contents-item-width",
+    "type": "FLOAT",
+    "vals": [
+     140,
+     100
+    ]
+   },
+   {
+    "name": "component/contents/padding-x",
+    "css": "--wh-component-contents-padding-x",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-12"
+     }
+    ]
+   },
+   {
+    "name": "component/contents/padding-y",
+    "css": "--wh-component-contents-padding-y",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-64"
+     },
+     {
+      "ref": "--wh-space-16"
+     }
+    ]
+   },
+   {
+    "name": "component/contents/row-gap",
+    "css": "--wh-component-contents-row-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-64"
+     },
+     {
+      "ref": "--wh-space-12"
+     }
+    ]
+   },
+   {
+    "name": "component/compare-column-gap",
+    "css": "--wh-component-compare-column-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-16"
+     }
+    ]
+   },
+   {
+    "name": "component/compare-row-gap",
+    "css": "--wh-component-compare-row-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-32"
+     }
+    ]
+   },
+   {
+    "name": "component/compare-gap",
+    "css": "--wh-component-compare-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-64"
+     },
+     {
+      "ref": "--wh-space-64"
+     }
+    ]
+   },
+   {
+    "name": "component/compare-text-gap",
+    "css": "--wh-component-compare-text-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-32"
+     }
+    ]
+   },
+   {
+    "name": "component/cover/title-block-padding-bottom",
+    "css": "--wh-component-cover-title-block-padding-bottom",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-16"
+     },
+     {
+      "ref": "--wh-space-16"
+     }
+    ]
+   },
+   {
+    "name": "component/intro-usps/text-gap",
+    "css": "--wh-component-intro-usps-text-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-32"
+     }
+    ]
+   },
+   {
+    "name": "component/text/section-gap",
+    "css": "--wh-component-text-section-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-32"
+     }
+    ]
+   },
+   {
+    "name": "component/text/columns-gap",
+    "css": "--wh-component-text-columns-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-64"
+     },
+     {
+      "ref": "--wh-space-64"
+     }
+    ]
+   },
+   {
+    "name": "component/text/columns-row-gap",
+    "css": "--wh-component-text-columns-row-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-32"
+     }
+    ]
+   },
+   {
+    "name": "component/text-media/content-gap",
+    "css": "--wh-component-text-media-content-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-32"
+     }
+    ]
+   },
+   {
+    "name": "component/split/text-gap",
+    "css": "--wh-component-split-text-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-32"
+     }
+    ]
+   },
+   {
+    "name": "component/cards/section-gap",
+    "css": "--wh-component-cards-section-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-32"
+     }
+    ]
+   },
+   {
+    "name": "component/cards/text-gap",
+    "css": "--wh-component-cards-text-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-32"
+     }
+    ]
+   },
+   {
+    "name": "component/cards/intro-gap",
+    "css": "--wh-component-cards-intro-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-64"
+     },
+     {
+      "ref": "--wh-space-64"
+     }
+    ]
+   },
+   {
+    "name": "component/cards/intro-row-gap",
+    "css": "--wh-component-cards-intro-row-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-32"
+     }
+    ]
+   },
+   {
+    "name": "component/cards/cards-gap",
+    "css": "--wh-component-cards-cards-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-16"
+     },
+     {
+      "ref": "--wh-space-16"
+     }
+    ]
+   },
+   {
+    "name": "component/cards/cards-row-gap",
+    "css": "--wh-component-cards-cards-row-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-32"
+     }
+    ]
+   },
+   {
+    "name": "component/variant-cards/section-gap",
+    "css": "--wh-component-variant-cards-section-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-32"
+     }
+    ]
+   },
+   {
+    "name": "component/variant-cards/scale-padding-x",
+    "css": "--wh-component-variant-cards-scale-padding-x",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-4"
+     },
+     {
+      "ref": "--wh-space-4"
+     }
+    ]
+   },
+   {
+    "name": "component/variant-cards/cards-gap",
+    "css": "--wh-component-variant-cards-cards-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-16"
+     },
+     {
+      "ref": "--wh-space-16"
+     }
+    ]
+   },
+   {
+    "name": "component/variant-cards/scale-gap",
+    "css": "--wh-component-variant-cards-scale-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-32"
+     }
+    ]
+   },
+   {
+    "name": "component/drawing-callouts/layout-gap",
+    "css": "--wh-component-drawing-callouts-layout-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-64"
+     },
+     {
+      "ref": "--wh-component-drawing-callouts-callouts-row-gap"
+     }
+    ]
+   },
+   {
+    "name": "component/size-table/cell-padding-x",
+    "css": "--wh-component-size-table-cell-padding-x",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-8"
+     },
+     {
+      "ref": "--wh-space-8"
+     }
+    ]
+   },
+   {
+    "name": "component/size-table/cell-padding-y",
+    "css": "--wh-component-size-table-cell-padding-y",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-8"
+     },
+     {
+      "ref": "--wh-space-8"
+     }
+    ]
+   },
+   {
+    "name": "component/faq/items-gap",
+    "css": "--wh-component-faq-items-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-32"
+     }
+    ]
+   },
+   {
+    "name": "component/faq/items-row-gap",
+    "css": "--wh-component-faq-items-row-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-32"
+     }
+    ]
+   },
+   {
+    "name": "component/faq-item/section-gap",
+    "css": "--wh-component-faq-item-section-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-24"
+     },
+     {
+      "ref": "--wh-space-24"
+     }
+    ]
+   },
+   {
+    "name": "component/compare-item/tags-gap",
+    "css": "--wh-component-compare-item-tags-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-12"
+     },
+     {
+      "ref": "--wh-space-12"
+     }
+    ]
+   },
+   {
+    "name": "component/compare-item/tags-row-gap",
+    "css": "--wh-component-compare-item-tags-row-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-12"
+     },
+     {
+      "ref": "--wh-space-12"
+     }
+    ]
+   },
+   {
+    "name": "component/compare-tag/section-padding-x",
+    "css": "--wh-component-compare-tag-section-padding-x",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-12"
+     },
+     {
+      "ref": "--wh-space-8"
+     }
+    ]
+   },
+   {
+    "name": "component/compare-tag/section-padding-y",
+    "css": "--wh-component-compare-tag-section-padding-y",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-8"
+     },
+     {
+      "ref": "--wh-space-4"
+     }
+    ]
+   },
+   {
+    "name": "component/card-item/section-gap",
+    "css": "--wh-component-card-item-section-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-32"
+     }
+    ]
+   },
+   {
+    "name": "component/variant-card/layout-above-mobile-padding-x",
+    "css": "--wh-component-variant-card-layout-above-mobile-padding-x",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-12"
+     },
+     {
+      "ref": "--wh-space-12"
+     }
+    ]
+   },
+   {
+    "name": "component/variant-card/layout-above-mobile-padding-y",
+    "css": "--wh-component-variant-card-layout-above-mobile-padding-y",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-16"
+     },
+     {
+      "ref": "--wh-space-16"
+     }
+    ]
+   },
+   {
+    "name": "component/variant-card/layout-above-mobile-gap",
+    "css": "--wh-component-variant-card-layout-above-mobile-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-4"
+     },
+     {
+      "ref": "--wh-space-4"
+     }
+    ]
+   },
+   {
+    "name": "component/variant-card/icon-area-padding-y",
+    "css": "--wh-component-variant-card-icon-area-padding-y",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-24"
+     },
+     {
+      "ref": "--wh-space-24"
+     }
+    ]
+   },
+   {
+    "name": "component/variant-card/info-gap",
+    "css": "--wh-component-variant-card-info-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-8"
+     },
+     {
+      "ref": "--wh-space-8"
+     }
+    ]
+   },
+   {
+    "name": "component/variant-card/name-row-padding-y",
+    "css": "--wh-component-variant-card-name-row-padding-y",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-12"
+     },
+     {
+      "ref": "--wh-space-12"
+     }
+    ]
+   },
+   {
+    "name": "component/variant-card/layout-padding-y",
+    "css": "--wh-component-variant-card-layout-padding-y",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-8"
+     },
+     {
+      "ref": "--wh-space-8"
+     }
+    ]
+   },
+   {
+    "name": "component/variant-card/icon-area-padding-y-2",
+    "css": "--wh-component-variant-card-icon-area-padding-y-2",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-4"
+     },
+     {
+      "ref": "--wh-space-4"
+     }
+    ]
+   },
+   {
+    "name": "component/variant-card/name-area-padding-x",
+    "css": "--wh-component-variant-card-name-area-padding-x",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-4"
+     },
+     {
+      "ref": "--wh-space-4"
+     }
+    ]
+   },
+   {
+    "name": "component/variant-card/name-area-padding-y",
+    "css": "--wh-component-variant-card-name-area-padding-y",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-4"
+     },
+     {
+      "ref": "--wh-space-4"
+     }
+    ]
+   },
+   {
+    "name": "component/contents/items-gap",
+    "css": "--wh-component-contents-items-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-64"
+     },
+     {
+      "ref": "--wh-space-64"
+     }
+    ]
+   },
+   {
+    "name": "component/callout/min-width",
+    "css": "--wh-component-callout-min-width",
+    "type": "FLOAT",
+    "vals": [
+     0,
+     358
+    ]
+   },
+   {
+    "name": "component/callout/padding-x",
+    "css": "--wh-component-callout-padding-x",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-16"
+     },
+     0
+    ]
+   },
+   {
+    "name": "component/callout/gap",
+    "css": "--wh-component-callout-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-12"
+     },
+     {
+      "ref": "--wh-space-12"
+     }
+    ]
+   },
+   {
+    "name": "component/drawing-callouts/callouts-row-gap",
+    "css": "--wh-component-drawing-callouts-callouts-row-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-16"
+     },
+     {
+      "ref": "--wh-space-12"
+     }
+    ]
+   },
+   {
+    "name": "component/drawing-callouts/callouts-gap",
+    "css": "--wh-component-drawing-callouts-callouts-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-16"
+     },
+     {
+      "ref": "--wh-space-16"
+     }
+    ]
+   },
+   {
+    "name": "component/callout/text-max-width",
+    "css": "--wh-component-callout-text-max-width",
+    "type": "FLOAT",
+    "vals": [
+     300,
+     358
+    ]
+   },
+   {
+    "name": "component/drawing-callouts/callouts-top-padding",
+    "css": "--wh-component-drawing-callouts-callouts-top-padding",
+    "type": "FLOAT",
+    "vals": [
+     0,
+     {
+      "ref": "--wh-space-24"
+     }
+    ]
+   },
+   {
+    "name": "component/contents/icon-height",
+    "css": "--wh-component-contents-icon-height",
+    "type": "FLOAT",
+    "vals": [
+     93,
+     60
+    ]
+   },
+   {
+    "name": "component/compare-item/content-gap",
+    "css": "--wh-component-compare-item-content-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-32"
+     },
+     {
+      "ref": "--wh-space-32"
+     }
+    ]
+   },
+   {
+    "name": "component/comparison-timeline/scale-mobile-gap",
+    "css": "--wh-component-comparison-timeline-scale-mobile-gap",
+    "type": "FLOAT",
+    "vals": [
+     {
+      "ref": "--wh-space-24"
+     },
+     {
+      "ref": "--wh-space-24"
+     }
+    ]
+   },
+   {
+    "name": "text/body-paragraph-spacing",
+    "css": "--wh-text-body-paragraph-spacing",
+    "type": "FLOAT",
+    "vals": [
+     27,
+     18
+    ]
+   },
+   {
+    "name": "text/small-paragraph-spacing",
+    "css": "--wh-text-small-paragraph-spacing",
+    "type": "FLOAT",
+    "vals": [
+     21.6,
+     19.2
+    ]
+   },
+   {
+    "name": "component/variant-card/attribute-height",
+    "css": "--wh-component-variant-card-attribute-height",
+    "type": "FLOAT",
+    "vals": [
+     43,
+     43
+    ]
+   },
+   {
+    "name": "component/variant-card-max-width",
+    "css": "--wh-component-variant-card-max-width",
+    "type": "FLOAT",
+    "vals": [
+     350,
+     220
+    ]
+   },
+   {
+    "name": "breakpoint/mobile",
+    "css": "@container (max-width: 749px)",
+    "type": "BOOLEAN",
+    "vals": [
+     false,
+     true
+    ]
+   },
+   {
+    "name": "breakpoint/above-mobile",
+    "css": "@container (min-width: 750px)",
+    "type": "BOOLEAN",
+    "vals": [
+     true,
+     false
+    ]
+   },
+   {
+    "name": "component/contents/icon-frame-height",
+    "css": "--wh-component-contents-icon-frame-height",
+    "type": "FLOAT",
+    "vals": [
+     160,
+     160
+    ]
+   }
+  ]
+ }
+}

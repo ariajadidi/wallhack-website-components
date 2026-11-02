@@ -1,0 +1,6 @@
+# photos + SVGs: kept locally and in Shopify Files, not in this public repository
+_content/upload*/
+_content/raw*/
+.DS_Store
+*.zip
+node_modules/

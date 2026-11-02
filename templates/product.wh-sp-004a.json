@@ -1,0 +1,62 @@
+{
+  "sections": {
+    "top_bar_1": {
+      "type": "wh-top-bar",
+      "settings": {
+        "breadcrumbs": "products / mousepads / sp-004a",
+        "color_scheme": "light"
+      }
+    },
+    "product_header_2": {
+      "type": "wh-product-header",
+      "settings": {
+        "title": "SP-004A",
+        "description": "<p>The WALLHACK M-001 is a premium wireless gaming mouse built around a die-cast magnesium alloy shell. Its wireless receiver doubles as a charging dock and control interface, and a hot-swappable battery system means the mouse never has to stop for charging.</p>",
+        "show_reviews": true,
+        "review_count": "(125)",
+        "reviews_link": "see all reviews",
+        "color_scheme": "light"
+      },
+      "blocks": {
+        "photo_1": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/wh-pdp-m001-1.png",
+            "shape": "1:1"
+          }
+        },
+        "photo_2": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/wh-pdp-m001-2.png",
+            "shape": "2:1"
+          }
+        },
+        "photo_3": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/wh-pdp-m001-3.png",
+            "shape": "1:1"
+          }
+        }
+      },
+      "block_order": [
+        "photo_1",
+        "photo_2",
+        "photo_3"
+      ]
+    },
+    "product_bar_3": {
+      "type": "wh-product-bar",
+      "settings": {
+        "title": "SP-004A",
+        "color_scheme": "light"
+      }
+    }
+  },
+  "order": [
+    "top_bar_1",
+    "product_header_2",
+    "product_bar_3"
+  ]
+}

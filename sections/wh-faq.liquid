@@ -1,0 +1,78 @@
+<section class="wh-section wh-faq wh-scheme-{{ section.settings.color_scheme }}" style="{% render 'wh-colors', s: section.settings %}">
+  <div class="wh-faq__items">{% content_for 'blocks' %}</div>
+</section>
+
+{% schema %}
+{
+  "name": "WH FAQ",
+  "blocks": [
+    {
+      "type": "wh-faq-item"
+    }
+  ],
+  "presets": [
+    {
+      "name": "WH FAQ",
+      "blocks": [
+        {
+          "type": "wh-faq-item"
+        },
+        {
+          "type": "wh-faq-item"
+        },
+        {
+          "type": "wh-faq-item"
+        }
+      ]
+    }
+  ],
+  "tag": "div",
+  "settings": [
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Colour mode",
+      "default": "light",
+      "options": [
+        {
+          "value": "light",
+          "label": "Light"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Custom colours (collaboration pages)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Leave empty to use the colour mode above. Filled in = this section uses these colours instead."
+    },
+    {
+      "type": "color",
+      "id": "custom_background",
+      "label": "Background"
+    },
+    {
+      "type": "color",
+      "id": "custom_foreground",
+      "label": "Text + icons"
+    },
+    {
+      "type": "color",
+      "id": "custom_border",
+      "label": "Borders"
+    },
+    {
+      "type": "color",
+      "id": "custom_image_background",
+      "label": "Photo background colour",
+      "info": "Behind photos (Solid). Figma: change the photo frame’s fill colour."
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,399 @@
+/* wh-tokens.css — GENERATED from Figma variables (WH-Website-Component) by _tools/gen-tokens.mjs. Do not edit by hand. */
+/* Scaled layout: Desktop designed at 1464px, Mobile at 390px, switch at a 750px window.
+   Everything is sized in design pixels × --wh-u, so the whole page scales with the window width. */
+
+:root {
+  --wh-black: #0e0e0e;
+  --wh-black-75: rgb(14 14 14 / 0.75);
+  --wh-white: #f9f9f9;
+  --wh-white-75: rgb(249 249 249 / 0.75);
+  --wh-grey-300: #c3c3c3;
+  --wh-grey-100: #e6e6e6;
+  --wh-font-heading: "NB Architekt", system-ui, sans-serif;
+  --wh-font-body: "Inter", system-ui, sans-serif;
+  --wh-campaign-black: #090909;
+  --wh-grey-50: #f1f1f1;
+  --wh-grey-900: #141414;
+}
+
+/* The page window is the container every section measures. */
+.wh-window { container: wh-window / inline-size; }
+
+/* Colour modes — put on a section (default Light). */
+.wh-scheme-light, .wh-window {
+  --wh-color-background: var(--wh-white);
+  --wh-color-foreground: var(--wh-black);
+  --wh-color-foreground-muted: var(--wh-black-75);
+  --wh-color-border: var(--wh-grey-300);
+  --wh-color-image-background: var(--wh-grey-100);
+  --wh-color-button-fill: rgb(244 244 244 / 0.5);
+  --wh-color-button-stroke-color: #ffffff;
+  --wh-color-button-font-fill: var(--wh-black);
+  --wh-color-surface: var(--wh-grey-50);
+  --wh-color-video-background: var(--wh-black);
+  --wh-color-button-fill-hover: rgb(255 255 255 / 0.85);
+  --wh-color-gradient-end: var(--wh-grey-300);
+}
+.wh-scheme-dark {
+  --wh-color-background: var(--wh-campaign-black);
+  --wh-color-foreground: var(--wh-grey-300);
+  --wh-color-foreground-muted: var(--wh-white-75);
+  --wh-color-border: var(--wh-grey-300);
+  --wh-color-image-background: #1f1f1f;
+  --wh-color-button-fill: rgb(22 22 22 / 0.75);
+  --wh-color-button-stroke-color: #525252;
+  --wh-color-button-font-fill: var(--wh-white);
+  --wh-color-surface: var(--wh-grey-900);
+  --wh-color-video-background: var(--wh-black);
+  --wh-color-button-fill-hover: rgb(38 38 38 / 0.85);
+  --wh-color-gradient-end: var(--wh-grey-100);
+}
+
+/* Desktop design (Figma mode: Desktop) */
+.wh-page {
+  --wh-u: calc(100cqw / 1464);
+  --wh-space-8: calc(8 * var(--wh-u));
+  --wh-space-12: calc(12 * var(--wh-u));
+  --wh-space-16: calc(16 * var(--wh-u));
+  --wh-space-32: calc(32 * var(--wh-u));
+  --wh-space-64: calc(64 * var(--wh-u));
+  --wh-space-24: calc(24 * var(--wh-u));
+  --wh-radius-2: calc(2 * var(--wh-u));
+  --wh-radius-8: calc(8 * var(--wh-u));
+  --wh-space-128: calc(128 * var(--wh-u));
+  --wh-space-4: calc(4 * var(--wh-u));
+  --wh-radius-4: calc(4 * var(--wh-u));
+  --wh-layout-side-padding: var(--wh-space-64);
+  --wh-layout-text-max-width: calc(900 * var(--wh-u));
+  --wh-font-size-display: calc(50.57 * var(--wh-u));
+  --wh-font-size-subtitle: calc(21.33 * var(--wh-u));
+  --wh-font-size-body: max(calc(16 * var(--wh-u)), 13px);
+  --wh-font-size-small: max(calc(12 * var(--wh-u)), 11px);
+  --wh-font-size-title: calc(28.44 * var(--wh-u));
+  --wh-layout-content-media-gap: var(--wh-space-64);
+  --wh-component-button-padding-y: var(--wh-space-32);
+  --wh-component-button-padding-x: var(--wh-space-32);
+  --wh-component-cover-padding-top: var(--wh-space-64);
+  --wh-component-cover-gap: var(--wh-space-16);
+  --wh-component-usp-icon-height: calc(114 * var(--wh-u));
+  --wh-component-usp-gap: var(--wh-space-32);
+  --wh-component-callout-height: calc(96 * var(--wh-u));
+  --wh-component-spec-row-height: calc(90 * var(--wh-u));
+  --wh-component-spec-cell-padding-x: calc(28 * var(--wh-u));
+  --wh-component-spec-cell-padding-y: 0px;
+  --wh-component-spec-label-width: calc(245 * var(--wh-u));
+  --wh-component-compare-item-gap: var(--wh-space-32);
+  --wh-layout-column-min-width: calc(200 * var(--wh-u));
+  --wh-layout-block-padding-y: var(--wh-space-64);
+  --wh-layout-block-padding-y-large: var(--wh-space-128);
+  --wh-component-drawing-inset-x: var(--wh-space-64);
+  --wh-component-drawing-inset-y: var(--wh-space-64);
+  --wh-component-button-small-padding-y: var(--wh-space-12);
+  --wh-component-button-small-padding-x: var(--wh-space-32);
+  --wh-component-cover-bottom-padding-y: var(--wh-space-32);
+  --wh-component-cover-bottom-padding-x: 0px;
+  --wh-component-size-cell-height: calc(100 * var(--wh-u));
+  --wh-component-variant-card-min-width: calc(150 * var(--wh-u));
+  --wh-component-variant-card-max-width: calc(350 * var(--wh-u));
+  --wh-component-contents-item-width: calc(104 * var(--wh-u));
+  --wh-component-contents-padding-x: calc(28 * var(--wh-u));
+  --wh-component-contents-padding-y: calc(42 * var(--wh-u));
+  --wh-component-contents-row-gap: calc(56 * var(--wh-u));
+  --wh-component-compare-column-gap: var(--wh-space-32);
+  --wh-component-compare-row-gap: var(--wh-space-32);
+  --wh-component-compare-gap: var(--wh-space-64);
+  --wh-component-compare-text-gap: var(--wh-space-32);
+  --wh-component-cover-title-block-padding-bottom: var(--wh-space-16);
+  --wh-component-intro-usps-text-gap: var(--wh-space-32);
+  --wh-component-text-section-gap: var(--wh-space-32);
+  --wh-component-text-columns-gap: var(--wh-space-64);
+  --wh-component-text-columns-row-gap: var(--wh-space-32);
+  --wh-component-text-media-content-gap: var(--wh-space-32);
+  --wh-component-split-text-gap: var(--wh-space-32);
+  --wh-component-cards-section-gap: var(--wh-space-32);
+  --wh-component-cards-text-gap: var(--wh-space-32);
+  --wh-component-cards-intro-gap: var(--wh-space-64);
+  --wh-component-cards-intro-row-gap: var(--wh-space-32);
+  --wh-component-cards-cards-gap: var(--wh-space-16);
+  --wh-component-cards-cards-row-gap: var(--wh-space-32);
+  --wh-component-variant-cards-section-gap: var(--wh-space-32);
+  --wh-component-variant-cards-scale-padding-x: var(--wh-space-4);
+  --wh-component-variant-cards-cards-gap: var(--wh-space-16);
+  --wh-component-variant-cards-scale-gap: var(--wh-space-32);
+  --wh-component-drawing-callouts-layout-gap: calc(22 * var(--wh-u));
+  --wh-component-glass-overlay-button-label-font-size-heading: calc(20 * var(--wh-u));
+  --wh-component-glass-overlay-button-label-font-size-subheading: calc(12 * var(--wh-u));
+  --wh-component-size-table-cell-padding-x: var(--wh-space-8);
+  --wh-component-size-table-cell-padding-y: var(--wh-space-8);
+  --wh-component-faq-items-gap: var(--wh-space-32);
+  --wh-component-faq-items-row-gap: var(--wh-space-32);
+  --wh-component-faq-item-section-gap: var(--wh-space-24);
+  --wh-component-compare-item-tags-gap: var(--wh-space-12);
+  --wh-component-compare-item-tags-row-gap: var(--wh-space-12);
+  --wh-component-compare-tag-section-padding-x: var(--wh-space-12);
+  --wh-component-compare-tag-section-padding-y: var(--wh-space-8);
+  --wh-component-card-item-section-gap: var(--wh-space-32);
+  --wh-component-variant-card-layout-above-mobile-padding-x: var(--wh-space-12);
+  --wh-component-variant-card-layout-above-mobile-padding-y: var(--wh-space-16);
+  --wh-component-variant-card-layout-above-mobile-gap: var(--wh-space-4);
+  --wh-component-variant-card-icon-area-padding-y: var(--wh-space-24);
+  --wh-component-variant-card-info-gap: var(--wh-space-8);
+  --wh-component-variant-card-name-row-padding-y: var(--wh-space-12);
+  --wh-component-variant-card-layout-padding-y: var(--wh-space-8);
+  --wh-component-variant-card-icon-area-padding-y-2: var(--wh-space-4);
+  --wh-component-variant-card-name-area-padding-x: var(--wh-space-4);
+  --wh-component-variant-card-name-area-padding-y: var(--wh-space-4);
+  --wh-component-contents-items-gap: calc(56 * var(--wh-u));
+  --wh-component-callout-min-width: 0px;
+  --wh-component-callout-padding-x: var(--wh-space-16);
+  --wh-component-callout-gap: var(--wh-space-12);
+  --wh-component-drawing-callouts-callouts-row-gap: var(--wh-space-16);
+  --wh-component-drawing-callouts-callouts-gap: var(--wh-space-16);
+  --wh-component-callout-text-max-width: calc(240 * var(--wh-u));
+  --wh-component-drawing-callouts-callouts-top-padding: 0px;
+  --wh-component-contents-icon-height: calc(69 * var(--wh-u));
+  --wh-component-compare-item-content-gap: var(--wh-space-32);
+  --wh-component-comparison-timeline-scale-mobile-gap: var(--wh-space-24);
+  --wh-text-body-paragraph-spacing: calc(24 * var(--wh-u));
+  --wh-text-small-paragraph-spacing: calc(19.2 * var(--wh-u));
+  --wh-component-variant-card-attribute-height: calc(43 * var(--wh-u));
+  --wh-component-contents-icon-frame-height: calc(125 * var(--wh-u));
+  --wh-component-glass-overlay-glass-stroke: calc(0.5 * var(--wh-u));
+  --wh-component-glass-overlay-glass-padding-x: calc(16 * var(--wh-u));
+  --wh-component-glass-overlay-glass-gap: calc(36 * var(--wh-u));
+  --wh-component-glass-overlay-glass-padding-y: calc(16 * var(--wh-u));
+  --wh-component-glass-overlay-glass-radius: calc(10 * var(--wh-u));
+  --wh-component-glass-overlay-glass-min-height: calc(53 * var(--wh-u));
+  --wh-component-glass-overlay-list-gap: calc(4 * var(--wh-u));
+  --wh-component-glass-overlay-small-padding-y: calc(3 * var(--wh-u));
+  --wh-component-glass-overlay-small-padding-x: calc(11 * var(--wh-u));
+  --wh-component-glass-overlay-breadcrumbs-font-size: calc(13 * var(--wh-u));
+  --wh-component-glass-menu-content-gap: calc(64 * var(--wh-u));
+  --wh-component-glass-menu-columns-gap: calc(18 * var(--wh-u));
+  --wh-component-glass-menu-column-width: calc(180 * var(--wh-u));
+  --wh-component-glass-menu-column-gap: calc(12 * var(--wh-u));
+  --wh-component-glass-menu-links-gap: calc(8 * var(--wh-u));
+  --wh-component-glass-menu-links-padding-x: calc(8 * var(--wh-u));
+  --wh-component-glass-menu-min-height: calc(180 * var(--wh-u));
+  --wh-component-product-card-width: calc(364 * var(--wh-u));
+  --wh-component-product-card-title-font-size: calc(42 * var(--wh-u));
+  --wh-component-product-card-section-gap: calc(32 * var(--wh-u));
+  --wh-component-product-card-info-gap: calc(18 * var(--wh-u));
+  --wh-component-product-card-icons-gap: calc(12 * var(--wh-u));
+  --wh-component-product-card-icon-width: calc(61 * var(--wh-u));
+  --wh-component-product-card-icon-height: calc(78 * var(--wh-u));
+  --wh-component-product-card-icon-padding-y: calc(8 * var(--wh-u));
+  --wh-component-product-card-icon-padding-x: calc(18 * var(--wh-u));
+  --wh-component-product-card-icon-radius: calc(4 * var(--wh-u));
+  --wh-component-product-card-buttons-gap: calc(16 * var(--wh-u));
+  --wh-component-product-card-options-gap: calc(8 * var(--wh-u));
+  --wh-component-product-card-option-list-gap: calc(5 * var(--wh-u));
+  --wh-component-product-card-option-padding-y: calc(7 * var(--wh-u));
+  --wh-component-product-card-option-padding-x: calc(12 * var(--wh-u));
+  --wh-component-product-card-button-gap: calc(8 * var(--wh-u));
+  --wh-component-product-card-button-height: calc(57 * var(--wh-u));
+  --wh-component-product-card-button-padding-y: calc(8 * var(--wh-u));
+  --wh-component-product-card-button-padding-x: calc(13 * var(--wh-u));
+  --wh-component-menu-mobile-top-bar-height: calc(42 * var(--wh-u));
+  --wh-component-menu-mobile-top-bar-padding-y: calc(8 * var(--wh-u));
+  --wh-component-menu-mobile-top-bar-padding-x: calc(14 * var(--wh-u));
+  --wh-component-menu-mobile-list-padding: calc(16 * var(--wh-u));
+  --wh-component-menu-mobile-footer-padding-y: calc(16 * var(--wh-u));
+  --wh-component-menu-mobile-footer-padding-x: calc(24 * var(--wh-u));
+  --wh-component-menu-mobile-footer-gap: calc(13 * var(--wh-u));
+  --wh-component-menu-mobile-product-bar-padding: calc(18 * var(--wh-u));
+  --wh-component-menu-mobile-product-card-padding-y: calc(10 * var(--wh-u));
+  --wh-component-menu-mobile-product-card-padding-x: calc(12 * var(--wh-u));
+  --wh-component-menu-mobile-product-card-gap: calc(12 * var(--wh-u));
+  --wh-component-menu-mobile-product-name-font-size: calc(24 * var(--wh-u));
+  --wh-component-menu-mobile-product-button-height: calc(47 * var(--wh-u));
+  --wh-component-pdp-gallery-image-height: calc(632 * var(--wh-u));
+  --wh-component-pdp-gallery-image-wide-width: calc(1264 * var(--wh-u));
+  --wh-component-pdp-title-font-size: var(--wh-font-size-title);
+  --wh-component-content-frame-padding: calc(18 * var(--wh-u));
+  --wh-component-content-frame-gap: calc(18 * var(--wh-u));
+  --wh-component-content-frame-icon-size: calc(31 * var(--wh-u));
+  --wh-component-pdp-info-min-height: calc(215 * var(--wh-u));
+  --wh-component-content-frame-outer-padding: calc(10 * var(--wh-u));
+  --wh-component-split-text-min-width: var(--wh-layout-column-min-width);
+  --wh-component-spec-font-size: calc(18.67 * var(--wh-u));
+  --wh-layout-detail-max-width: calc(1057 * var(--wh-u));
+}
+
+/* Mobile design (Figma mode: Mobile) */
+@container wh-window (max-width: 749px) {
+  .wh-page {
+    --wh-u: min(calc(100cqw / 390), 1.3px); /* Mobile stops growing at 1.3× (≈507px window) */
+    --wh-layout-side-padding: var(--wh-space-16);
+    --wh-layout-text-max-width: calc(700 * var(--wh-u));
+    --wh-font-size-display: calc(28 * var(--wh-u));
+    --wh-font-size-subtitle: calc(16 * var(--wh-u));
+    --wh-font-size-body: max(calc(12 * var(--wh-u)), 11px);
+    --wh-font-size-small: max(calc(12 * var(--wh-u)), 11px);
+    --wh-font-size-title: calc(21 * var(--wh-u));
+    --wh-layout-content-media-gap: var(--wh-space-32);
+    --wh-component-button-padding-y: var(--wh-space-16);
+    --wh-component-button-padding-x: var(--wh-space-16);
+    --wh-component-cover-padding-top: var(--wh-space-32);
+    --wh-component-cover-gap: 0px;
+    --wh-component-usp-icon-height: calc(62 * var(--wh-u));
+    --wh-component-usp-gap: var(--wh-space-16);
+    --wh-component-callout-height: 0px;
+    --wh-component-spec-row-height: calc(47 * var(--wh-u));
+    --wh-component-spec-cell-padding-x: calc(10.5 * var(--wh-u));
+    --wh-component-spec-cell-padding-y: calc(10.5 * var(--wh-u));
+    --wh-component-spec-label-width: calc(157 * var(--wh-u));
+    --wh-component-compare-item-gap: var(--wh-space-16);
+    --wh-layout-column-min-width: calc(200 * var(--wh-u));
+    --wh-layout-block-padding-y: var(--wh-space-32);
+    --wh-layout-block-padding-y-large: var(--wh-space-64);
+    --wh-component-drawing-inset-x: 0px;
+    --wh-component-drawing-inset-y: 0px;
+    --wh-component-button-small-padding-y: var(--wh-space-8);
+    --wh-component-button-small-padding-x: var(--wh-space-12);
+    --wh-component-cover-bottom-padding-y: var(--wh-space-32);
+    --wh-component-cover-bottom-padding-x: var(--wh-space-16);
+    --wh-component-size-cell-height: calc(75 * var(--wh-u));
+    --wh-component-variant-card-min-width: calc(180 * var(--wh-u));
+    --wh-component-variant-card-max-width: calc(220 * var(--wh-u));
+    --wh-component-contents-item-width: calc(88 * var(--wh-u));
+    --wh-component-contents-padding-x: calc(10.5 * var(--wh-u));
+    --wh-component-contents-padding-y: calc(10.5 * var(--wh-u));
+    --wh-component-contents-row-gap: calc(10.5 * var(--wh-u));
+    --wh-component-compare-column-gap: var(--wh-space-16);
+    --wh-component-compare-row-gap: var(--wh-space-32);
+    --wh-component-compare-gap: var(--wh-space-64);
+    --wh-component-compare-text-gap: var(--wh-space-32);
+    --wh-component-cover-title-block-padding-bottom: var(--wh-space-16);
+    --wh-component-intro-usps-text-gap: var(--wh-space-32);
+    --wh-component-text-section-gap: var(--wh-space-32);
+    --wh-component-text-columns-gap: var(--wh-space-64);
+    --wh-component-text-columns-row-gap: var(--wh-space-32);
+    --wh-component-text-media-content-gap: var(--wh-space-32);
+    --wh-component-split-text-gap: var(--wh-space-32);
+    --wh-component-cards-section-gap: var(--wh-space-32);
+    --wh-component-cards-text-gap: var(--wh-space-32);
+    --wh-component-cards-intro-gap: var(--wh-space-64);
+    --wh-component-cards-intro-row-gap: var(--wh-space-32);
+    --wh-component-cards-cards-gap: var(--wh-space-16);
+    --wh-component-cards-cards-row-gap: var(--wh-space-32);
+    --wh-component-variant-cards-section-gap: var(--wh-space-32);
+    --wh-component-variant-cards-scale-padding-x: var(--wh-space-4);
+    --wh-component-variant-cards-cards-gap: var(--wh-space-16);
+    --wh-component-variant-cards-scale-gap: var(--wh-space-32);
+    --wh-component-drawing-callouts-layout-gap: calc(11 * var(--wh-u));
+    --wh-component-glass-overlay-button-label-font-size-heading: calc(20 * var(--wh-u));
+    --wh-component-glass-overlay-button-label-font-size-subheading: calc(12 * var(--wh-u));
+    --wh-component-size-table-cell-padding-x: var(--wh-space-8);
+    --wh-component-size-table-cell-padding-y: var(--wh-space-8);
+    --wh-component-faq-items-gap: var(--wh-space-32);
+    --wh-component-faq-items-row-gap: var(--wh-space-32);
+    --wh-component-faq-item-section-gap: var(--wh-space-24);
+    --wh-component-compare-item-tags-gap: var(--wh-space-12);
+    --wh-component-compare-item-tags-row-gap: var(--wh-space-12);
+    --wh-component-compare-tag-section-padding-x: var(--wh-space-8);
+    --wh-component-compare-tag-section-padding-y: var(--wh-space-4);
+    --wh-component-card-item-section-gap: var(--wh-space-32);
+    --wh-component-variant-card-layout-above-mobile-padding-x: var(--wh-space-12);
+    --wh-component-variant-card-layout-above-mobile-padding-y: var(--wh-space-16);
+    --wh-component-variant-card-layout-above-mobile-gap: var(--wh-space-4);
+    --wh-component-variant-card-icon-area-padding-y: var(--wh-space-24);
+    --wh-component-variant-card-info-gap: var(--wh-space-8);
+    --wh-component-variant-card-name-row-padding-y: var(--wh-space-12);
+    --wh-component-variant-card-layout-padding-y: var(--wh-space-8);
+    --wh-component-variant-card-icon-area-padding-y-2: var(--wh-space-4);
+    --wh-component-variant-card-name-area-padding-x: var(--wh-space-4);
+    --wh-component-variant-card-name-area-padding-y: var(--wh-space-4);
+    --wh-component-contents-items-gap: calc(56 * var(--wh-u));
+    --wh-component-callout-min-width: var(--wh-layout-detail-max-width);
+    --wh-component-callout-padding-x: 0px;
+    --wh-component-callout-gap: var(--wh-space-12);
+    --wh-component-drawing-callouts-callouts-row-gap: var(--wh-space-12);
+    --wh-component-drawing-callouts-callouts-gap: var(--wh-space-16);
+    --wh-component-callout-text-max-width: calc(358 * var(--wh-u));
+    --wh-component-drawing-callouts-callouts-top-padding: var(--wh-space-24);
+    --wh-component-contents-icon-height: calc(52 * var(--wh-u));
+    --wh-component-compare-item-content-gap: var(--wh-space-32);
+    --wh-component-comparison-timeline-scale-mobile-gap: var(--wh-space-24);
+    --wh-text-body-paragraph-spacing: calc(18 * var(--wh-u));
+    --wh-text-small-paragraph-spacing: calc(19.2 * var(--wh-u));
+    --wh-component-variant-card-attribute-height: calc(43 * var(--wh-u));
+    --wh-component-contents-icon-frame-height: calc(140 * var(--wh-u));
+    --wh-component-glass-overlay-glass-stroke: calc(0.5 * var(--wh-u));
+    --wh-component-glass-overlay-glass-padding-x: calc(16 * var(--wh-u));
+    --wh-component-glass-overlay-glass-gap: calc(24 * var(--wh-u));
+    --wh-component-glass-overlay-glass-padding-y: calc(16 * var(--wh-u));
+    --wh-component-glass-overlay-glass-radius: calc(10 * var(--wh-u));
+    --wh-component-glass-overlay-glass-min-height: calc(53 * var(--wh-u));
+    --wh-component-glass-overlay-list-gap: calc(4 * var(--wh-u));
+    --wh-component-glass-overlay-small-padding-y: calc(3 * var(--wh-u));
+    --wh-component-glass-overlay-small-padding-x: calc(11 * var(--wh-u));
+    --wh-component-glass-overlay-breadcrumbs-font-size: calc(13 * var(--wh-u));
+    --wh-component-glass-menu-content-gap: calc(64 * var(--wh-u));
+    --wh-component-glass-menu-columns-gap: calc(18 * var(--wh-u));
+    --wh-component-glass-menu-column-width: calc(180 * var(--wh-u));
+    --wh-component-glass-menu-column-gap: calc(12 * var(--wh-u));
+    --wh-component-glass-menu-links-gap: calc(8 * var(--wh-u));
+    --wh-component-glass-menu-links-padding-x: calc(8 * var(--wh-u));
+    --wh-component-glass-menu-min-height: calc(180 * var(--wh-u));
+    --wh-component-product-card-width: calc(364 * var(--wh-u));
+    --wh-component-product-card-title-font-size: calc(42 * var(--wh-u));
+    --wh-component-product-card-section-gap: calc(32 * var(--wh-u));
+    --wh-component-product-card-info-gap: calc(18 * var(--wh-u));
+    --wh-component-product-card-icons-gap: calc(12 * var(--wh-u));
+    --wh-component-product-card-icon-width: calc(61 * var(--wh-u));
+    --wh-component-product-card-icon-height: calc(78 * var(--wh-u));
+    --wh-component-product-card-icon-padding-y: calc(8 * var(--wh-u));
+    --wh-component-product-card-icon-padding-x: calc(18 * var(--wh-u));
+    --wh-component-product-card-icon-radius: calc(4 * var(--wh-u));
+    --wh-component-product-card-buttons-gap: calc(16 * var(--wh-u));
+    --wh-component-product-card-options-gap: calc(8 * var(--wh-u));
+    --wh-component-product-card-option-list-gap: calc(5 * var(--wh-u));
+    --wh-component-product-card-option-padding-y: calc(7 * var(--wh-u));
+    --wh-component-product-card-option-padding-x: calc(12 * var(--wh-u));
+    --wh-component-product-card-button-gap: calc(8 * var(--wh-u));
+    --wh-component-product-card-button-height: calc(57 * var(--wh-u));
+    --wh-component-product-card-button-padding-y: calc(8 * var(--wh-u));
+    --wh-component-product-card-button-padding-x: calc(13 * var(--wh-u));
+    --wh-component-menu-mobile-top-bar-height: calc(33 * var(--wh-u));
+    --wh-component-menu-mobile-top-bar-padding-y: calc(6 * var(--wh-u));
+    --wh-component-menu-mobile-top-bar-padding-x: calc(6 * var(--wh-u));
+    --wh-component-menu-mobile-list-padding: calc(16 * var(--wh-u));
+    --wh-component-menu-mobile-footer-padding-y: calc(16 * var(--wh-u));
+    --wh-component-menu-mobile-footer-padding-x: calc(24 * var(--wh-u));
+    --wh-component-menu-mobile-footer-gap: calc(13 * var(--wh-u));
+    --wh-component-menu-mobile-product-bar-padding: calc(18 * var(--wh-u));
+    --wh-component-menu-mobile-product-card-padding-y: calc(10 * var(--wh-u));
+    --wh-component-menu-mobile-product-card-padding-x: calc(12 * var(--wh-u));
+    --wh-component-menu-mobile-product-card-gap: calc(12 * var(--wh-u));
+    --wh-component-menu-mobile-product-name-font-size: calc(24 * var(--wh-u));
+    --wh-component-menu-mobile-product-button-height: calc(47 * var(--wh-u));
+    --wh-component-pdp-gallery-image-height: calc(358 * var(--wh-u));
+    --wh-component-pdp-gallery-image-wide-width: calc(716 * var(--wh-u));
+    --wh-component-pdp-title-font-size: calc(24 * var(--wh-u));
+    --wh-component-content-frame-padding: calc(10 * var(--wh-u));
+    --wh-component-content-frame-gap: calc(12 * var(--wh-u));
+    --wh-component-content-frame-icon-size: calc(18 * var(--wh-u));
+    --wh-component-pdp-info-min-height: calc(229 * var(--wh-u));
+    --wh-component-content-frame-outer-padding: calc(10 * var(--wh-u));
+    --wh-component-split-text-min-width: var(--wh-layout-window-width);
+    --wh-component-spec-font-size: calc(14 * var(--wh-u));
+    --wh-layout-detail-max-width: calc(313 * var(--wh-u));
+  }
+}
+
+/* Text styles — generated from the Figma text styles */
+.wh-h1 { font-family: var(--wh-font-heading); font-weight: 300; font-size: var(--wh-font-size-display); line-height: 1.05; letter-spacing: -0.02em; text-transform: uppercase; }
+.wh-h2 { font-family: var(--wh-font-heading); font-weight: 700; font-size: var(--wh-font-size-subtitle); line-height: 1; letter-spacing: 0.04em; text-transform: uppercase; }
+.wh-h3 { font-family: var(--wh-font-heading); font-weight: 300; font-size: var(--wh-font-size-subtitle); line-height: 1; letter-spacing: 0; text-transform: uppercase; }
+.wh-h4 { font-family: var(--wh-font-heading); font-weight: 700; font-size: var(--wh-font-size-small); line-height: 1; letter-spacing: 0.08em; text-transform: uppercase; }
+.wh-p1 { font-family: var(--wh-font-body); font-weight: 300; font-size: var(--wh-font-size-body); line-height: 1.5; letter-spacing: -0.01em; }
+.wh-p1-bold { font-family: var(--wh-font-body); font-weight: 700; font-size: var(--wh-font-size-body); line-height: 1.5; letter-spacing: -0.01em; }
+.wh-p2, .wh-p3 { font-family: var(--wh-font-body); font-weight: 300; font-size: var(--wh-font-size-small); line-height: 1.6; letter-spacing: 0; }
+.wh-h5 { font-family: var(--wh-font-heading); font-weight: 300; font-size: var(--wh-font-size-title); line-height: 1; letter-spacing: 0; text-transform: uppercase; }
+.wh-glass-button-heading { font-family: var(--wh-font-heading); font-weight: 300; font-size: var(--wh-component-glass-overlay-button-label-font-size-heading); line-height: normal; letter-spacing: 0.02em; }
+.wh-glass-button-subheading { font-family: var(--wh-font-body); font-weight: 300; font-size: var(--wh-component-glass-overlay-button-label-font-size-subheading); line-height: 1.2; letter-spacing: 0; }
+.wh-glass-button-heading-active { font-family: var(--wh-font-heading); font-weight: 700; font-size: var(--wh-component-glass-overlay-button-label-font-size-heading); line-height: 1; letter-spacing: 0.02em; }
+.wh-glass-breadcrumbs { font-family: var(--wh-font-heading); font-weight: 700; font-size: var(--wh-component-glass-overlay-breadcrumbs-font-size); line-height: 1; letter-spacing: 0; }
+.wh-glass-product-title { font-family: var(--wh-font-heading); font-weight: 300; font-size: var(--wh-component-product-card-title-font-size); line-height: 1; letter-spacing: 0; }
+.wh-glass-product-name { font-family: var(--wh-font-heading); font-weight: 300; font-size: var(--wh-component-menu-mobile-product-name-font-size); line-height: 1; letter-spacing: 0; }

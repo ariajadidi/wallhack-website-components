@@ -1,0 +1,243 @@
+{
+  "sections": {
+    "top_bar_1": {
+      "type": "wh-top-bar",
+      "settings": {
+        "breadcrumbs": "products / sleeves",
+        "color_scheme": "light"
+      }
+    },
+    "product_header_2": {
+      "type": "wh-product-header",
+      "settings": {
+        "title": "Sleeves",
+        "description": "<p>The Wallhack Pro Sleeve features a premium mixture of 88% Polyester and 12% Spandex with bonded edges for improved comfort and glide on glass mousepad surfaces.</p>",
+        "show_reviews": true,
+        "review_count": "(125)",
+        "reviews_link": "see all reviews",
+        "color_scheme": "light"
+      },
+      "blocks": {
+        "photo_1": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/wh-pdp-m001-1.png",
+            "shape": "1:1"
+          }
+        },
+        "photo_2": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/wh-pdp-m001-2.png",
+            "shape": "2:1"
+          }
+        },
+        "photo_3": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/wh-pdp-m001-3.png",
+            "shape": "1:1"
+          }
+        }
+      },
+      "block_order": [
+        "photo_1",
+        "photo_2",
+        "photo_3"
+      ]
+    },
+    "product_bar_3": {
+      "type": "wh-product-bar",
+      "settings": {
+        "title": "Sleeves",
+        "color_scheme": "light"
+      }
+    },
+    "drawing_callouts_4": {
+      "type": "wh-drawing-callouts",
+      "settings": {
+        "layout": "illustration",
+        "drawing": "shopify://shop_images/wh-drawing-pro-sleeve.svg",
+        "drawing_mobile": "",
+        "color_scheme": "light"
+      },
+      "blocks": {},
+      "block_order": []
+    },
+    "size_table_5": {
+      "type": "wh-size-table",
+      "settings": {
+        "sizes": "XS, S, M, L, XL",
+        "color_scheme": "light"
+      },
+      "blocks": {
+        "row_1": {
+          "type": "row",
+          "settings": {
+            "label": "length",
+            "letter": "A",
+            "values": "38cm, 39cm, 40cm, 41cm, 42cm"
+          }
+        },
+        "row_2": {
+          "type": "row",
+          "settings": {
+            "label": "Bicep",
+            "letter": "B",
+            "values": "12.5cm, 13cm, 13.5cm, 14cm, 15cm"
+          }
+        },
+        "row_3": {
+          "type": "row",
+          "settings": {
+            "label": "Wrist",
+            "letter": "C",
+            "values": "6.5cm, 7cm, 7.5cm, 8cm, 8.5cm"
+          }
+        },
+        "row_4": {
+          "type": "row",
+          "settings": {
+            "label": "glove",
+            "letter": "D",
+            "values": "7cm, 7.6cm, 8.15Cm, 9.4cm, 10cm"
+          }
+        },
+        "row_5": {
+          "type": "row",
+          "settings": {
+            "label": "thumb",
+            "letter": "E",
+            "values": "2.4cm, 2.6cm, 2.9Cm, 3.3m, 3.6cm"
+          }
+        }
+      },
+      "block_order": [
+        "row_1",
+        "row_2",
+        "row_3",
+        "row_4",
+        "row_5"
+      ]
+    },
+    "intro_usps_6": {
+      "type": "wh-intro-usps",
+      "settings": {
+        "heading": "comfort with performance",
+        "body": "<p>The Wallhack Pro Sleeve features a premium mixture of 88% Polyester and 12% Spandex with bonded edges for improved comfort and glide on glass mousepad surfaces.</p><p>Designed from the ground up for intense gameplay.</p>",
+        "show_cta": true,
+        "cta_label": "see all sleeves",
+        "color_scheme": "light"
+      },
+      "blocks": {},
+      "block_order": []
+    },
+    "faq_7": {
+      "type": "wh-faq",
+      "settings": {
+        "color_scheme": "light"
+      },
+      "blocks": {
+        "faq_item_1": {
+          "type": "wh-faq-item",
+          "settings": {
+            "question": "Why should I use a gaming sleeve?",
+            "answer": "<p>Bare skin sticks. Your forearm drags on the pad and on the table edge, and that drag works against every movement your arm makes. A sleeve puts low-friction fabric between the two so your arm moves as freely as your mouse does. It's standard kit on stage at tournaments for exactly this reason.</p>"
+          }
+        },
+        "faq_item_2": {
+          "type": "wh-faq-item",
+          "settings": {
+            "question": "Can I wear it on either arm?",
+            "answer": "<p>Yes. There's no left or right version, so one sleeve works on whichever arm you want it on, whether you are right handed or left handed.</p>"
+          }
+        },
+        "faq_item_3": {
+          "type": "wh-faq-item",
+          "settings": {
+            "question": "Will it slide down during a long session?",
+            "answer": "<p>The top cuff is a grippy silicone band that holds at the bicep, and at 180gsm the fabric keeps its shape instead of loosening as it warms up. Lighter sleeves stretch out over a few hours and start creeping down the arm. Get the bicep measurement right from the size chart and this one stays where you put it.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_1",
+        "faq_item_2",
+        "faq_item_3"
+      ]
+    },
+    "compare_8": {
+      "type": "wh-compare",
+      "settings": {
+        "heading": "Classic or Glove",
+        "body": "<p>The WALLHACK Pro Sleeve comes in 2 versions: a classic sleeve and a gloved variant.</p>",
+        "color_scheme": "light",
+        "spacing": "large"
+      },
+      "blocks": {
+        "compare_item_1": {
+          "type": "wh-compare-item",
+          "settings": {
+            "name": "Classic",
+            "show_tags": false,
+            "suitable_label": "",
+            "description": "<p>Straight cut, bicep to wrist. The low-friction fabric covers the part of your forearm that rests on the pad and stops there. Pick Classic if only your arm makes contact, or you just don't want anything past your wrist.</p>",
+            "image": "shopify://shop_images/wh-camp-2d1835f7.png",
+            "image_fit": "fill",
+            "image_background": "solid",
+            "image_shape": "3:2"
+          }
+        },
+        "compare_item_2": {
+          "type": "wh-compare-item",
+          "settings": {
+            "name": "glove",
+            "show_tags": false,
+            "suitable_label": "",
+            "description": "<p>Same fabric, carried over the wrist to cover part of the palm and thumb. The cut is low-profile so it stays clear of your mouse, and the inner-thumb seam is stitched flat. Pick Glove if the side of your palm drags on the pad, or you want the glide to continue all the way to your grip.</p>",
+            "image": "shopify://shop_images/wh-camp-8d7effc1.png",
+            "image_fit": "fill",
+            "image_background": "solid",
+            "image_shape": "3:2"
+          }
+        }
+      },
+      "block_order": [
+        "compare_item_1",
+        "compare_item_2"
+      ]
+    },
+    "text_media_9": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": true,
+        "heading": "Drop sleeves",
+        "body": "<p>Drop artwork doesn't stop at the pad. Many releases ship a matching Pro Sleeve alongside the glass pad. Ghost in the Shell '95, EVANGELION, Miku OS, Awakening Sora, Frenzy Sora, Futurefall and more.</p>",
+        "image": "shopify://shop_images/wh-camp-fb4381ad.png",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "none",
+        "image_mobile_shape": "",
+        "image_fit": "fill",
+        "image_fit_mobile": "same",
+        "color_scheme": "light",
+        "spacing": "large",
+        "image_shape": "16:9"
+      }
+    }
+  },
+  "order": [
+    "top_bar_1",
+    "product_header_2",
+    "product_bar_3",
+    "drawing_callouts_4",
+    "size_table_5",
+    "intro_usps_6",
+    "faq_7",
+    "compare_8",
+    "text_media_9"
+  ]
+}

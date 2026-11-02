@@ -1,0 +1,531 @@
+{
+  "sections": {
+    "top_bar_1": {
+      "type": "wh-top-bar",
+      "settings": {
+        "breadcrumbs": "products / mousepads / cr-005",
+        "color_scheme": "light"
+      }
+    },
+    "product_header_2": {
+      "type": "wh-product-header",
+      "settings": {
+        "title": "CR-005",
+        "description": "<p>Five years after the original skypad redefined the glass mousepad, the 005 generation arrives. Two surfaces, engineered against each other. One tuned for speed. One tuned for control. built on the legacy of precision and finish that made wallhack the most respected glass pad on the market.</p>",
+        "show_reviews": true,
+        "review_count": "(125)",
+        "reviews_link": "see all reviews",
+        "color_scheme": "light"
+      },
+      "blocks": {
+        "photo_1": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/wh-pdp-m001-1.png",
+            "shape": "1:1"
+          }
+        },
+        "photo_2": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/wh-pdp-m001-2.png",
+            "shape": "2:1"
+          }
+        },
+        "photo_3": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/wh-pdp-m001-3.png",
+            "shape": "1:1"
+          }
+        }
+      },
+      "block_order": [
+        "photo_1",
+        "photo_2",
+        "photo_3"
+      ]
+    },
+    "product_bar_3": {
+      "type": "wh-product-bar",
+      "settings": {
+        "title": "CR-005",
+        "color_scheme": "light"
+      }
+    },
+    "drawing_callouts_4": {
+      "type": "wh-drawing-callouts",
+      "settings": {
+        "layout": "callouts",
+        "drawing": "shopify://shop_images/wh-drawing-sp005-desktop-v2.svg",
+        "drawing_mobile": "shopify://shop_images/wh-drawing-sp005-mobile-v2.svg",
+        "color_scheme": "light"
+      },
+      "blocks": {
+        "callout_1": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>3,3 mm thickness</p>",
+            "position": "top",
+            "type": "callout"
+          }
+        },
+        "callout_2": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>Tempered uncoated glass surface</p>",
+            "position": "top",
+            "type": "callout"
+          }
+        },
+        "callout_3": {
+          "type": "callout",
+          "settings": {
+            "text": "<p></p>",
+            "position": "top",
+            "type": "empty"
+          }
+        },
+        "callout_4": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>Concave grid pattern silicon base</p>",
+            "position": "top",
+            "type": "callout"
+          }
+        },
+        "callout_5": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>SP (Speed) surface for minimal friction</p><p>CR (Control) surface for more stopping power</p>",
+            "position": "bottom",
+            "type": "callout"
+          }
+        },
+        "callout_6": {
+          "type": "callout",
+          "settings": {
+            "text": "<p></p>",
+            "position": "bottom",
+            "type": "empty"
+          }
+        }
+      },
+      "block_order": [
+        "callout_1",
+        "callout_2",
+        "callout_3",
+        "callout_4",
+        "callout_5",
+        "callout_6"
+      ]
+    },
+    "spec_sheet_5": {
+      "type": "wh-spec-sheet",
+      "settings": {
+        "color_scheme": "light"
+      },
+      "blocks": {
+        "spec_row_1": {
+          "type": "wh-spec-row",
+          "settings": {
+            "specs": "1",
+            "label_1": "dimensions",
+            "value_1": "44cm x 51cm"
+          }
+        },
+        "spec_row_2": {
+          "type": "wh-spec-row",
+          "settings": {
+            "specs": "2",
+            "label_1": "surface material",
+            "value_1": "tempered glass",
+            "label_2": "weight",
+            "value_2": "1450g"
+          }
+        },
+        "spec_row_3": {
+          "type": "wh-spec-row",
+          "settings": {
+            "specs": "2",
+            "label_1": "base material",
+            "value_1": "custom Concave Silicone Grid Pattern",
+            "label_2": "thickness",
+            "value_2": "3.3mm"
+          }
+        }
+      },
+      "block_order": [
+        "spec_row_1",
+        "spec_row_2",
+        "spec_row_3"
+      ]
+    },
+    "intro_usps_6": {
+      "type": "wh-intro-usps",
+      "settings": {
+        "heading": "a legacy, sharpened",
+        "body": "<p>Five years after the original skypad redefined the glass mousepad, the 005 generation arrives. Two surfaces, engineered against each other. One tuned for speed. One tuned for control. built on the legacy of precision and finish that made wallhack the most respected glass pad on the market.</p>",
+        "show_cta": true,
+        "cta_label": "Choose your pad",
+        "color_scheme": "dark"
+      },
+      "blocks": {
+        "usp_1": {
+          "type": "wh-usp",
+          "settings": {
+            "icon": "shopify://shop_images/wh-usp-3mm-v2.svg"
+          }
+        },
+        "usp_2": {
+          "type": "wh-usp",
+          "settings": {
+            "icon": "shopify://shop_images/wh-usp-random-v2.svg"
+          }
+        },
+        "usp_3": {
+          "type": "wh-usp",
+          "settings": {
+            "icon": "shopify://shop_images/wh-usp-cnd-edge-v2.svg"
+          }
+        },
+        "usp_4": {
+          "type": "wh-usp",
+          "settings": {
+            "icon": "shopify://shop_images/wh-usp-laser-etched-v2.svg"
+          }
+        },
+        "usp_5": {
+          "type": "wh-usp",
+          "settings": {
+            "icon": "shopify://shop_images/wh-usp-tempered-glass-v2.svg"
+          }
+        }
+      },
+      "block_order": [
+        "usp_1",
+        "usp_2",
+        "usp_3",
+        "usp_4",
+        "usp_5"
+      ]
+    },
+    "faq_7": {
+      "type": "wh-faq",
+      "settings": {
+        "color_scheme": "dark"
+      },
+      "blocks": {
+        "faq_item_1": {
+          "type": "wh-faq-item",
+          "settings": {
+            "question": "Why would I use a glass mousepad?",
+            "answer": "<p>Glass mousepads offer truly unparalleled surface experiences and performance, whether you prefer speed or control. While maintaining their quickness for an incredibly long time. Since it’s hardened glass, the consistency of the surface will be unmatched, making it stand the test of time with significantly longer lifespan than cloth.</p>"
+          }
+        },
+        "faq_item_2": {
+          "type": "wh-faq-item",
+          "settings": {
+            "question": "Is the surface coated?",
+            "answer": "<p>No. The texture is etched into the glass itself, not applied on top. Coatings wear through where you use them most, which is how a pad ends up feeling different in the middle than at the edges. Uncoated glass doesn't do that. What it feels like out of the box is what it feels like in two years</p>"
+          }
+        },
+        "faq_item_3": {
+          "type": "wh-faq-item",
+          "settings": {
+            "question": "Are glass mousepads fragile?",
+            "answer": "<p>Our mousepads are built using tempered glass, making them extremely resistant to cracks, chips and long-term wear. Even though we’ve made the glass thinner for ergonomics, it's stil made of tough, tempered glass. The surface is also stain-proof and immune to issues like edge fraying or humidity damage.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_1",
+        "faq_item_2",
+        "faq_item_3"
+      ]
+    },
+    "text_media_8": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": true,
+        "heading": "Why glass",
+        "body": "<p>Glass is the fastest and most consistent surface you can play on. The friction under your skates is identical every session, so the muscle memory you built last month still applies today.</p><p>The SP and CR are two of the most refined glass surfaces available, one tuned to run fast and one tuned to stop hard, both built so the pad is the last variable you have to think about.</p>",
+        "image": "shopify://shop_images/wh-camp-3c734089.png",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "none",
+        "image_mobile_shape": "",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "large",
+        "image_shape": "2:1"
+      }
+    },
+    "compare_9": {
+      "type": "wh-compare",
+      "settings": {
+        "heading": "choose your friction",
+        "body": "<p>The choice between the SP-005 and the CR-005 ultimately comes down to play style, type of game and preference of feel. Both pads are the same tempered glass. What differs is the etch, and what that does at the end of a movement. One surface lets the mouse run, the other gives you something to push against when you stop. The right one depends on whether your aim is built on tracking movements or flicking fast.</p>",
+        "color_scheme": "dark",
+        "spacing": "large"
+      },
+      "blocks": {
+        "compare_item_1": {
+          "type": "wh-compare-item",
+          "settings": {
+            "name": "SP-005",
+            "show_tags": true,
+            "suitable_label": "suitable for",
+            "description": "<p>The faster of the two. A slight texture gives you enough feedback to feel where the mouse is without slowing it down, which puts it in the middle of the range rather than at either extreme. Pick it if you prefer a low-friction, fast mouse gilde.</p>",
+            "image": "shopify://shop_images/wh-compare-surface.jpg",
+            "image_fit": "fit",
+            "image_background": "solid",
+            "image_shape": "3:2"
+          },
+          "blocks": {
+            "compare_tag_1": {
+              "type": "wh-compare-tag",
+              "settings": {
+                "label": "tracking-heavy games"
+              }
+            },
+            "compare_tag_2": {
+              "type": "wh-compare-tag",
+              "settings": {
+                "label": "hero shooters"
+              }
+            }
+          },
+          "block_order": [
+            "compare_tag_1",
+            "compare_tag_2"
+          ]
+        },
+        "compare_item_2": {
+          "type": "wh-compare-item",
+          "settings": {
+            "name": "CR-005",
+            "show_tags": true,
+            "suitable_label": "suitable for",
+            "description": "<p>The control surface. Press harder and it responds, slowing the glide instead of letting the mouse carry past the target. It's the closest thing we make to a cloth pad's stopping power, which makes it the straightforward choice if you're moving over from cloth and don't want to relearn how you aim.</p>",
+            "image": "shopify://shop_images/wh-camp-1aaa3005.jpg",
+            "image_fit": "fit",
+            "image_background": "solid",
+            "image_shape": "3:2"
+          },
+          "blocks": {
+            "compare_tag_1": {
+              "type": "wh-compare-tag",
+              "settings": {
+                "label": "flick-intensive games"
+              }
+            },
+            "compare_tag_2": {
+              "type": "wh-compare-tag",
+              "settings": {
+                "label": "tactical shooters"
+              }
+            }
+          },
+          "block_order": [
+            "compare_tag_1",
+            "compare_tag_2"
+          ]
+        }
+      },
+      "block_order": [
+        "compare_item_1",
+        "compare_item_2"
+      ]
+    },
+    "split_10": {
+      "type": "wh-split",
+      "settings": {
+        "image_side": "right",
+        "heading": "precision in every detail",
+        "body": "<p>Three layers, 3.3mm in total. The top is tempered glass, micro-etched so the texture is cut into the surface rather than applied to it, and left uncoated so there's nothing to wear through.</p><p>The color is printed on the underside, where your mouse never reaches it.</p><p>The bottom is 60A silicone running the full width of the pad, so the glass is supported across its whole area and grips the desk instead of resting on it.</p>",
+        "image": "shopify://shop_images/wh-camp-27d4ad4e.png",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "none",
+        "image_mobile_shape": "",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "regular",
+        "image_shape": "1:1"
+      }
+    },
+    "text_media_11": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": false,
+        "heading": "Spill it, wipe it, keep playing",
+        "body": "<p>The SP-005 edge goes through a three-step CNC machining process to produce a gradual taper. It's there for one reason: a hard edge under a forearm becomes a pressure point over a long session, and a sloped one doesn't. The refinement over the SP-004 edge is small on paper but obvious after an hour.</p>",
+        "image": "shopify://shop_images/wh-camp-ce1fde1d.png",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "none",
+        "image_mobile_shape": "",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "large",
+        "image_shape": "2:1"
+      }
+    },
+    "text_media_12": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": true,
+        "heading": "Spill it, wipe it, keep playing",
+        "body": "<p>Glass is non-porous, and so is the silicone under it. Sweat, condensation, a knocked-over drink: none of it soaks in. Cleaning involves just a microfibre cloth and water, or a glass-safe cleaner if something has dried on. No stains, no edge fraying, no soft patches where your palm sits.</p>",
+        "image": "shopify://shop_images/wh-camp-34e00e1d.png",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "none",
+        "image_mobile_shape": "",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "large",
+        "image_shape": "16:9"
+      }
+    },
+    "text_media_13": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": true,
+        "heading": "durable",
+        "body": "<p>Tempered glass isn't window glass. Tempered glass resists flexing, takes knocks that would crack an untreated sheet, and is built to hold together rather than shatter.Whether you're a casual user or a gaming enthusiast, the 005 generation guarantees a surface that lasts.</p><p>Not only is the 005 generation capable of withstanding drops. Now, you’ll never have to worry about your glass pad shattering or chipping in the mail, or when taking it to LAN parties, or even objects like your microphone falling onto it.</p>",
+        "image": "shopify://shop_images/wh-camp-3b910e2b.jpg",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "none",
+        "image_mobile_shape": "",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "large",
+        "image_shape": "21:9"
+      }
+    },
+    "text_media_14": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": true,
+        "heading": "Black or white",
+        "body": "<p>The SP-005 is available in a solid black and solid white color way.</p>",
+        "image": "shopify://shop_images/wh-camp-669d3588.png",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "none",
+        "image_mobile_shape": "",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "large",
+        "image_shape": "2:1"
+      }
+    },
+    "text_media_15": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": true,
+        "heading": "custom drops",
+        "body": "<p>The SP-005 doubles as a canvas. We work with artists and studios on limited runs, printed under the glass. Alongside original work. The pad underneath is the standard SP-005, unchanged.</p>",
+        "image": "shopify://shop_images/wh-camp-ad10c924.png",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "none",
+        "image_mobile_shape": "",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "large",
+        "image_shape": "1:1"
+      }
+    },
+    "text_media_16": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": true,
+        "heading": "packaging",
+        "body": "<p>The SP-005 and the CR-005 both ship in rugged plastic carrying cases designed to protect your pad on it’s journey to you, and wherever you decide to bring it.</p>",
+        "image": "shopify://shop_images/wh-camp-2d8b0094.jpg",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "none",
+        "image_mobile_shape": "",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "large",
+        "image_shape": "3:2"
+      }
+    },
+    "text_media_17": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": true,
+        "heading": "the perfect setup",
+        "body": "<p>The pad is one part of it. We also make the M-001 mouse and the K-001 keyboard, all built to the same standard and designed to sit on a desk together. Matching materials, matching finishes, nothing that clashes.</p>",
+        "image": "shopify://shop_images/wh-camp-233ff619.jpg",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "none",
+        "image_mobile_shape": "",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "large",
+        "image_shape": "3:2"
+      }
+    }
+  },
+  "order": [
+    "top_bar_1",
+    "product_header_2",
+    "product_bar_3",
+    "drawing_callouts_4",
+    "spec_sheet_5",
+    "intro_usps_6",
+    "faq_7",
+    "text_media_8",
+    "compare_9",
+    "split_10",
+    "text_media_11",
+    "text_media_12",
+    "text_media_13",
+    "text_media_14",
+    "text_media_15",
+    "text_media_16",
+    "text_media_17"
+  ]
+}

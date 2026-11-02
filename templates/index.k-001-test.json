@@ -1,0 +1,711 @@
+{
+  "sections": {
+    "top_bar_1": {
+      "type": "wh-top-bar",
+      "settings": {
+        "breadcrumbs": "products / mouse / K-001",
+        "color_scheme": "dark"
+      }
+    },
+    "product_header_2": {
+      "type": "wh-product-header",
+      "settings": {
+        "title": "K-001",
+        "description": "<p>The WALLHACK M-001 is a premium wireless gaming mouse built around a die-cast magnesium alloy shell. Its wireless receiver doubles as a charging dock and control interface, and a hot-swappable battery system means the mouse never has to stop for charging.</p>",
+        "show_reviews": true,
+        "review_count": "(125)",
+        "reviews_link": "see all reviews",
+        "color_scheme": "dark"
+      },
+      "blocks": {
+        "photo_1": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/wh-pdp-m001-1.png",
+            "shape": "1:1"
+          }
+        },
+        "photo_2": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/wh-pdp-m001-2.png",
+            "shape": "2:1"
+          }
+        },
+        "photo_3": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/wh-pdp-m001-3.png",
+            "shape": "1:1"
+          }
+        }
+      },
+      "block_order": [
+        "photo_1",
+        "photo_2",
+        "photo_3"
+      ]
+    },
+    "drawing_callouts_3": {
+      "type": "wh-drawing-callouts",
+      "settings": {
+        "layout": "callouts",
+        "drawing": "shopify://shop_images/wh-drawing-k001-top-down.svg",
+        "drawing_mobile": "",
+        "color_scheme": "dark",
+        "custom_background": "#0e0e0e"
+      },
+      "blocks": {
+        "callout_1": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>CNC-machined aluminium enclosure</p>",
+            "position": "top",
+            "type": "callout"
+          }
+        },
+        "callout_2": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>Up to 8000 Hz polling rate</p>",
+            "position": "top",
+            "type": "callout"
+          }
+        },
+        "callout_3": {
+          "type": "callout",
+          "settings": {
+            "text": "<p></p>",
+            "position": "top",
+            "type": "empty"
+          }
+        },
+        "callout_4": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>Adjustable actuation point with 0.01 mm actuation resolution</p>",
+            "position": "top",
+            "type": "callout"
+          }
+        },
+        "callout_5": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>Double-shot PBT, shine-through keycaps</p>",
+            "position": "bottom",
+            "type": "callout"
+          }
+        },
+        "callout_6": {
+          "type": "callout",
+          "settings": {
+            "text": "<p></p>",
+            "position": "bottom",
+            "type": "empty"
+          }
+        },
+        "callout_7": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>Per-key WLED backlight</p>",
+            "position": "bottom",
+            "type": "callout"
+          }
+        }
+      },
+      "block_order": [
+        "callout_1",
+        "callout_2",
+        "callout_3",
+        "callout_4",
+        "callout_5",
+        "callout_6",
+        "callout_7"
+      ]
+    },
+    "drawing_callouts_4": {
+      "type": "wh-drawing-callouts",
+      "settings": {
+        "layout": "callouts",
+        "drawing": "shopify://shop_images/wh-drawing-k001-front.svg",
+        "drawing_mobile": "",
+        "color_scheme": "dark",
+        "custom_background": "#0e0e0e"
+      },
+      "blocks": {
+        "callout_1": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>Stepped endless dial for real-time adjustment of actuation point and Rapid Trigger</p>",
+            "position": "top",
+            "type": "callout"
+          }
+        },
+        "callout_2": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>Wired 1.8m USB-C to USB-A cable connection</p>",
+            "position": "top",
+            "type": "callout"
+          }
+        },
+        "callout_3": {
+          "type": "callout",
+          "settings": {
+            "text": "<p></p>",
+            "position": "top",
+            "type": "empty"
+          }
+        },
+        "callout_4": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>WALLHACK KS-TR Linear Switch (Medium), co-developed with Gateron</p>",
+            "position": "top",
+            "type": "callout"
+          }
+        },
+        "callout_5": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>Silicone anti-slip textured base</p>",
+            "position": "bottom",
+            "type": "callout"
+          }
+        },
+        "callout_6": {
+          "type": "callout",
+          "settings": {
+            "text": "<p></p>",
+            "position": "bottom",
+            "type": "empty"
+          }
+        },
+        "callout_7": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>Adjustable typing angle: 0°, 4° and 7°</p>",
+            "position": "bottom",
+            "type": "callout"
+          }
+        }
+      },
+      "block_order": [
+        "callout_1",
+        "callout_2",
+        "callout_3",
+        "callout_4",
+        "callout_5",
+        "callout_6",
+        "callout_7"
+      ]
+    },
+    "specs_contents_5": {
+      "type": "wh-specs-contents",
+      "settings": {
+        "label": "contents",
+        "color_scheme": "dark",
+        "custom_background": "#0e0e0e"
+      },
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-k001-box-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-k001-v2.svg",
+            "caption": "1x K-001 Keyboard"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-usba-usbc-v2.svg",
+            "caption": "1x usb-c to usb-a cable"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-keyswitch-puller-v2.svg",
+            "caption": "1x switch puller"
+          }
+        },
+        "item_5": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-keycap-puller-v2.svg",
+            "caption": "1x KeyCap Puller"
+          }
+        },
+        "item_6": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-4d-riser-v2.svg",
+            "caption": "1x 4° Riser"
+          }
+        },
+        "item_7": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-7d-riser-v2.svg",
+            "caption": "1x 7° Riser"
+          }
+        },
+        "item_8": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-4d-screws-v2.svg",
+            "caption": "1x 4° Riser screw set"
+          }
+        },
+        "item_9": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-7d-screws-v2.svg",
+            "caption": "1x 7° Riser screw set"
+          }
+        },
+        "item_10": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-screwdriver-v2.svg",
+            "caption": "1x Screwdriver"
+          }
+        },
+        "spec_row_11": {
+          "type": "spec_row",
+          "settings": {
+            "specs": "2",
+            "label_1": "weight (no riser)",
+            "value_1": "1300 g",
+            "label_2": "Form Factor",
+            "value_2": "65%"
+          }
+        },
+        "spec_row_12": {
+          "type": "spec_row",
+          "settings": {
+            "specs": "2",
+            "label_1": "material",
+            "value_1": "6063 Aluminium",
+            "label_2": "max polling rate",
+            "value_2": "8000 hz"
+          }
+        },
+        "spec_row_13": {
+          "type": "spec_row",
+          "settings": {
+            "specs": "2",
+            "label_1": "Max Scan Rate",
+            "value_1": "16000 hz",
+            "label_2": "dimensions (no riser)",
+            "value_2": "125 × 313 × 33 mm"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "item_5",
+        "item_6",
+        "item_7",
+        "item_8",
+        "item_9",
+        "item_10",
+        "spec_row_11",
+        "spec_row_12",
+        "spec_row_13"
+      ]
+    },
+    "image_6": {
+      "type": "wh-image",
+      "settings": {
+        "image": "shopify://shop_images/wh-camp-780b5f09.png",
+        "image_mobile": "shopify://shop_images/wh-camp-25004f15.png",
+        "image_fade": "none",
+        "image_fade_mobile": "none",
+        "image_background": "none",
+        "image_mobile_shape": "16:9",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "image_shape": "21:9",
+        "custom_background": "#0e0e0e"
+      }
+    },
+    "intro_usps_7": {
+      "type": "wh-intro-usps",
+      "settings": {
+        "heading": "INTRODUCING THE K-001",
+        "body": "<p>The WALLHACK K-001 is a compact 65% high-performance Hall Effect (HE) keyboard built for speed, consistency, and control. It combines a precision CNC-machined aluminum enclosure with the WALLHACK CORE-MK1 electronics platform and the WALLHACK KS-TR Linear Switch (Medium), co-developed with Gateron. On-device quick settings and a stepped endless dial allow real-time adjustment of actuation point and Rapid Trigger. All wrapped in function-first Danish design.</p><p>The K-001 is available for *PRICE*</p>",
+        "show_cta": true,
+        "cta_label": "get notified",
+        "color_scheme": "dark",
+        "custom_background": "#0e0e0e"
+      },
+      "blocks": {},
+      "block_order": []
+    },
+    "text_media_8": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": false,
+        "heading": "Spill it, wipe it, keep playing",
+        "body": "<p>The K-001 is available in both Natural and Slate colour ways</p>",
+        "image": "shopify://shop_images/wh-camp-0d429cb9.png",
+        "image_mobile": "shopify://shop_images/wh-camp-a08aced2.png",
+        "image_fade": "none",
+        "image_fade_mobile": "none",
+        "image_background": "none",
+        "image_mobile_shape": "2:3",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "large",
+        "image_shape": "3:2",
+        "custom_background": "#0e0e0e"
+      }
+    },
+    "text_9": {
+      "type": "wh-text",
+      "settings": {
+        "columns": "2",
+        "show_heading": true,
+        "heading": "form and function",
+        "body": "<p>The underside of the keyboard features 4 mounting holes for attaching a 4-degree or a 7-degree riser made from a solid block of machined aluminium. To mount it, simply screw the preferred riser on using the included screws and custom screwdriver.</p>",
+        "body_1": "<p>The K-001 is our first keyboard, built for competitive gaming and made to last. Every part is chosen for how it performs and how it holds up.</p>",
+        "body_2": "<p>The housing of the K-001 is made from CNC machined 6063 aluminium, that has been bead blasted and anodized for a smooth and durable finish.</p>",
+        "color_scheme": "dark",
+        "custom_background": "#0e0e0e"
+      }
+    },
+    "image_10": {
+      "type": "wh-image",
+      "settings": {
+        "image": "shopify://shop_images/wh-camp-5b71ccd2.png",
+        "image_mobile": "shopify://shop_images/wh-camp-75eefbf0.png",
+        "image_fade": "none",
+        "image_fade_mobile": "bottom",
+        "image_background": "none",
+        "image_mobile_shape": "4:3",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "image_shape": "4:3",
+        "custom_background": "#0e0e0e"
+      }
+    },
+    "text_media_11": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": false,
+        "heading": "Spill it, wipe it, keep playing",
+        "body": "<p>The underside of the keyboard features 4 mounting holes for attaching a 4-degree or a 7-degree riser made from a solid block of machined aluminium. To mount it, simply screw the preferred riser on using the included screws and custom screwdriver.</p>",
+        "image": "shopify://shop_images/wh-camp-d2bee6b4.png",
+        "image_mobile": "shopify://shop_images/wh-camp-fd5a7032.png",
+        "image_fade": "none",
+        "image_fade_mobile": "none",
+        "image_background": "none",
+        "image_mobile_shape": "4:5",
+        "image_fit": "fit",
+        "image_fit_mobile": "fill",
+        "color_scheme": "dark",
+        "spacing": "large",
+        "image_shape": "2:1",
+        "custom_background": "#0e0e0e"
+      }
+    },
+    "cards_12": {
+      "type": "wh-cards",
+      "settings": {
+        "show_heading": true,
+        "heading": "WAllhack ks-tr\nlinear switch series",
+        "show_intro": true,
+        "intro_1": "<p>Our keyboard comes with our brand new series of custom hall effect switches, the Wallhack KS-TR Linear switch. Made in collaboration with the industry leaders in keyboard switch manufacturing, Gateron.</p>",
+        "intro_2": "<p>The KS-TR series features three spring weights: Light, Medium and Heavy, giving our users the option to mix and match different spring weights to achieve the perfect combination for your exact needs.</p>",
+        "color_scheme": "dark",
+        "spacing": "large",
+        "custom_background": "#0e0e0e"
+      },
+      "blocks": {
+        "card_1": {
+          "type": "wh-card",
+          "settings": {
+            "name": "KS-TR Light",
+            "description": "<p>Light is the fastest, lightest touch, built for quick actuation and repeated input.</p>",
+            "image": "shopify://shop_images/wh-camp-538b5aed.png",
+            "image_fit": "fit",
+            "image_background": "solid",
+            "image_shape": "4:3"
+          }
+        },
+        "card_2": {
+          "type": "wh-card",
+          "settings": {
+            "name": "KS-TR Medium",
+            "description": "<p>Medium is slightly heavier than average, and is a nice balance between speed and control with its firm keypress feel.</p>",
+            "image": "shopify://shop_images/wh-camp-bd77829c.png",
+            "image_fit": "fit",
+            "image_background": "solid",
+            "image_shape": "4:3"
+          }
+        },
+        "card_3": {
+          "type": "wh-card",
+          "settings": {
+            "name": "KS-TR Heavy",
+            "description": "<p>Heavy is more deliberate, giving you fewer accidental presses. A great typing feel and nice for users who enjoy a more substantial and precise keypress feel.</p>",
+            "image": "shopify://shop_images/wh-camp-47391fb2.png",
+            "image_fit": "fit",
+            "image_background": "solid",
+            "image_shape": "4:3"
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3"
+      ]
+    },
+    "split_13": {
+      "type": "wh-split",
+      "settings": {
+        "image_side": "left",
+        "heading": "Tailored to your preferences",
+        "body": "<p>Control your actuation point and Rapid Trigger sensitivity on directly on the keyboard using the stepped dial.</p><p>The K-001 comes stock with the KS-TR (Medium) and the Heavy and Light variants will be available separately at launch</p>",
+        "image": "shopify://shop_images/wh-camp-493f4ffb.png",
+        "image_mobile": "shopify://shop_images/wh-camp-47272cad.png",
+        "image_fade": "none",
+        "image_fade_mobile": "none",
+        "image_background": "none",
+        "image_mobile_shape": "16:9",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "regular",
+        "image_shape": "4:3",
+        "custom_background": "#0e0e0e"
+      }
+    },
+    "split_14": {
+      "type": "wh-split",
+      "settings": {
+        "image_side": "right",
+        "heading": "Focused Light path",
+        "body": "<p>Our switches have a first of its kind light guide structure that directs the light to the keycap legend and minimizes the light bleed on the switch plate.</p><p>Our custom double-shot PBT keycaps and 0.1mm precision keycap legends allows for focused light illuminating the legend with little to no light spill.</p>",
+        "image": "shopify://shop_images/wh-camp-b010a730.png",
+        "image_mobile": "shopify://shop_images/wh-camp-077b1da4.png",
+        "image_fade": "none",
+        "image_fade_mobile": "none",
+        "image_background": "none",
+        "image_mobile_shape": "16:9",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "regular",
+        "image_shape": "4:3",
+        "custom_background": "#0e0e0e"
+      }
+    },
+    "text_media_15": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": true,
+        "no_space_bottom": true,
+        "show_heading": false,
+        "heading": "Spill it, wipe it, keep playing",
+        "body": "<p>The transparency of our keycap light guide allows for a stealth look by turning the brightness to 0. Giving the keycaps an almost pure black appearance.</p>",
+        "image": "shopify://shop_images/wh-camp-6585c10e.png",
+        "image_mobile": "shopify://shop_images/wh-camp-bd434cf1.png",
+        "image_fade": "none",
+        "image_fade_mobile": "none",
+        "image_background": "gradient",
+        "image_mobile_shape": "9:16",
+        "image_fit": "fill",
+        "image_fit_mobile": "fit",
+        "color_scheme": "dark",
+        "spacing": "large",
+        "image_shape": "21:9"
+      }
+    },
+    "text_media_16": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": true,
+        "no_space_bottom": true,
+        "show_heading": false,
+        "heading": "Spill it, wipe it, keep playing",
+        "body": "<p>the keycap legend allows for stealth setups in all lighting conditions, for all types of eyes</p>",
+        "image": "shopify://shop_images/wh-camp-e6237e5e.png",
+        "image_mobile": "shopify://shop_images/wh-camp-e6237e5e.png",
+        "image_fade": "none",
+        "image_fade_mobile": "none",
+        "image_background": "solid",
+        "image_mobile_shape": "4:5",
+        "image_fit": "fill",
+        "image_fit_mobile": "fit",
+        "color_scheme": "dark",
+        "spacing": "large",
+        "image_shape": "2:1",
+        "custom_background": "#eeeeee",
+        "custom_foreground": "#0e0e0e"
+      }
+    },
+    "text_media_17": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": true,
+        "heading": "the stack",
+        "body": "<p>The K-001 has a black anodized aluminum plate and dampening silicone mid layer. Underneath the PCB lays a layer of foam along with a sheet of plastic film that in combination with the silicone mid layer absorbs reverberation in the chassis.</p><p>The whole stack is screw-mounted to the bottom housing of the keyboard to ensure predictable actuation of each key and a crisp and clacky sound signature.</p>",
+        "image": "shopify://shop_images/wh-camp-7dbd311e.png",
+        "image_mobile": "shopify://shop_images/wh-camp-5e88e6fb.png",
+        "image_fade": "none",
+        "image_fade_mobile": "none",
+        "image_background": "none",
+        "image_mobile_shape": "4:5",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "large",
+        "image_shape": "21:9",
+        "custom_background": "#0e0e0e"
+      }
+    },
+    "text_media_18": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": true,
+        "no_space_bottom": true,
+        "show_heading": false,
+        "heading": "Spill it, wipe it, keep playing",
+        "body": "<p>At the bottom of the stack is our main electronics platform, the WALLHACK Core-MK1.</p>",
+        "image": "shopify://shop_images/wh-camp-06cf4d60.png",
+        "image_mobile": "shopify://shop_images/wh-camp-286ad1d6.png",
+        "image_fade": "none",
+        "image_fade_mobile": "none",
+        "image_background": "none",
+        "image_mobile_shape": "21:9",
+        "image_fit": "fit",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "spacing": "large",
+        "image_shape": "21:9",
+        "custom_background": "#0e0e0e"
+      }
+    },
+    "text_19": {
+      "type": "wh-text",
+      "settings": {
+        "columns": "1",
+        "show_heading": false,
+        "heading": "form and function",
+        "body": "<p>It achieves an 8000 hertz polling rate, 16000 hertz Scan rate and 0.129ms of input delay.</p><p>In combination, this will result in a seamless input that feels responsive and instantaneous in game. This tech stack also drives our implementation of input determination features such as custom actuation points, rapid trigger, game pad emulation and various types of SOCD.</p>",
+        "body_1": "<p>The K-001 is our first keyboard, built for competitive gaming and made to last. Every part is chosen for how it performs and how it holds up.</p>",
+        "body_2": "<p>The housing of the K-001 is made from CNC machined 6063 aluminium, that has been bead blasted and anodized for a smooth and durable finish.</p>",
+        "color_scheme": "dark",
+        "custom_background": "#0e0e0e"
+      }
+    },
+    "text_20": {
+      "type": "wh-text",
+      "settings": {
+        "columns": "1",
+        "show_heading": true,
+        "heading": "WALLHACK TERMINAL",
+        "body": "<p>The K-001 features our web-based software, WALLHACK Terminal, to enable fine control of the keyboards internal settings without the need to download any software.<br><br>Here you can set up configure all setting of the keyboard such as game pad emulation, Depth-based or last-input SOCD, as well as the actuation point and rapid trigger settings, and a whole bunch of other tweaks to tailor the K-001 to your exact playstyle.</p>",
+        "body_1": "<p>The K-001 is our first keyboard, built for competitive gaming and made to last. Every part is chosen for how it performs and how it holds up.</p>",
+        "body_2": "<p>The housing of the K-001 is made from CNC machined 6063 aluminium, that has been bead blasted and anodized for a smooth and durable finish.</p>",
+        "color_scheme": "dark",
+        "custom_background": "#0e0e0e"
+      }
+    },
+    "content_frame_21": {
+      "type": "wh-content-frame",
+      "settings": {
+        "orientation": "landscape",
+        "image": "",
+        "image_mobile": "",
+        "background_gradient": true,
+        "color_scheme": "dark",
+        "custom_background": "#0e0e0e"
+      }
+    },
+    "cover_22": {
+      "type": "wh-cover",
+      "settings": {
+        "heading": "Safe from prying Paws",
+        "subheading": "The K-001 ships in a rugged and protective carry case that you can use to transport the K-001 as well as all the included accessories.",
+        "show_subheading": true,
+        "subtitle_position": "top",
+        "image": "shopify://shop_images/wh-camp-a50f8d38.png",
+        "image_mobile": "shopify://shop_images/wh-camp-1b5c6923.jpg",
+        "image_fade": "none",
+        "image_fade_mobile": "none",
+        "image_background": "solid",
+        "image_mobile_shape": "2:3",
+        "image_fit": "fill",
+        "image_fit_mobile": "same",
+        "color_scheme": "dark",
+        "image_shape": "4:3",
+        "custom_background": "#ecebeb",
+        "custom_foreground": "#0e0e0e"
+      }
+    },
+    "image_23": {
+      "type": "wh-image",
+      "settings": {
+        "image": "shopify://shop_images/wh-camp-6fcc1961.png",
+        "image_mobile": "shopify://shop_images/wh-camp-bf7198cb.png",
+        "image_fade": "none",
+        "image_fade_mobile": "none",
+        "image_background": "solid",
+        "image_mobile_shape": "2:3",
+        "image_fit": "fill",
+        "image_fit_mobile": "fit",
+        "color_scheme": "dark",
+        "image_shape": "3:2",
+        "custom_background": "#edebec"
+      }
+    }
+  },
+  "order": [
+    "top_bar_1",
+    "product_header_2",
+    "drawing_callouts_3",
+    "drawing_callouts_4",
+    "specs_contents_5",
+    "image_6",
+    "intro_usps_7",
+    "text_media_8",
+    "text_9",
+    "image_10",
+    "text_media_11",
+    "cards_12",
+    "split_13",
+    "split_14",
+    "text_media_15",
+    "text_media_16",
+    "text_media_17",
+    "text_media_18",
+    "text_19",
+    "text_20",
+    "content_frame_21",
+    "cover_22",
+    "image_23"
+  ]
+}

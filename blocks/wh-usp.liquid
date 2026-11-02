@@ -1,0 +1,20 @@
+<div class="wh-usp" data-wh-block="{{ block.id }}" {{ block.shopify_attributes }}>{% render 'wh-icon', image: block.settings.icon %}</div>
+
+
+{% schema %}
+{
+  "name": "USP icon",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "icon",
+      "label": "Icon (SVG from the USP library)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "USP icon"
+    }
+  ]
+}
+{% endschema %}

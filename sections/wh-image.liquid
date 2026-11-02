@@ -1,0 +1,284 @@
+<section class="wh-section wh-image wh-scheme-{{ section.settings.color_scheme }}" style="{% render 'wh-colors', s: section.settings %}">
+  {% render 'wh-media', shape: section.settings.image_shape, force_ratio: section.settings.image_ratio, image: section.settings.image, image_mobile: section.settings.image_mobile, mobile_shape: section.settings.image_mobile_shape, fade: section.settings.image_fade, fade_mobile: section.settings.image_fade_mobile, background: section.settings.image_background, fit: section.settings.image_fit, fit_mobile: section.settings.image_fit_mobile, ratio: 1.7778, sizes: '100vw' %}
+</section>
+
+{% schema %}
+{
+  "name": "WH Image",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Image (mobile)"
+    },
+    {
+      "type": "select",
+      "id": "image_mobile_shape",
+      "label": "Phone photo shape",
+      "default": "",
+      "options": [
+        {
+          "value": "",
+          "label": "Same as the phone photo"
+        },
+        {
+          "value": "21:9",
+          "label": "21:9"
+        },
+        {
+          "value": "2:1",
+          "label": "2:1"
+        },
+        {
+          "value": "16:9",
+          "label": "16:9"
+        },
+        {
+          "value": "3:2",
+          "label": "3:2"
+        },
+        {
+          "value": "4:3",
+          "label": "4:3"
+        },
+        {
+          "value": "1:1",
+          "label": "1:1"
+        },
+        {
+          "value": "4:5",
+          "label": "4:5"
+        },
+        {
+          "value": "2:3",
+          "label": "2:3"
+        },
+        {
+          "value": "9:16",
+          "label": "9:16"
+        }
+      ],
+      "info": "The frame shape for the Image (mobile)."
+    },
+    {
+      "type": "select",
+      "id": "image_fade",
+      "label": "Photo fade",
+      "default": "none",
+      "info": "The photo fades to see-through at that edge, so it blends into any background colour.",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        },
+        {
+          "value": "both",
+          "label": "Top and bottom"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "image_fade_mobile",
+      "label": "Photo fade (phone photo)",
+      "default": "same",
+      "info": "Only used with an Image (mobile).",
+      "options": [
+        {
+          "value": "same",
+          "label": "Same as above"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        },
+        {
+          "value": "both",
+          "label": "Top and bottom"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "image_background",
+      "label": "Photo background",
+      "default": "solid",
+      "info": "What sits behind the photo: Solid = the photo background colour (around Fit photos, through cut-outs), None = nothing (the section shows through), Gradient = page colour fading to light.",
+      "options": [
+        {
+          "value": "solid",
+          "label": "Solid"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "gradient",
+          "label": "Gradient"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "image_shape",
+      "label": "Image shape",
+      "default": "16:9",
+      "options": [
+        {
+          "value": "21:9",
+          "label": "21:9 extra wide"
+        },
+        {
+          "value": "2:1",
+          "label": "2:1 wide"
+        },
+        {
+          "value": "16:9",
+          "label": "16:9 landscape"
+        },
+        {
+          "value": "3:2",
+          "label": "3:2"
+        },
+        {
+          "value": "4:3",
+          "label": "4:3"
+        },
+        {
+          "value": "1:1",
+          "label": "1:1 square"
+        },
+        {
+          "value": "4:5",
+          "label": "4:5 tall"
+        },
+        {
+          "value": "2:3",
+          "label": "2:3 tall"
+        },
+        {
+          "value": "9:16",
+          "label": "9:16 portrait"
+        },
+        {
+          "value": "custom",
+          "label": "Custom (designers only)"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "image_fit",
+      "label": "Photo",
+      "default": "fill",
+      "options": [
+        {
+          "value": "fill",
+          "label": "Fill — crop to the frame"
+        },
+        {
+          "value": "fit",
+          "label": "Fit — show the whole photo"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "image_fit_mobile",
+      "label": "Phone photo",
+      "default": "same",
+      "info": "Only used when there is a separate phone photo.",
+      "options": [
+        { "value": "same", "label": "Same as desktop" },
+        { "value": "fill", "label": "Fill — crop to the frame" },
+        { "value": "fit", "label": "Fit — show the whole photo" }
+      ]
+    },
+    {
+      "type": "number",
+      "id": "image_ratio",
+      "label": "Custom ratio (width ÷ height)",
+      "info": "Only used when Image shape is Custom."
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Colour mode",
+      "default": "light",
+      "options": [
+        {
+          "value": "light",
+          "label": "Light"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Custom colours (collaboration pages)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Leave empty to use the colour mode above. Filled in = this section uses these colours instead."
+    },
+    {
+      "type": "color",
+      "id": "custom_background",
+      "label": "Background"
+    },
+    {
+      "type": "color",
+      "id": "custom_foreground",
+      "label": "Text + icons"
+    },
+    {
+      "type": "color",
+      "id": "custom_border",
+      "label": "Borders"
+    },
+    {
+      "type": "color",
+      "id": "custom_image_background",
+      "label": "Photo background colour",
+      "info": "Behind photos (Solid). Figma: change the photo frame’s fill colour."
+    },
+    {
+      "type": "color",
+      "id": "custom_gradient_end",
+      "label": "Gradient bottom colour",
+      "info": "Background = Gradient: the colour at the bottom of the photo. Empty = the colour mode’s gradient colour. Tip: use the next section’s background colour so the page flows into it."
+    }
+  ],
+  "tag": "div",
+  "presets": [
+    {
+      "name": "WH Image"
+    }
+  ]
+}
+{% endschema %}

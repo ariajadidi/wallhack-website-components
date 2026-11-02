@@ -1,0 +1,28 @@
+<div class="wh-card wh-card--text" data-wh-block="{{ block.id }}" {{ block.shopify_attributes }}>
+  {% render 'wh-card-text', block: block %}
+</div>
+
+{% schema %}
+{
+  "name": "Text card",
+  "settings": [
+    {
+      "type": "text",
+      "id": "name",
+      "label": "Name",
+      "default": "KS-TR Light"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Light is the fastest, lightest touch, built for quick actuation and repeated input.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text card"
+    }
+  ]
+}
+{% endschema %}

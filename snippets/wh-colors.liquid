@@ -1,0 +1,10 @@
+{%- comment -%}
+  One-off colour overrides for collaboration pages. Param: s (section.settings).
+  Empty fields = the section's Light/Dark colour mode. Set values override the colour tokens for the whole section,
+  so text, icons/drawings (currentColor), borders and image backgrounds all follow.
+{%- endcomment -%}
+{%- if s.custom_background != blank -%}--wh-color-background: {{ s.custom_background }};{%- endif -%}
+{%- if s.custom_foreground != blank -%}--wh-color-foreground: {{ s.custom_foreground }};--wh-color-foreground-muted: {{ s.custom_foreground }};{%- endif -%}
+{%- if s.custom_border != blank -%}--wh-color-border: {{ s.custom_border }};{%- endif -%}
+{%- if s.custom_image_background != blank -%}--wh-color-image-background: {{ s.custom_image_background }};{%- endif -%}
+{%- if s.custom_gradient_end != blank -%}--wh-color-gradient-end: {{ s.custom_gradient_end }};{%- endif -%}

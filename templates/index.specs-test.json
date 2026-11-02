@@ -1,0 +1,118 @@
+{
+  "sections": {
+    "specs_contents_1": {
+      "type": "wh-specs-contents",
+      "settings": {
+        "label": "contents",
+        "color_scheme": "light"
+      },
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-k001-box-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-k001-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-usba-usbc-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-keyswitch-puller-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "item_5": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-keycap-puller-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "item_6": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-4d-riser-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "item_7": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-7d-riser-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "item_8": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-4d-screws-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "item_9": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-7d-screws-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "item_10": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/wh-contents-screwdriver-v2.svg",
+            "caption": "1x carry case"
+          }
+        },
+        "spec_row_11": {
+          "type": "spec_row",
+          "settings": {
+            "specs": "1",
+            "label_1": "weight",
+            "value_1": "1450g"
+          }
+        },
+        "spec_row_12": {
+          "type": "spec_row",
+          "settings": {
+            "specs": "2",
+            "label_1": "weight",
+            "value_1": "1450g",
+            "label_2": "weight",
+            "value_2": "1450g"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "item_5",
+        "item_6",
+        "item_7",
+        "item_8",
+        "item_9",
+        "item_10",
+        "spec_row_11",
+        "spec_row_12"
+      ]
+    }
+  },
+  "order": [
+    "specs_contents_1"
+  ]
+}

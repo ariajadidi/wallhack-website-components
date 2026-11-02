@@ -1,0 +1,341 @@
+/* wh-sections.css — scaled layout (Desktop 1464 / Mobile 390, one switch at a 750px window). Reference implementation of the Figma section components (WH-Website-Component).
+   Every size comes from wh-tokens.css (generated from Figma variables). Raw px values are marked "raw in Figma". */
+
+/* ---------- Canvas: the page window fills the browser (test layout) ---------- */
+* { box-sizing: border-box; }
+body.wh-canvas { margin: 0; display: flex; min-height: 100vh; }
+.wh-window { flex: 1 1 auto; min-width: 0; background: var(--wh-color-background); }
+
+/* ---------- Shared ---------- */
+/* Borders match Figma strokeAlign CENTER: drawn as box-shadows (half inside, half outside) so they never change a box's size and neighbouring cells share one line. */
+.wh-page h1, .wh-page h2, .wh-page h3, .wh-page p, .wh-page ul { margin: 0; }
+.wh-page img { display: block; width: 100%; height: auto; }
+.wh-section { background: var(--wh-color-background); color: var(--wh-color-foreground); }
+/* Shopify wraps every theme block in <div class="shopify-block">; Figma has no such layer, so let the block itself be the flex item. */
+.wh-page .shopify-block { display: contents; }
+.wh-p1 p + p { margin-top: var(--wh-text-body-paragraph-spacing); }
+.wh-p2 p + p, .wh-p3 p + p { margin-top: var(--wh-text-small-paragraph-spacing); }
+.wh-media { position: relative; overflow: hidden; background: var(--wh-color-image-background); }
+/* The frame keeps its Figma shape; the photo is cropped to fill it (Figma: image fill = Fill) */
+.wh-media > img, .wh-media > svg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.wh-media .wh-media__mobile { display: none; }
+/* Icons + line drawings always take the text colour (color/foreground): the SVG is used as a mask. */
+.wh-icon { display: block; background: currentColor; -webkit-mask: var(--wh-icon) center / contain no-repeat; mask: var(--wh-icon) center / contain no-repeat; }
+.wh-icon--empty { background: none; border: 1px dashed var(--wh-color-border); }
+.wh-button { display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; color: inherit; text-decoration: none;
+  padding: var(--wh-component-button-padding-y) var(--wh-component-button-padding-x); box-shadow: inset 0 0 0 calc(1px / 2) var(--wh-color-foreground), 0 0 0 calc(1px / 2) var(--wh-color-foreground); border-radius: var(--wh-radius-2); }
+.wh-button--small { padding: var(--wh-component-button-small-padding-y) var(--wh-component-button-small-padding-x); }
+
+@container wh-window (max-width: 749px) {
+  .wh-page .wh-mobile-left { text-align: left; }
+  .wh-media--has-mobile .wh-media__desktop { display: none; }
+  .wh-media--has-mobile .wh-media__mobile { display: block; }
+}
+
+/* Photo fades (Figma Media/Image “fade top / fade bottom”): the photo AND its background turn see-through over 30% of the height
+   at that edge (an opacity mask, like the alpha masks in Figma), so it melts into whatever colour is behind it. */
+.wh-media { --wh-fade-top: 0%; --wh-fade-bottom: 0%; }
+.wh-media--fade-top { --wh-fade-top: 30%; }
+.wh-media--fade-bottom { --wh-fade-bottom: 30%; }
+.wh-media--fade-top, .wh-media--fade-bottom, .wh-media--mfade {
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 var(--wh-fade-top), #000 calc(100% - var(--wh-fade-bottom)), transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 var(--wh-fade-top), #000 calc(100% - var(--wh-fade-bottom)), transparent); }
+/* Background=Gradient: colour = color/background → color/gradient-end */
+.wh-media--gradient { background: linear-gradient(to bottom, var(--wh-color-background), var(--wh-color-gradient-end)); }
+.wh-media--fit > img { object-fit: contain; }   /* Figma image scale mode Fit: the whole photo, on the frame's background */
+.wh-media--no-bg { background: none; }   /* Figma Media Background=None: no box behind cut-outs / Fit photos */
+@container wh-window (max-width: 749px) {   /* the phone photo can have its own Fill / Fit */
+  .wh-media--mfit-fit > .wh-media__mobile { object-fit: contain; }
+  .wh-media--mfit-fill > .wh-media__mobile { object-fit: cover; }
+}
+@container wh-window (max-width: 749px) {   /* a separate phone photo can fade differently */
+  .wh-media--mfade { --wh-fade-top: 0%; --wh-fade-bottom: 0%; }
+  .wh-media--mfade.wh-media--mfade-top { --wh-fade-top: 30%; }
+  .wh-media--mfade.wh-media--mfade-bottom { --wh-fade-bottom: 30%; }
+}
+
+/* ---------- Cover ---------- */
+.wh-cover { position: relative; display: flex; flex-direction: column; align-items: center; overflow: hidden; aspect-ratio: var(--ratio); }
+.wh-cover > .wh-media { position: absolute; inset: 0; }
+.wh-cover__title-block { position: relative; display: flex; flex-direction: column; align-items: center; width: 100%; text-align: center;
+  gap: var(--wh-component-cover-gap); padding: var(--wh-component-cover-padding-top) 0 var(--wh-component-cover-title-block-padding-bottom); }
+.wh-cover--bottom { justify-content: space-between; padding: var(--wh-component-cover-bottom-padding-y) var(--wh-component-cover-bottom-padding-x); }
+.wh-cover--bottom .wh-cover__title-block { padding: 0; }
+.wh-cover__sub { position: relative; text-align: center; }
+@container wh-window (max-width: 749px) { .wh-cover { aspect-ratio: var(--ratio-mobile, var(--ratio)); } }
+
+/* ---------- Intro + USPs ---------- */
+.wh-intro { display: flex; flex-direction: column; align-items: center; gap: var(--wh-layout-content-media-gap); padding: var(--wh-layout-block-padding-y) var(--wh-layout-side-padding); }
+.wh-intro__text { display: flex; flex-direction: column; align-items: center; gap: var(--wh-component-intro-usps-text-gap); width: 100%; text-align: center; }
+.wh-intro__body { width: 100%; max-width: var(--wh-layout-text-max-width); }
+.wh-intro__usps { display: flex; flex-direction: column; align-items: center; gap: var(--wh-layout-content-media-gap); width: 100%; }
+.wh-usp-row { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-end; gap: var(--wh-component-usp-gap); }
+.wh-usp .wh-icon { height: var(--wh-component-usp-icon-height); aspect-ratio: var(--ratio, 0.645); }
+
+/* ---------- Text ---------- */
+.wh-text { display: flex; flex-direction: column; align-items: center; gap: var(--wh-component-text-section-gap); padding: var(--wh-layout-block-padding-y) var(--wh-layout-side-padding); }
+.wh-text > .wh-h1 { width: 100%; text-align: center; }
+.wh-text__body { width: 100%; max-width: var(--wh-layout-text-max-width); text-align: center; }
+.wh-text__columns { display: flex; flex-wrap: wrap; column-gap: var(--wh-component-text-columns-gap); row-gap: var(--wh-component-text-columns-row-gap); width: 100%; max-width: var(--wh-layout-text-max-width); }
+.wh-text__columns > * { flex: 1 0 0; min-width: var(--wh-layout-column-min-width); }
+
+/* ---------- Text + Media ---------- */
+.wh-text-media { display: flex; flex-direction: column; gap: var(--wh-layout-content-media-gap); padding-block: var(--wh-layout-block-padding-y-large); }
+/* Spacing: Regular (Figma: section padding linked to layout/block-padding-y instead of …-large) */
+.wh-page .wh-spacing-regular { padding-top: var(--wh-layout-block-padding-y); padding-bottom: var(--wh-layout-block-padding-y); }
+.wh-page .wh-text-media--flush-top { padding-top: 0; } .wh-page .wh-text-media--flush-bottom { padding-bottom: 0; }   /* Figma: section padding set to 0 by the designer */
+.wh-text-media__content { display: flex; flex-direction: column; align-items: center; gap: var(--wh-component-text-media-content-gap); padding-inline: var(--wh-layout-side-padding); text-align: center; }
+.wh-text-media__body { width: 100%; max-width: var(--wh-layout-text-max-width); }
+.wh-text-media > .wh-media { aspect-ratio: var(--ratio, 1.7778); }
+
+/* ---------- Image ---------- */
+.wh-image > .wh-media { aspect-ratio: var(--ratio, 1.7778); }
+@container wh-window (max-width: 749px) { .wh-image > .wh-media--has-mobile, .wh-text-media > .wh-media--has-mobile, .wh-split > .wh-media.wh-media--has-mobile, .wh-card > .wh-media.wh-media--has-mobile, .wh-compare-item > .wh-media.wh-media--has-mobile { aspect-ratio: var(--ratio-mobile, var(--ratio)); } }
+
+/* ---------- Split — grid: Figma FILL gives both halves equal width even though only the text half has padding ---------- */
+.wh-split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); padding-block: var(--wh-layout-block-padding-y-large); }
+.wh-split > .wh-media { aspect-ratio: var(--ratio, 1); }
+.wh-split__text { display: flex; flex-direction: column; justify-content: center; gap: var(--wh-component-split-text-gap); padding: var(--wh-layout-block-padding-y) var(--wh-layout-side-padding); }
+.wh-split--image-right > .wh-media { order: 2; }
+@container wh-window (max-width: 749px) {
+  .wh-split { grid-template-columns: minmax(0, 1fr); }
+  .wh-split__text > .wh-h1 { text-align: center; } /* Figma: heading (mobile) is centred */
+  .wh-split > .wh-media, .wh-split--image-right > .wh-media { order: 2; } /* Mobile: image always below the text */
+}
+
+/* ---------- Compare ---------- */
+.wh-compare { display: flex; flex-direction: column; align-items: center; gap: var(--wh-component-compare-gap); padding: var(--wh-layout-block-padding-y-large) var(--wh-layout-side-padding); }
+.wh-compare__text { display: flex; flex-direction: column; align-items: center; gap: var(--wh-component-compare-text-gap); width: 100%; text-align: center; }
+.wh-compare__body { max-width: var(--wh-layout-text-max-width); }
+.wh-compare__items { display: flex; flex-wrap: wrap; align-items: flex-start; column-gap: var(--wh-component-compare-column-gap); row-gap: var(--wh-component-compare-row-gap); width: 100%; }
+.wh-compare-item { flex: 1 0 0; min-width: var(--wh-layout-column-min-width); display: flex; flex-direction: column; gap: var(--wh-component-compare-item-gap); }
+.wh-compare-item > .wh-media { aspect-ratio: var(--ratio, 1.7778); border-radius: var(--wh-radius-8); background: var(--wh-color-background); }
+.wh-compare-item__content { display: flex; flex-direction: column; gap: var(--wh-component-compare-item-content-gap); padding-right: var(--wh-space-16); }
+.wh-compare-item__tags-block { display: flex; flex-direction: column; gap: var(--wh-component-compare-item-tags-gap); }
+.wh-compare-item__tags { display: flex; flex-wrap: wrap; column-gap: var(--wh-component-compare-item-tags-gap); row-gap: var(--wh-component-compare-item-tags-row-gap); }
+.wh-tag { box-shadow: inset 0 0 0 calc(0.5px / 2) var(--wh-color-border), 0 0 0 calc(0.5px / 2) var(--wh-color-border); border-radius: var(--wh-radius-2); white-space: nowrap;
+  padding: var(--wh-component-compare-tag-section-padding-y) var(--wh-component-compare-tag-section-padding-x); }
+
+/* ---------- Cards ---------- */
+.wh-cards { display: flex; flex-direction: column; align-items: center; gap: var(--wh-component-cards-section-gap); padding: var(--wh-layout-block-padding-y-large) var(--wh-layout-side-padding); }
+/* Text Cards: the Cards section without its title block, using text-only cards */
+.wh-text-cards { padding: var(--wh-layout-block-padding-y-large) var(--wh-layout-side-padding); }
+.wh-cards__text { display: flex; flex-direction: column; align-items: center; gap: var(--wh-component-cards-text-gap); width: 100%; }
+.wh-cards__text > .wh-h1 { text-align: center; }
+.wh-cards__intro { display: flex; flex-wrap: wrap; column-gap: var(--wh-component-cards-intro-gap); row-gap: var(--wh-component-cards-intro-row-gap); width: 100%; }
+.wh-cards__intro > * { flex: 1 0 0; min-width: var(--wh-layout-column-min-width); }
+.wh-cards__cards { display: flex; flex-wrap: wrap; align-items: flex-start; column-gap: var(--wh-component-cards-cards-gap); row-gap: var(--wh-component-cards-cards-row-gap); width: 100%; }
+.wh-card { flex: 1 0 0; min-width: var(--wh-layout-column-min-width); display: flex; flex-direction: column; gap: var(--wh-component-card-item-section-gap); }
+.wh-card > .wh-media { aspect-ratio: var(--ratio, 1); border-radius: var(--wh-radius-8); }
+.wh-card__text { display: flex; flex-direction: column; gap: var(--wh-space-16); padding-right: var(--wh-space-12); }
+
+/* ---------- Comparison Timeline ---------- */
+.wh-timeline { display: flex; flex-direction: column; gap: var(--wh-component-variant-cards-section-gap); padding: var(--wh-layout-block-padding-y-large) var(--wh-layout-side-padding); }
+.wh-timeline__main { display: flex; align-items: center; justify-content: center; }
+.wh-timeline__cards { flex: 1 0 0; min-width: 0; display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; column-gap: var(--wh-component-variant-cards-cards-gap); row-gap: 0; }
+.wh-variant { flex: 1 0 0; min-width: var(--wh-component-variant-card-min-width); max-width: var(--wh-component-variant-card-max-width); }
+.wh-variant__desktop { display: flex; flex-direction: column; align-items: center; gap: var(--wh-component-variant-card-layout-above-mobile-gap);
+  padding: var(--wh-component-variant-card-layout-above-mobile-padding-y) var(--wh-component-variant-card-layout-above-mobile-padding-x); }
+.wh-variant__icon-area { display: flex; justify-content: center; width: 100%; padding-block: var(--wh-component-variant-card-icon-area-padding-y); }
+.wh-variant__icon-area .wh-icon { width: calc(156 * var(--wh-u)); height: calc(130 * var(--wh-u)); } /* icon instance size in Figma */
+.wh-variant__info { display: flex; flex-direction: column; gap: var(--wh-component-variant-card-info-gap); width: 100%; }
+.wh-variant__name-row { padding-block: var(--wh-component-variant-card-name-row-padding-y); text-align: center; }
+.wh-attr { display: flex; justify-content: space-between; align-items: center; gap: calc(8 * var(--wh-u)); height: var(--wh-component-variant-card-attribute-height); box-shadow: inset 0 calc(0.5px / -2) 0 0 var(--wh-color-border), 0 calc(0.5px / 2) 0 0 var(--wh-color-border); white-space: nowrap; }
+.wh-variant__mobile { display: none; }
+.wh-timeline__scale { display: flex; align-items: center; gap: var(--wh-component-variant-cards-scale-gap); }
+.wh-timeline__scale hr { flex: 1 0 0; height: 1px; margin: 0; border: 0; background: var(--wh-color-foreground); }
+.wh-timeline__scale-mobile { display: none; }
+@container wh-window (max-width: 749px) {
+  .wh-timeline__scale { display: none; }
+  .wh-timeline__scale-mobile { display: flex; flex-direction: column; align-items: center; align-self: stretch; gap: var(--wh-component-comparison-timeline-scale-mobile-gap);
+    padding-inline: var(--wh-component-variant-cards-scale-padding-x); }
+  .wh-timeline__scale-mobile hr { flex: 1 0 0; width: 1px; margin: 0; border: 0; background: var(--wh-color-foreground); }
+  .wh-variant { flex-basis: 100%; }
+  .wh-variant__desktop { display: none; }
+  .wh-variant__mobile { display: flex; align-items: center; padding-block: var(--wh-component-variant-card-layout-padding-y); }
+  .wh-variant__mobile-icon { flex: 1 0 0; display: flex; justify-content: center; padding-block: var(--wh-component-variant-card-icon-area-padding-y-2); }
+  .wh-variant__mobile-icon .wh-icon { width: calc(69 * var(--wh-u)); height: calc(57 * var(--wh-u)); }
+  .wh-variant__mobile-name { flex: 1 0 0; padding: var(--wh-component-variant-card-name-area-padding-y) var(--wh-component-variant-card-name-area-padding-x); }
+}
+
+/* ---------- Drawing + callouts ---------- */
+.wh-drawing { padding: var(--wh-layout-block-padding-y) var(--wh-layout-side-padding); }
+.wh-drawing__layout { display: flex; flex-direction: column; gap: var(--wh-component-drawing-callouts-layout-gap); padding: var(--wh-component-drawing-inset-y) var(--wh-component-drawing-inset-x); }
+.wh-callouts { display: flex; flex-wrap: wrap; align-items: flex-start; column-gap: var(--wh-component-drawing-callouts-callouts-gap); row-gap: var(--wh-component-drawing-callouts-callouts-row-gap); }
+.wh-callouts--top { padding-top: var(--wh-component-drawing-callouts-callouts-top-padding); }
+/* drawing, callouts, spec rows and contents share one width (Figma layout/detail-max-width), centred */
+.wh-callouts, .wh-spec-row__row, .wh-contents__label-top, .wh-contents__row { width: 100%; max-width: var(--wh-layout-detail-max-width); margin-inline: auto; }
+.wh-callout { flex: 1 0 0; min-width: min(var(--wh-component-callout-min-width), 100%); min-height: var(--wh-component-callout-height);
+  display: flex; align-items: flex-start; gap: var(--wh-component-callout-gap); padding-inline: var(--wh-component-callout-padding-x); }
+.wh-callouts--bottom .wh-callout { align-items: flex-end; }
+.wh-callout__line { flex: none; width: 1px; align-self: stretch; background: var(--wh-color-border); }
+.wh-callout__text { flex: 1 0 0; min-width: 0; max-width: var(--wh-component-callout-text-max-width); }
+.wh-callout--empty { visibility: hidden; }
+.wh-drawing__art { width: 100%; max-width: var(--wh-layout-detail-max-width); margin-inline: auto; }   /* Figma “art” frame: product details width, centred */
+.wh-drawing__art .wh-icon { width: 100%; aspect-ratio: var(--ratio, 2.36); }
+.wh-drawing__art--mobile { display: none; }
+@container wh-window (max-width: 749px) {
+  .wh-drawing__art { order: -1; }
+  .wh-drawing__art--mobile { display: block; }
+  .wh-drawing--has-mobile .wh-drawing__art--desktop { display: none; }
+  .wh-callout { flex-basis: 100%; }
+  .wh-callout--empty { display: none; }
+}
+
+/* ---------- Spec sheet (one block = one Spec row line) ---------- */
+.wh-spec-sheet { padding-block: var(--wh-layout-block-padding-y); }
+/* Specs + Contents: Contents on top, spec lines flush below; the section carries the block padding */
+.wh-specs-contents { padding-block: var(--wh-layout-block-padding-y); }
+.wh-spec-row { padding-inline: var(--wh-layout-side-padding); }
+.wh-spec-row__row { display: flex; flex-wrap: wrap; }
+.wh-spec { flex: 1 0 0; min-width: var(--wh-layout-column-min-width); display: flex; }
+.wh-spec__cell { display: flex; align-items: center; height: var(--wh-component-spec-row-height); box-shadow: inset 0 0 0 calc(1px / 2) var(--wh-color-border), 0 0 0 calc(1px / 2) var(--wh-color-border);
+  padding: var(--wh-component-spec-cell-padding-y) var(--wh-component-spec-cell-padding-x); }
+.wh-spec__label { flex: 0 0 var(--wh-component-spec-label-width); }
+/* spec sheet text: H2 labels / H3 values at the spec sheet’s own size (Figma component/spec-font-size) */
+.wh-spec__cell.wh-h2, .wh-spec__cell.wh-h3, .wh-contents__label.wh-h2, .wh-contents__label-top.wh-h2 { font-size: var(--wh-component-spec-font-size); }
+.wh-spec__value { flex: 1 0 0; min-width: 0; }
+@container wh-window (max-width: 749px) { .wh-spec__cell { justify-content: center; text-align: center; } }
+
+/* ---------- Contents ("what's in the box") ---------- */
+.wh-contents { padding-inline: var(--wh-layout-side-padding); }
+.wh-contents__label-top { display: none; align-items: center; justify-content: center; text-align: center; height: var(--wh-component-spec-row-height);
+  padding-inline: var(--wh-component-spec-cell-padding-x); box-shadow: inset 0 0 0 calc(1px / 2) var(--wh-color-border), 0 0 0 calc(1px / 2) var(--wh-color-border); }
+.wh-contents__row { display: flex; align-items: stretch; }
+.wh-contents__label { flex: 0 0 var(--wh-component-spec-label-width); display: flex; align-items: center; padding-inline: var(--wh-component-spec-cell-padding-x); box-shadow: inset 0 0 0 calc(1px / 2) var(--wh-color-border), 0 0 0 calc(1px / 2) var(--wh-color-border); }
+.wh-contents__items { flex: 1 0 0; min-width: 0; display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; box-shadow: inset 0 0 0 calc(1px / 2) var(--wh-color-border), 0 0 0 calc(1px / 2) var(--wh-color-border);
+  column-gap: var(--wh-component-contents-items-gap); row-gap: var(--wh-component-contents-row-gap); padding: var(--wh-component-contents-padding-y) var(--wh-component-contents-padding-x); }
+.wh-contents-item { width: var(--wh-component-contents-item-width); min-height: var(--wh-component-contents-icon-frame-height);   /* grows if a caption wraps at the minimum text size, so icons never shrink */ display: flex; flex-direction: column; align-items: center; gap: var(--wh-space-32); text-align: center; }
+.wh-contents-item .wh-icon { flex: none; height: var(--wh-component-contents-icon-height); aspect-ratio: 3 / 2; }
+@container wh-window (max-width: 749px) {
+  .wh-contents__label-top { display: flex; }
+  .wh-contents__label { display: none; }
+}
+
+/* ---------- Size table ---------- */
+.wh-size { padding: var(--wh-layout-block-padding-y) var(--wh-layout-side-padding); }
+.wh-size table { width: 100%; border-collapse: separate; border-spacing: 0; table-layout: fixed; }
+.wh-size th, .wh-size td { height: var(--wh-component-size-cell-height); text-align: center; vertical-align: middle; box-shadow: inset 0 0 0 calc(1px / 2) var(--wh-color-border), 0 0 0 calc(1px / 2) var(--wh-color-border);
+  padding: var(--wh-component-size-table-cell-padding-y) var(--wh-component-size-table-cell-padding-x); }
+
+/* ---------- FAQ ---------- */
+.wh-faq { padding: var(--wh-layout-block-padding-y) var(--wh-layout-side-padding); }
+.wh-faq__items { display: flex; flex-wrap: wrap; align-items: flex-start; column-gap: var(--wh-component-faq-items-gap); row-gap: var(--wh-component-faq-items-row-gap); }
+.wh-faq-item { flex: 1 0 0; min-width: var(--wh-layout-column-min-width); display: flex; flex-direction: column; gap: var(--wh-component-faq-item-section-gap); }
+
+/* ---------- Glass (Figma effect style component/button-glass/button-glass-style + color/button-* colours) ---------- */
+/* Figma background blur 10.9 = CSS blur(5.45); drop shadow 0 2 blur 6 black 10%. Raw in Figma (effect style), scaled like everything else. */
+.wh-glass { background: var(--wh-color-button-fill); color: var(--wh-color-button-font-fill); border-radius: var(--wh-component-glass-overlay-glass-radius);
+  -webkit-backdrop-filter: blur(calc(5.45 * var(--wh-u))); backdrop-filter: blur(calc(5.45 * var(--wh-u))); box-shadow: 0 calc(2 * var(--wh-u)) calc(6 * var(--wh-u)) rgb(0 0 0 / 0.1); }
+/* Small glass button (Glass/Button Size=Small) — with the glass outline (color/button-stroke-color, glass-stroke, centred) */
+.wh-glass--small { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; white-space: nowrap;
+  padding: var(--wh-component-glass-overlay-small-padding-y) var(--wh-component-glass-overlay-small-padding-x);
+  box-shadow: inset 0 0 0 calc(var(--wh-component-glass-overlay-glass-stroke) / 2) var(--wh-color-button-stroke-color), 0 0 0 calc(var(--wh-component-glass-overlay-glass-stroke) / 2) var(--wh-color-button-stroke-color),
+    0 calc(2 * var(--wh-u)) calc(6 * var(--wh-u)) rgb(0 0 0 / 0.1); }
+
+/* Hover (Figma: Glass/Button + Button/CTA State=Hover). Only on devices with a mouse; the same look for keyboard focus. */
+.wh-glass--small, .wh-button { transition: background-color 0.15s ease-out, color 0.15s ease-out; }
+@media (hover: hover) {
+  .wh-glass--small:hover { background-color: var(--wh-color-button-fill-hover); }
+  .wh-button:hover { background-color: var(--wh-color-foreground); color: var(--wh-color-background); }
+}
+.wh-glass--small:focus-visible { background-color: var(--wh-color-button-fill-hover); outline: 1px solid var(--wh-color-button-font-fill); outline-offset: 2px; }
+.wh-button:focus-visible { background-color: var(--wh-color-foreground); color: var(--wh-color-background); outline: 1px solid var(--wh-color-foreground); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .wh-glass--small, .wh-button { transition: none; } }
+
+/* ---------- Top bar (Menu/Top Bar) — its own section (wh-top-bar) that stays at the top of the window ---------- */
+/* Sticks inside .wh-page, i.e. for the whole page. On a live theme with its own sticky header, set --wh-sticky-top to that header's height. */
+.wh-page > .wh-sticky { position: sticky; top: var(--wh-sticky-top, 0px); z-index: 10; }
+.wh-topbar { display: flex; justify-content: space-between; align-items: center; height: var(--wh-component-menu-mobile-top-bar-height);
+  padding: var(--wh-component-menu-mobile-top-bar-padding-y) var(--wh-component-menu-mobile-top-bar-padding-x);
+  box-shadow: inset 0 calc(var(--wh-component-glass-overlay-glass-stroke) / -2) 0 0 var(--wh-color-border), 0 calc(var(--wh-component-glass-overlay-glass-stroke) / 2) 0 0 var(--wh-color-border); }
+.wh-topbar__crumbs { padding: var(--wh-component-glass-overlay-small-padding-y) var(--wh-component-glass-overlay-small-padding-x); color: var(--wh-color-button-font-fill); }
+.wh-topbar > .wh-glass--small { align-self: stretch; }
+/* Minimum size: the top bar scales with the page like everything else, but stops shrinking at a readable size
+   (like the body-text floors): 44px desktop / 35px phone. Figma's bar (42 / 33) is a touch lower, so on a window at or below the design width the floor wins. Web-only — Figma has no screen size. */
+.wh-topbar { --wh-topbar-min-height: 44px; --wh-topbar-min-padding-y: 8px; --wh-topbar-min-padding-x: 12px;   /* padding-y floor = Figma's 8, so “close” keeps its size when the bar stops shrinking */
+  height: max(var(--wh-component-menu-mobile-top-bar-height), var(--wh-topbar-min-height));
+  padding: max(var(--wh-component-menu-mobile-top-bar-padding-y), var(--wh-topbar-min-padding-y)) max(var(--wh-component-menu-mobile-top-bar-padding-x), var(--wh-topbar-min-padding-x)); }
+/* Phone floors are 20% lower than desktop */
+@container wh-window (max-width: 749px) { .wh-topbar { --wh-topbar-min-height: 35px; --wh-topbar-min-padding-y: 6px; --wh-topbar-min-padding-x: 5px; } }
+.wh-topbar > .wh-topbar__crumbs, .wh-topbar > .wh-glass--small { padding: max(var(--wh-component-glass-overlay-small-padding-y), 3px) max(var(--wh-component-glass-overlay-small-padding-x), 10px); }
+.wh-topbar .wh-glass-breadcrumbs { font-size: max(var(--wh-component-glass-overlay-breadcrumbs-font-size), 12px); }
+.wh-topbar .wh-glass-button-subheading { font-size: max(var(--wh-component-glass-overlay-button-label-font-size-subheading), 12px); }
+.wh-topbar > .wh-glass--small { border-radius: max(var(--wh-component-glass-overlay-glass-radius), 8px); }
+
+/* ---------- Product Header (top of every product page) ---------- */
+.wh-pdp__gallery { display: flex; gap: var(--wh-space-16); padding: var(--wh-space-16); overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; scroll-padding-inline: var(--wh-space-16); scrollbar-width: none; }
+.wh-pdp__gallery::-webkit-scrollbar { display: none; }
+/* With wh-gallery.js: slow endless scroll, stops under the mouse and can be dragged */
+.wh-pdp__gallery.is-enhanced { scroll-snap-type: none; cursor: grab; }
+.wh-pdp__gallery.is-dragging { cursor: grabbing; user-select: none; }
+/* The gallery never covers more than 70% of the screen height: on wide, short screens the photos shrink (they keep their shape). */
+/* Photo row cap: the top bar + the photo row never take more than 70% of the window height */
+.wh-pdp__gallery { --wh-topbar-reserve: max(var(--wh-component-menu-mobile-top-bar-height), 44px);
+  --wh-pdp-photo-h: min(var(--wh-component-pdp-gallery-image-height), calc(70svh - 2 * var(--wh-space-16) - var(--wh-topbar-reserve))); }
+@container wh-window (max-width: 749px) { .wh-pdp__gallery { --wh-topbar-reserve: max(var(--wh-component-menu-mobile-top-bar-height), 35px); } }
+.wh-pdp__photo { flex: none; position: relative; overflow: hidden; height: var(--wh-pdp-photo-h); aspect-ratio: 1;
+  border-radius: var(--wh-radius-4); background: var(--wh-color-surface); scroll-snap-align: start; }
+.wh-pdp__photo--wide { aspect-ratio: 2; } /* Media/Gallery Image Ratio=2:1 (gallery-image-wide-width = 2 × height: 1264/632, Mobile 716/358) */
+.wh-pdp__photo > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.wh-pdp__info { display: flex; flex-wrap: wrap; align-items: flex-start; column-gap: var(--wh-space-16); row-gap: var(--wh-space-16);
+  min-height: var(--wh-component-pdp-info-min-height); padding: var(--wh-space-32) var(--wh-layout-side-padding);
+  box-shadow: inset 0 calc(1px / -2) 0 0 var(--wh-color-border), 0 calc(1px / 2) 0 0 var(--wh-color-border); }
+.wh-pdp__title-col, .wh-pdp__text-col { flex: 1 0 0; min-width: var(--wh-layout-column-min-width); display: flex; flex-direction: column; }
+.wh-pdp__title-col { gap: var(--wh-space-8); }
+.wh-pdp__text-col { gap: var(--wh-space-16); max-width: var(--wh-layout-text-max-width); }   /* same cap as the campaign paragraphs (Figma text-column max width = layout/text-max-width) */
+.wh-pdp__title { font-size: var(--wh-component-pdp-title-font-size); }
+.wh-pdp__reviews { display: flex; align-items: center; gap: var(--wh-space-32); }
+.wh-pdp__reviews-info { display: flex; align-items: center; gap: var(--wh-space-16); color: var(--wh-color-foreground-muted); }
+.wh-pdp__reviews-info a { color: inherit; text-decoration: none; }
+
+/* ---------- Content Frame (glass frame with the rune + a video, on the page background) ---------- */
+.wh-content-frame { padding: var(--wh-component-content-frame-outer-padding); }
+.wh-content-frame--gradient { background: linear-gradient(to bottom, var(--wh-color-background) 35%, var(--wh-color-gradient-end)); }
+.wh-content-frame__glass { display: flex; flex-direction: column; gap: var(--wh-component-content-frame-gap); padding: var(--wh-component-content-frame-padding);
+  /* Figma effect style content-window-style: the glass drop shadow + two inner shadows that light the top edge */
+  box-shadow: 0 calc(2 * var(--wh-u)) calc(6 * var(--wh-u)) rgb(0 0 0 / 0.1), inset 0 calc(2 * var(--wh-u)) calc(7 * var(--wh-u)) rgb(255 255 255 / 0.05),
+    inset 0 calc(0.5 * var(--wh-u)) calc(1 * var(--wh-u)) rgb(255 255 255 / 0.26); }
+.wh-rune { display: block; width: var(--wh-component-content-frame-icon-size); height: var(--wh-component-content-frame-icon-size); overflow: visible;
+  fill: var(--wh-color-button-fill);   /* glow in the frame colour + Figma effect style content-window-rune-style (two faint white edges) */
+  filter: drop-shadow(0 0 calc(4 * var(--wh-u)) var(--wh-color-button-fill)) drop-shadow(0 0 calc(4 * var(--wh-u)) rgb(255 255 255 / 0.07)) drop-shadow(0 calc(0.5 * var(--wh-u)) 0 rgb(255 255 255 / 0.08)); }
+.wh-content-frame__video { position: relative; overflow: hidden; aspect-ratio: var(--ratio, 16 / 9); background: var(--wh-color-video-background); border-radius: var(--wh-radius-2); }
+.wh-content-frame__video > video, .wh-content-frame__video > img, .wh-content-frame__video > iframe { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border: 0; }
+.wh-content-frame__video > .wh-content-frame__mobile { display: none; }   /* separate phone photo (Figma Mobile image=Separate) */
+@container wh-window (max-width: 749px) { .wh-content-frame__video--has-mobile > .wh-content-frame__desktop { display: none; } .wh-content-frame__video--has-mobile > .wh-content-frame__mobile { display: block; } }
+
+/* ---------- Mobile = one column at EVERY window width below 750px ----------
+   Figma's Mobile frame is always 390px wide, where min-width 200 columns can't sit side by side.
+   Real Mobile windows go up to 749px, so the stacking is enforced here instead of left to wrapping. */
+@container wh-window (max-width: 749px) {
+  .wh-text__columns > *, .wh-cards__intro > *, .wh-compare-item, .wh-card, .wh-faq-item, .wh-spec, .wh-pdp__info > * { flex-basis: 100%; }
+  .wh-contents__items { display: grid; grid-template-columns: repeat(2, var(--wh-component-contents-item-width)); justify-content: center; }
+}
+
+/* ---------- Product pages: floating buy button (Figma: Menu Mobile/Product Bar + Shop/Button Filled) ----------
+   Fixed to the screen over the page content: lower right corner on wide screens, across the bottom on phones.
+   Drawn at its Figma size (it doesn't scale with the page window): it hugs the product name, never narrower than 468
+   (Figma: the bar's min width 432 + 2 × product-bar-padding 18), the Add to Cart button stays 174 wide. */
+.wh-pbar.wh-page { --wh-u: 1px; }
+.wh-pbar { position: fixed; right: 0; bottom: 0; z-index: 50; max-width: 100%; padding: var(--wh-component-menu-mobile-product-bar-padding); background: none; }
+@media (max-width: 749px) {
+  .wh-pbar { left: 0; }
+  body.wh-has-pbar .wh-window { padding-bottom: 103px; }   /* room under the page for the bar on phones (Figma: 103 tall) */
+}
+/* glass with its thin light outline (color/button-stroke-color, glass-stroke, centred) + the glass drop shadow */
+.wh-glass--outline { box-shadow: inset 0 0 0 calc(var(--wh-component-glass-overlay-glass-stroke) / 2) var(--wh-color-button-stroke-color),
+  0 0 0 calc(var(--wh-component-glass-overlay-glass-stroke) / 2) var(--wh-color-button-stroke-color), 0 calc(2 * var(--wh-u)) calc(6 * var(--wh-u)) rgb(0 0 0 / 0.1); }
+.wh-pbar__bar { display: flex; align-items: center; justify-content: space-between; gap: var(--wh-component-menu-mobile-product-card-gap); margin: 0; min-width: min(432px, calc(100vw - 2 * var(--wh-component-menu-mobile-product-bar-padding)));
+  padding: var(--wh-component-menu-mobile-product-card-padding-y) var(--wh-component-menu-mobile-product-card-padding-x); }
+.wh-pbar__name { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }   /* hugs the name; only shortens if the screen is too narrow */
+.wh-shopbtn { display: inline-flex; align-items: center; justify-content: center; gap: calc(10 * var(--wh-u)); height: var(--wh-component-product-card-button-height);
+  padding: var(--wh-component-product-card-button-padding-y) var(--wh-component-product-card-button-padding-x); border: 0; border-radius: var(--wh-radius-2);
+  background: none; color: var(--wh-color-button-font-fill); text-decoration: none; white-space: nowrap; cursor: pointer; box-shadow: inset 0 0 0 1px var(--wh-color-button-font-fill);
+  transition: opacity 0.15s ease-out; }
+.wh-shopbtn--filled { justify-content: space-between; background: var(--wh-color-button-font-fill); color: var(--wh-color-background); }
+.wh-pbar__add { flex: none; width: 174px; height: var(--wh-component-menu-mobile-product-button-height); }   /* raw in Figma: fixed 174 */
+.wh-shopbtn:disabled { opacity: 0.5; cursor: not-allowed; }
+.wh-shopbtn:focus-visible { outline: 1px solid var(--wh-color-button-font-fill); outline-offset: 2px; }
+@media (hover: hover) { .wh-shopbtn--filled:not(:disabled):hover { opacity: 0.88; } }
+@media (prefers-reduced-motion: reduce) { .wh-shopbtn { transition: none; } }

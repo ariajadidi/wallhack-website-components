@@ -1,0 +1,28 @@
+{%- comment -%}
+  Frame shape → width ÷ height. Param: shape (21:9 · 2:1 · 16:9 · 3:2 · 4:3 · 1:1 · 4:5 · 2:3 · 9:16), fallback (number used when shape is empty).
+  Used for the phone photo's frame (Figma: the “image (mobile)” Ratio), so the phone crop keeps its designed shape.
+{%- endcomment -%}
+{%- liquid
+  case shape
+    when '21:9'
+      echo 2.3333
+    when '2:1'
+      echo 2
+    when '16:9'
+      echo 1.7778
+    when '3:2'
+      echo 1.5
+    when '4:3'
+      echo 1.3333
+    when '1:1'
+      echo 1
+    when '4:5'
+      echo 0.8
+    when '2:3'
+      echo 0.6667
+    when '9:16'
+      echo 0.5625
+    else
+      echo fallback
+  endcase
+-%}

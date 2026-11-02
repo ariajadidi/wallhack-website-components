@@ -1,0 +1,195 @@
+<div class="wh-card" data-wh-block="{{ block.id }}" {{ block.shopify_attributes }}>
+  {% render 'wh-media', shape: block.settings.image_shape, force_ratio: block.settings.image_ratio, image: block.settings.image, image_mobile: block.settings.image_mobile, mobile_shape: block.settings.image_mobile_shape, fit: block.settings.image_fit, fit_mobile: block.settings.image_fit_mobile, background: block.settings.image_background, ratio: 1, sizes: '(min-width: 750px) 33vw, 100vw' %}
+  {% render 'wh-card-text', block: block %}
+</div>
+
+{% schema %}
+{
+  "name": "Card",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Image (mobile)"
+    },
+    {
+      "type": "select",
+      "id": "image_mobile_shape",
+      "label": "Phone photo shape",
+      "default": "",
+      "options": [
+        {
+          "value": "",
+          "label": "Same as the phone photo"
+        },
+        {
+          "value": "21:9",
+          "label": "21:9"
+        },
+        {
+          "value": "2:1",
+          "label": "2:1"
+        },
+        {
+          "value": "16:9",
+          "label": "16:9"
+        },
+        {
+          "value": "3:2",
+          "label": "3:2"
+        },
+        {
+          "value": "4:3",
+          "label": "4:3"
+        },
+        {
+          "value": "1:1",
+          "label": "1:1"
+        },
+        {
+          "value": "4:5",
+          "label": "4:5"
+        },
+        {
+          "value": "2:3",
+          "label": "2:3"
+        },
+        {
+          "value": "9:16",
+          "label": "9:16"
+        }
+      ],
+      "info": "The frame shape for the Image (mobile)."
+    },
+    {
+      "type": "select",
+      "id": "image_shape",
+      "label": "Image shape",
+      "default": "1:1",
+      "options": [
+        {
+          "value": "21:9",
+          "label": "21:9 extra wide"
+        },
+        {
+          "value": "2:1",
+          "label": "2:1 wide"
+        },
+        {
+          "value": "16:9",
+          "label": "16:9 landscape"
+        },
+        {
+          "value": "3:2",
+          "label": "3:2"
+        },
+        {
+          "value": "4:3",
+          "label": "4:3"
+        },
+        {
+          "value": "1:1",
+          "label": "1:1 square"
+        },
+        {
+          "value": "4:5",
+          "label": "4:5 tall"
+        },
+        {
+          "value": "2:3",
+          "label": "2:3 tall"
+        },
+        {
+          "value": "9:16",
+          "label": "9:16 portrait"
+        },
+        {
+          "value": "custom",
+          "label": "Custom (designers only)"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "image_fit",
+      "label": "Photo",
+      "default": "fill",
+      "options": [
+        {
+          "value": "fill",
+          "label": "Fill — crop to the frame"
+        },
+        {
+          "value": "fit",
+          "label": "Fit — show the whole photo"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "image_fit_mobile",
+      "label": "Phone photo",
+      "default": "same",
+      "info": "Only used when there is a separate phone photo.",
+      "options": [
+        {
+          "value": "same",
+          "label": "Same as desktop"
+        },
+        {
+          "value": "fill",
+          "label": "Fill — crop to the frame"
+        },
+        {
+          "value": "fit",
+          "label": "Fit — show the whole photo"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "image_background",
+      "label": "Photo background",
+      "default": "solid",
+      "options": [
+        {
+          "value": "solid",
+          "label": "Solid"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ]
+    },
+    {
+      "type": "number",
+      "id": "image_ratio",
+      "label": "Custom ratio (width ÷ height)",
+      "info": "Only used when Image shape is Custom."
+    },
+    {
+      "type": "text",
+      "id": "name",
+      "label": "Name",
+      "default": "KS-TR Light"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Text</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Card"
+    }
+  ]
+}
+{% endschema %}

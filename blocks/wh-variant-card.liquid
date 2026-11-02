@@ -1,0 +1,54 @@
+<div class="wh-variant" data-wh-block="{{ block.id }}" {{ block.shopify_attributes }}>
+  <div class="wh-variant__desktop">
+    <div class="wh-variant__icon-area">{% render 'wh-icon', image: block.settings.icon %}</div>
+    <div class="wh-variant__info">
+      <div class="wh-variant__name-row"><h3 class="wh-h2">{{ block.settings.name | escape }}</h3></div>
+      <div class="wh-p3">{% content_for 'blocks' %}</div>
+    </div>
+  </div>
+  <div class="wh-variant__mobile">
+    <div class="wh-variant__mobile-icon">{% render 'wh-icon', image: block.settings.icon %}</div>
+    <div class="wh-variant__mobile-name"><p class="wh-h2">{{ block.settings.name | escape }}</p></div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Variant card",
+  "blocks": [
+    {
+      "type": "wh-variant-attribute"
+    }
+  ],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "icon",
+      "label": "Icon (line drawing)"
+    },
+    {
+      "type": "text",
+      "id": "name",
+      "label": "Name",
+      "default": "PTFE Dots"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Variant card",
+      "blocks": [
+        {
+          "type": "wh-variant-attribute"
+        },
+        {
+          "type": "wh-variant-attribute"
+        },
+        {
+          "type": "wh-variant-attribute"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

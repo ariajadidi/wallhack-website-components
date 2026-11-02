@@ -1,0 +1,131 @@
+{
+  "sections": {
+    "text_media_1": {
+      "type": "wh-text-media",
+      "settings": {
+        "no_space_top": false,
+        "no_space_bottom": false,
+        "show_heading": true,
+        "heading": "Spill it, wipe it, keep playing",
+        "body": "<p>Glass is non-porous, and so is the silicone under it. Sweat, condensation, a knocked-over drink: none of it soaks in. Cleaning involves just a microfibre cloth and water, or a glass-safe cleaner if something has dried on. No stains, no edge fraying, no soft patches where your palm sits.</p>",
+        "image": "shopify://shop_images/wh-text-media-test-1.jpg",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "solid",
+        "image_mobile_shape": "",
+        "image_fit": "fill",
+        "image_fit_mobile": "same",
+        "color_scheme": "light",
+        "spacing": "large",
+        "image_shape": "custom",
+        "image_ratio": 4.0
+      }
+    },
+    "image_2": {
+      "type": "wh-image",
+      "settings": {
+        "image": "shopify://shop_images/wh-image-test-2.jpg",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "solid",
+        "image_mobile_shape": "",
+        "image_fit": "fill",
+        "image_fit_mobile": "same",
+        "color_scheme": "light",
+        "image_shape": "2:3"
+      }
+    },
+    "split_3": {
+      "type": "wh-split",
+      "settings": {
+        "image_side": "right",
+        "heading": "precision in every detail",
+        "body": "<p>Three layers, 3.3mm in total. The top is tempered glass, micro-etched so the texture is cut into the surface rather than applied to it, and left uncoated so there's nothing to wear through.</p><p>The color is printed on the underside, where your mouse never reaches it.</p><p>The bottom is 60A silicone running the full width of the pad, so the glass is supported across its whole area and grips the desk instead of resting on it.</p>",
+        "image": "shopify://shop_images/wh-camp-27d4ad4e.png",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "solid",
+        "image_mobile_shape": "",
+        "image_fit": "fill",
+        "image_fit_mobile": "same",
+        "color_scheme": "light",
+        "spacing": "regular",
+        "image_shape": "custom",
+        "image_ratio": 0.75
+      }
+    },
+    "cards_4": {
+      "type": "wh-cards",
+      "settings": {
+        "show_heading": true,
+        "heading": "WAllhack ks-tr\nlinear switch series",
+        "show_intro": true,
+        "intro_1": "<p>Our keyboard comes with our brand new series of custom hall effect switches, the Wallhack KS-TR Linear switch. Made in collaboration with the industry leaders in keyboard switch manufacturing, Gateron.</p>",
+        "intro_2": "<p>The KS-TR series features three spring weights: Light, Medium and Heavy, giving our users the option to mix and match different spring weights to achieve the perfect combination for your exact needs.</p>",
+        "color_scheme": "light",
+        "spacing": "large"
+      },
+      "blocks": {
+        "card_1": {
+          "type": "wh-card",
+          "settings": {
+            "name": "KS-TR Light",
+            "description": "<p>Light is the fastest, lightest touch, built for quick actuation and repeated input.</p>",
+            "image": "shopify://shop_images/wh-camp-538b5aed.png",
+            "image_fit": "fill",
+            "image_background": "solid",
+            "image_shape": "1:1"
+          }
+        },
+        "card_2": {
+          "type": "wh-card",
+          "settings": {
+            "name": "KS-TR Light",
+            "description": "<p>Medium is slightly heavier than average, and is a nice balance between speed and control with its firm keypress feel.</p>",
+            "image": "shopify://shop_images/wh-camp-bd77829c.png",
+            "image_fit": "fill",
+            "image_background": "solid",
+            "image_shape": "1:1"
+          }
+        },
+        "card_3": {
+          "type": "wh-card",
+          "settings": {
+            "name": "KS-TR Light",
+            "description": "<p>Heavy is more deliberate, giving you fewer accidental presses. A great typing feel and nice for users who enjoy a more substantial and precise keypress feel.</p>",
+            "image": "shopify://shop_images/wh-camp-47391fb2.png",
+            "image_fit": "fill",
+            "image_background": "solid",
+            "image_shape": "1:1"
+          }
+        },
+        "card_4": {
+          "type": "wh-card",
+          "settings": {
+            "name": "KS-TR Light",
+            "description": "<p>Heavy is more deliberate, giving you fewer accidental presses. A great typing feel and nice for users who enjoy a more substantial and precise keypress feel.</p>",
+            "image": "shopify://shop_images/wh-camp-47391fb2.png",
+            "image_fit": "fill",
+            "image_background": "solid",
+            "image_shape": "1:1"
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3",
+        "card_4"
+      ]
+    }
+  },
+  "order": [
+    "text_media_1",
+    "image_2",
+    "split_3",
+    "cards_4"
+  ]
+}
