@@ -63,17 +63,27 @@ const colorOverrides = async inst => {
 
 // Media/Image options: photo fades (fade top / fade bottom), gradient background, and the separate phone photo (Mobile image=Separate)
 const ratioOfMedia = n => { const r = n && n.componentProperties && n.componentProperties.Ratio; const m = r && /^(\d+):(\d+)$/.exec(r.value); return m ? +(m[1] / m[2]).toFixed(3) : n ? +(n.width / n.height).toFixed(3) : undefined; };
+// Phone shape of a Media/Image or Media/Card Image: Mobile ratio=Separate → its “Phone ratio” (a Media/Ratio component: same photo, own phone crop); otherwise none.
+// Read from the property, not the “ratio (mobile)” layer: inside slots (Cards, Compare) Figma can keep that layer stale for plugins.
+const phoneRatioOf = async n => { const q = n && n.componentProperties; if (!q || !q['Mobile ratio'] || q['Mobile ratio'].value !== 'Separate') return undefined;
+  const k = Object.keys(q).find(x => x.startsWith('Phone ratio#')); const c = k ? await figma.getNodeByIdAsync(q[k].value) : null;
+  const m = c && /Ratio=(\d+):(\d+)/.exec(c.name); return m ? +(m[1] / m[2]).toFixed(3) : undefined; };
+const phoneShapeOf = async n => (await phoneRatioOf(n)) || ratioOfMedia(n);   // the shape a Media frame actually shows on phones
 const isMobileLayer = (n, root) => { for (let x = n; x && x !== root; x = x.parent) if (/\(mobile\)/.test(x.name)) return true; return false; };
 const photoOf = n => n.findOne(c => c.name === 'photo') || n;   // Media/Image + Card Image: the picture is on its own “photo” layer (so switching Background keeps it); in Media/Image it sits inside “content” under the fade masks
 const fitOf = n => { const f = (Array.isArray(photoOf(n).fills) ? photoOf(n).fills : []).find(x => x.type === 'IMAGE' && x.visible !== false); return f && f.scaleMode === 'FIT' ? 'fit' : 'fill'; };
 const firstMediaFit = async c => { for (const n of [c, ...c.findAll(x => x.type === 'INSTANCE')]) { const nm = n.type === 'INSTANCE' ? await compName(n) : ''; if (nm === 'Media/Image' || nm === 'Media/Card Image') return fitOf(n); } return 'fill'; };
 const bgOf = q => q.Background === 'Gradient' ? 'gradient' : q.Background === 'None' ? 'none' : 'solid';   // Media “Background”
 const firstMediaBg = async c => { for (const n of [c, ...c.findAll(x => x.type === 'INSTANCE')]) { const nm = n.type === 'INSTANCE' ? await compName(n) : ''; if (nm === 'Media/Image' || nm === 'Media/Card Image') return bgOf(await props(n)); } return 'solid'; };
-// Card / Compare column / Content Frame with Mobile image=Separate: the phone photo is the “(mobile)” layer
-const phoneMediaOf = async (c, q) => { if (q['Mobile image'] !== 'Separate') return {};
+// Card / Compare column / Content Frame with Mobile image=Separate: the phone photo is the “(mobile)” layer.
+// Mobile image=Same: the same photo, with its own phone shape when its Media frame has Mobile ratio=Separate.
+const phoneMediaOf = async (c, q) => {
+  if (q['Mobile image'] !== 'Separate') {
+    for (const n of c.findAll(x => x.type === 'INSTANCE' && !isMobileLayer(x, c))) if (['Media/Image', 'Media/Card Image'].includes(await compName(n))) { const r = await phoneRatioOf(n); return r ? { imageMobileRatio: r } : {}; }
+    return {}; }
   for (const n of c.findAll(x => /\(mobile\)/.test(x.name))) { const ph = n.type === 'INSTANCE' && ['Media/Image', 'Media/Card Image'].includes(await compName(n)) ? photoOf(n) : n;
     const f = (Array.isArray(ph.fills) ? ph.fills : []).find(x => x.type === 'IMAGE' && x.visible !== false);
-    if (f && f.imageHash) return { imageMobile: [f.imageHash], imageMobileRatio: ratioOfMedia(n), imageFitMobile: f.scaleMode === 'FIT' ? 'fit' : 'fill' }; }
+    if (f && f.imageHash) return { imageMobile: [f.imageHash], imageMobileRatio: await phoneShapeOf(n), imageFitMobile: f.scaleMode === 'FIT' ? 'fit' : 'fill' }; }
   return {}; };
 // Background=Gradient: the bottom colour is color/gradient-end unless a designer set a plain colour on the “background” layer’s last stop
 const gradientEndOf = n => { const bg = n.findOne(c => c.name === 'background'); const g = bg && Array.isArray(bg.fills) && bg.fills.find(f => f.type === 'GRADIENT_LINEAR' && f.visible !== false);
@@ -82,10 +92,11 @@ const fadeOf = q => q['fade top'] && q['fade bottom'] ? 'both' : q['fade top'] ?
 const mediaOptions = async (s, p) => { const o = {}; const ms = [];
   for (const n of s.findAll(x => x.type === 'INSTANCE')) if ((await compName(n)) === 'Media/Image') ms.push(n);
   const desk = ms.find(n => !isMobileLayer(n, s)), mob = ms.find(n => isMobileLayer(n, s));
-  if (desk) { const q = await props(desk); o.imageFade = fadeOf(q); o.imageBackground = bgOf(q); o.imageFit = fitOf(desk); const ge = gradientEndOf(desk); if (o.imageBackground === 'gradient' && ge) o.gradientEnd = ge; }
+  if (desk) { const q = await props(desk); o.imageFade = fadeOf(q); o.imageBackground = bgOf(q); o.imageFit = fitOf(desk); const ge = gradientEndOf(desk); if (o.imageBackground === 'gradient' && ge) o.gradientEnd = ge;
+    if (!(mob && p['Mobile image'] === 'Separate')) { const r = await phoneRatioOf(desk); if (r) o.imageMobileRatio = r; } }   // same photo, own phone shape (Mobile ratio=Separate)
   if (mob && p['Mobile image'] === 'Separate') { const q = await props(mob); o.imageFadeMobile = fadeOf(q); o.imageFitMobile = fitOf(mob);
     const f = (Array.isArray(photoOf(mob).fills) ? photoOf(mob).fills : []).find(x => x.type === 'IMAGE' && x.visible !== false); if (f && f.imageHash) o.imageMobile = [f.imageHash];
-    o.imageMobileRatio = ratioOfMedia(mob); }
+    o.imageMobileRatio = await phoneShapeOf(mob); }
   return o; };
 
 // sections in page order; plain frames/groups used to organise a page (e.g. a page frame pasted inside another) are looked into

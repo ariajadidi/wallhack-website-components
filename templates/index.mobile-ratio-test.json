@@ -1,0 +1,83 @@
+{
+  "sections": {
+    "img_phone_45": {
+      "type": "wh-image",
+      "settings": {
+        "image": "shopify://shop_images/wh-image-test-2.jpg",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "solid",
+        "image_mobile_shape": "4:5",
+        "image_fit": "fill",
+        "image_fit_mobile": "same",
+        "color_scheme": "light",
+        "image_shape": "16:9"
+      }
+    },
+    "img_same": {
+      "type": "wh-image",
+      "settings": {
+        "image": "shopify://shop_images/wh-image-test-2.jpg",
+        "image_mobile": "",
+        "image_fade": "none",
+        "image_fade_mobile": "same",
+        "image_background": "solid",
+        "image_mobile_shape": "",
+        "image_fit": "fill",
+        "image_fit_mobile": "same",
+        "color_scheme": "light",
+        "image_shape": "16:9"
+      }
+    },
+    "cards": {
+      "type": "wh-cards",
+      "settings": {
+        "show_heading": true,
+        "heading": "WAllhack ks-tr\nlinear switch series",
+        "show_intro": true,
+        "intro_1": "<p>Our keyboard comes with our brand new series of custom hall effect switches, the Wallhack KS-TR Linear switch. Made in collaboration with the industry leaders in keyboard switch manufacturing, Gateron.</p>",
+        "intro_2": "<p>The KS-TR series features three spring weights: Light, Medium and Heavy, giving our users the option to mix and match different spring weights to achieve the perfect combination for your exact needs.</p>",
+        "color_scheme": "light",
+        "spacing": "large"
+      },
+      "blocks": {
+        "card_1": {
+          "type": "wh-card",
+          "settings": {
+            "name": "KS-TR Light",
+            "description": "<p>Light is the fastest, lightest touch, built for quick actuation and repeated input.</p>",
+            "image": "shopify://shop_images/wh-camp-538b5aed.png",
+            "image_fit": "fill",
+            "image_background": "solid",
+            "image_shape": "1:1",
+            "image_mobile": "",
+            "image_mobile_shape": "9:16"
+          }
+        },
+        "card_2": {
+          "type": "wh-card",
+          "settings": {
+            "name": "KS-TR Light",
+            "description": "<p>Medium is slightly heavier than average, and is a nice balance between speed and control with its firm keypress feel.</p>",
+            "image": "shopify://shop_images/wh-camp-538b5aed.png",
+            "image_fit": "fill",
+            "image_background": "solid",
+            "image_shape": "1:1",
+            "image_mobile": "",
+            "image_mobile_shape": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2"
+      ]
+    }
+  },
+  "order": [
+    "img_phone_45",
+    "img_same",
+    "cards"
+  ]
+}

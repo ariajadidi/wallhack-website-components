@@ -83,14 +83,16 @@ def media_opts(s):
     """Media/Image options from Figma: phone photo, photo fades, gradient behind the photo."""
     return {"image_mobile": img(s.get("imageMobile")), "image_fade": s.get("imageFade", "none"),
             "image_fade_mobile": s.get("imageFadeMobile", "same"), "image_background": s.get("imageBackground") or ("gradient" if s.get("imageGradient") else "solid"),
-            "image_mobile_shape": (shape_of(s.get("imageMobileRatio"))[0] or "") if s.get("imageMobile") else "",
+            "image_mobile_shape": shape_of(s.get("imageMobileRatio"))[0] or "",   # phone photo's shape, or the same photo's own phone shape (Media Mobile ratio=Separate)
             "image_fit": s.get("imageFit", "fill"),
             "image_fit_mobile": s["imageFitMobile"] if s.get("imageMobile") and s.get("imageFitMobile") and s.get("imageFitMobile") != s.get("imageFit", "fill") else "same",
             **({"custom_gradient_end": s["gradientEnd"]} if s.get("gradientEnd") else {})}
 
 def phone_opts(i):
-    """Separate phone photo on a card / Compare column (Figma Mobile image=Separate)."""
-    if not i.get("imageMobile"): return {}
+    """Phone version of a card / Compare column photo: a separate photo (Figma Mobile image=Separate) or the same photo in its own shape (Media Mobile ratio=Separate)."""
+    if not i.get("imageMobile"):
+        shape = shape_of(i.get("imageMobileRatio"))[0]
+        return {"image_mobile_shape": shape} if shape else {}
     return {"image_mobile": img(i["imageMobile"]), "image_mobile_shape": shape_of(i.get("imageMobileRatio"))[0] or "",
             "image_fit_mobile": i["imageFitMobile"] if i.get("imageFitMobile") and i["imageFitMobile"] != i.get("imageFit", "fill") else "same"}
 

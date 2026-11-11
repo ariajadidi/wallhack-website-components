@@ -62,3 +62,14 @@ What was built and decided, in order. Node ids refer to the Figma file `jBz28tmW
 
 - This repository now holds the theme, tools and documentation (replacing the 3D configurator prototype).
   Photos are kept out because the repository is public.
+
+## 11 Nov — Phone shape for the same photo
+
+- Problem: a photo couldn't change shape on phones (e.g. 16:9 Desktop → 4:5 Mobile) without placing it twice
+  (Mobile image = Separate).
+- `Media/Image` and `Media/Card Image` got **Mobile ratio = Same / Separate** + **Phone ratio** (new `Media/Ratio` spacer set,
+  default 4:5). The frame's height now comes from invisible ratio spacers that switch with the Responsive mode; the photo is
+  re-cropped. Image instances in sections, cards and compare items changed from locked ratio to FILL / HUG.
+- Verified: all 332 image instances on every page kept their exact size (all Same); new option checked at Desktop/Mobile.
+- Extractor reads `imageMobileRatio` from Phone ratio; converter writes `image_mobile_shape` without a phone photo; theme
+  applies the phone shape with or without `image_mobile` (`wh-media--mshape`). Test page: `?view=mobile-ratio-test`.

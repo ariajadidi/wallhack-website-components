@@ -7,7 +7,7 @@
     endcapture
   endif
 -%}
-<section class="wh-section wh-cover wh-cover--{{ section.settings.subtitle_position }} wh-scheme-{{ section.settings.color_scheme }}" style="--ratio: {{ ratio }};{% if section.settings.image_mobile %} --ratio-mobile: {% render 'wh-ratio', shape: section.settings.image_mobile_shape, fallback: section.settings.image_mobile.aspect_ratio %};{% endif %} {% render 'wh-colors', s: section.settings %}">
+<section class="wh-section wh-cover wh-cover--{{ section.settings.subtitle_position }} wh-scheme-{{ section.settings.color_scheme }}" style="--ratio: {{ ratio }};{% if section.settings.image_mobile %} --ratio-mobile: {% render 'wh-ratio', shape: section.settings.image_mobile_shape, fallback: section.settings.image_mobile.aspect_ratio %};{% elsif section.settings.image_mobile_shape != blank %} --ratio-mobile: {% render 'wh-ratio', shape: section.settings.image_mobile_shape, fallback: ratio %};{% endif %} {% render 'wh-colors', s: section.settings %}">
   {% render 'wh-media', shape: section.settings.image_shape, force_ratio: section.settings.image_ratio, image: section.settings.image, image_mobile: section.settings.image_mobile, mobile_shape: section.settings.image_mobile_shape, fade: section.settings.image_fade, fade_mobile: section.settings.image_fade_mobile, background: section.settings.image_background, fit: section.settings.image_fit, fit_mobile: section.settings.image_fit_mobile, ratio: 1.7778, sizes: '100vw', loading: 'eager' %}
   <div class="wh-cover__title-block">
     <h1 class="wh-h1">{{ section.settings.heading | escape | newline_to_br }}</h1>
@@ -76,7 +76,7 @@
       "options": [
         {
           "value": "",
-          "label": "Same as the phone photo"
+          "label": "Same (desktop shape, or the phone photo's own)"
         },
         {
           "value": "21:9",
@@ -115,7 +115,7 @@
           "label": "9:16"
         }
       ],
-      "info": "The frame shape for the Image (mobile)."
+      "info": "Shape of the photo on phones (window under 750px). Works with the same photo or a separate phone photo (Image (mobile))."
     },
     {
       "type": "select",

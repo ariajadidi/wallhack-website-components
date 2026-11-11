@@ -90,7 +90,8 @@ body.wh-canvas { margin: 0; display: flex; min-height: 100vh; }
 
 /* ---------- Image ---------- */
 .wh-image > .wh-media { aspect-ratio: var(--ratio, 1.7778); }
-@container wh-window (max-width: 749px) { .wh-image > .wh-media--has-mobile, .wh-text-media > .wh-media--has-mobile, .wh-split > .wh-media.wh-media--has-mobile, .wh-card > .wh-media.wh-media--has-mobile, .wh-compare-item > .wh-media.wh-media--has-mobile { aspect-ratio: var(--ratio-mobile, var(--ratio)); } }
+/* Phone shape (below 750px): a separate phone photo's frame, or the same photo re-cropped (Figma Media “Mobile ratio = Separate”) */
+@container wh-window (max-width: 749px) { .wh-image > .wh-media--mshape, .wh-text-media > .wh-media--mshape, .wh-split > .wh-media.wh-media--mshape, .wh-card > .wh-media.wh-media--mshape, .wh-compare-item > .wh-media.wh-media--mshape { aspect-ratio: var(--ratio-mobile, var(--ratio)); } }
 
 /* ---------- Split — grid: Figma FILL gives both halves equal width even though only the text half has padding ---------- */
 .wh-split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); padding-block: var(--wh-layout-block-padding-y-large); }

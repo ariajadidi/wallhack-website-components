@@ -44,7 +44,8 @@ What the extractor reads, per section instance (top to bottom; plain frames/grou
 - colour mode (explicit Light/Dark on the section) and **custom colours** — any solid paint no longer linked to a colour
   variable becomes a section colour (`colors`) or an element colour (`elementColors`);
 - photo options: ratio (from the Media `Ratio` property), Fit/Fill, fades, Background, gradient end colour, separate phone
-  photo and its options;
+  photo and its options, phone shape (`imageMobileRatio`: Media `Mobile ratio = Separate` → its `Phone ratio`, read from the
+  property — not the `ratio (mobile)` layer, which plugins can see stale inside slots);
 - spacing (`Regular` = padding linked to `layout/block-padding-y`), “no space above/below”;
 - phone settings from the sibling phone frame `<frame name> (mobile)` when it exists (it wins over hidden `(mobile)` layers).
 

@@ -38,6 +38,18 @@ Learned while building this system. Each line is a limit we hit and what works i
 - An aspect-locked Media/Image that is stretched in a vertical parent keeps its height when its Ratio changes — put it in a
   horizontal “image holder” frame with `layoutGrow 1` and a `minWidth`.
 - Plugins can create slots with `ComponentNode.createSlot()`; slot content in existing instances doesn't follow the main.
+- **Exposed nested instances break inside slots.** A nested instance with `isExposedInstance = true` inside an item that
+  sits in a slot gets a wrong id path (it points at the main's slot layer); reading its `name` throws “node does not exist”.
+  Use an INSTANCE_SWAP property on the parent component instead of exposing the nested instance.
+- Inside slot content, plugins can change a property *on* a nested instance (variant, instance swap) but changes one level
+  deeper (`setProperties` / `swapComponent` on a layer inside that instance) can silently not apply. Read values from the
+  property, not from the layer it drives.
+- An INSTANCE_SWAP property has **one default for the whole variant set**: binding a layer resets it to that default, and
+  swapping a bound layer inside a variant changes the set's default for every variant. Pick one sensible default
+  (`editComponentProperty(key, { defaultValue })`).
+- A frame that only gets its height from visible children (hug auto-layout + invisible aspect-locked spacer frames bound to
+  `breakpoint/*`) switches shape with the Responsive mode — this is how `Mobile ratio` works. Absolute children with
+  STRETCH constraints follow the frame.
 - Clones land on the source page — move them before `combineAsVariants`.
 
 ## Variables and modes
