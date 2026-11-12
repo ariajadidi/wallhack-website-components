@@ -82,3 +82,8 @@ What was built and decided, in order. Node ids refer to the Figma file `jBz28tmW
   Mobile). Fade links restored on all 27 Media/Image Separate variants. Checked: 16:9 Desktop → 4:5 / 9:16 / 1:1 Mobile, fades on.
 - The swap dropdown showed `Media/Ratio` as one item, so only its default could be picked. The 9 variants became standalone
   components `Media/Phone ratio/21:9` … `/9:16` (same ids and keys). Extractor reads the ratio from the end of the name.
+- The picker still wasn't a real dropdown, so the swap was replaced by a variant: **Mobile ratio = Same / 21:9 … 9:16**
+  (Media/Image 270, Card Image 180 variants). `Phone ratio` and the `Media/Phone ratio` components are gone; `ratio (mobile)`
+  is a plain aspect-locked frame bound to `breakpoint/mobile`. Cloning variants dropped the fade bottom link again — restored
+  on all 243. Checked at Desktop/Mobile: Same = 16:9; 21:9 / 1:1 / 4:5 / 9:16 re-crop on Mobile only; fades work.
+  Extractor reads the ratio from the variant value.

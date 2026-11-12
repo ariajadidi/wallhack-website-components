@@ -35,7 +35,7 @@ On Cover, Image, Split and Text + Media (and partly on cards and compare columns
 | `image_fit` / `image_fit_mobile` | photo scale mode | Fill (crop) or Fit (whole photo on the photo background) |
 | `image_background` | Media `Background` | Solid (photo background colour) · None · Gradient (page colour → `gradient-end`) |
 | `image_fade` / `image_fade_mobile` | fade top / bottom | Opacity mask (30% of the height), works on any background |
-| `image_mobile_shape` | Media Mobile ratio = Separate → Phone ratio | The same photo re-cropped to its own shape on phones (`wh-media--mshape`, `--ratio-mobile`); empty = Desktop shape |
+| `image_mobile_shape` | Media Mobile ratio (21:9 … 9:16; Same = empty) | The same photo re-cropped to its own shape on phones (`wh-media--mshape`, `--ratio-mobile`); empty = Desktop shape |
 | `image_mobile`, `image_mobile_shape` | Mobile image = Separate | A different photo on phones, in its own shape (empty shape = the phone photo's own proportions) |
 
 ## Product pages (PDPs)
