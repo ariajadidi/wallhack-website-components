@@ -53,6 +53,9 @@ Learned while building this system. Each line is a limit we hit and what works i
 - **A property bound to a hidden layer disappears from the instance's right panel** (also when the layer is hidden by a
   variable). Keep layers that carry an INSTANCE_SWAP / text property visible; put the breakpoint visibility inside the
   swapped component instead.
+- **Instance-swap values must be standalone components, not variants of one set.** The swap dropdown lists a set as one
+  item (its default variant) and can't pick the others unless the nested instance is exposed. Moving a variant out of its
+  set (`appendChild` to a plain frame) keeps its id and key, so existing swaps survive.
 - A hug auto-layout frame whose children are **all** hidden keeps its last size (it doesn't collapse). Add an always-visible
   0.01 px child so it re-measures when a breakpoint variable hides the rest.
 - Rebuilding or cloning variant layers loses their `componentPropertyReferences` (e.g. boolean fades) — after a

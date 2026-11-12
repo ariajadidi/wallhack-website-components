@@ -63,11 +63,11 @@ const colorOverrides = async inst => {
 
 // Media/Image options: photo fades (fade top / fade bottom), gradient background, and the separate phone photo (Mobile image=Separate)
 const ratioOfMedia = n => { const r = n && n.componentProperties && n.componentProperties.Ratio; const m = r && /^(\d+):(\d+)$/.exec(r.value); return m ? +(m[1] / m[2]).toFixed(3) : n ? +(n.width / n.height).toFixed(3) : undefined; };
-// Phone shape of a Media/Image or Media/Card Image: Mobile ratio=Separate → its “Phone ratio” (a Media/Ratio component: same photo, own phone crop); otherwise none.
+// Phone shape of a Media/Image or Media/Card Image: Mobile ratio=Separate → its “Phone ratio” (a Media/Phone ratio/<w:h> component: same photo, own phone crop); otherwise none.
 // Read from the property, not the “ratio (mobile)” layer: inside slots (Cards, Compare) Figma can keep that layer stale for plugins.
 const phoneRatioOf = async n => { const q = n && n.componentProperties; if (!q || !q['Mobile ratio'] || q['Mobile ratio'].value !== 'Separate') return undefined;
   const k = Object.keys(q).find(x => x.startsWith('Phone ratio#')); const c = k ? await figma.getNodeByIdAsync(q[k].value) : null;
-  const m = c && /Ratio=(\d+):(\d+)/.exec(c.name); return m ? +(m[1] / m[2]).toFixed(3) : undefined; };
+  const m = c && /(\d+):(\d+)$/.exec(c.name); return m ? +(m[1] / m[2]).toFixed(3) : undefined; };
 const phoneShapeOf = async n => (await phoneRatioOf(n)) || ratioOfMedia(n);   // the shape a Media frame actually shows on phones
 const isMobileLayer = (n, root) => { for (let x = n; x && x !== root; x = x.parent) if (/\(mobile\)/.test(x.name)) return true; return false; };
 const photoOf = n => n.findOne(c => c.name === 'photo') || n;   // Media/Image + Card Image: the picture is on its own “photo” layer (so switching Background keeps it); in Media/Image it sits inside “content” under the fade masks

@@ -80,3 +80,5 @@ What was built and decided, in order. Node ids refer to the Figma file `jBz28tmW
   the `ratio (mobile)` spacer was hidden on Desktop (so Figma hid the property) and stuck at a fixed 160 × 200.
 - `ratio (mobile)` is now always visible at FILL / HUG; `Media/Ratio` switches itself (flat on Desktop, phone shape on
   Mobile). Fade links restored on all 27 Media/Image Separate variants. Checked: 16:9 Desktop → 4:5 / 9:16 / 1:1 Mobile, fades on.
+- The swap dropdown showed `Media/Ratio` as one item, so only its default could be picked. The 9 variants became standalone
+  components `Media/Phone ratio/21:9` … `/9:16` (same ids and keys). Extractor reads the ratio from the end of the name.
