@@ -73,3 +73,10 @@ What was built and decided, in order. Node ids refer to the Figma file `jBz28tmW
 - Verified: all 332 image instances on every page kept their exact size (all Same); new option checked at Desktop/Mobile.
 - Extractor reads `imageMobileRatio` from Phone ratio; converter writes `image_mobile_shape` without a phone photo; theme
   applies the phone shape with or without `image_mobile` (`wh-media--mshape`). Test page: `?view=mobile-ratio-test`.
+
+## 12 Nov — Mobile ratio fixes
+
+- *Separate* variants had lost their fade top / fade bottom links (the toggles vanished) and Phone ratio couldn't be changed:
+  the `ratio (mobile)` spacer was hidden on Desktop (so Figma hid the property) and stuck at a fixed 160 × 200.
+- `ratio (mobile)` is now always visible at FILL / HUG; `Media/Ratio` switches itself (flat on Desktop, phone shape on
+  Mobile). Fade links restored on all 27 Media/Image Separate variants. Checked: 16:9 Desktop → 4:5 / 9:16 / 1:1 Mobile, fades on.
