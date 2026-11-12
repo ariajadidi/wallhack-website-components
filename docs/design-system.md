@@ -59,6 +59,7 @@ Type scale (ratio 1.333, minimal): `font-size/display` (H1), `title` (H5), `subt
 | `Section/Specs + Contents` (`125:4087`) | Nested Contents (“what's in the box”) + Spec sheet; spec text sized by `component/spec-font-size` |
 | `Section/Product Header` (`281:19`) | Top of every product page: top bar (breadcrumbs + close), gallery slot, title, description, reviews |
 | `Menu Mobile/Product Bar` (`266:76`) | Floating Add to Cart bar, used on every screen size |
+| `Section/Image + CTA` (set `536:7613`) | Copy of `Section/Image` (Mobile image Same / Separate) with an absolute `dim` layer (`color/wh-black` at 30%, stretches over the photo and its fades) and an exposed `cta` (`Button/CTA` Large, centred, above the dim). **Not in the Shopify pipeline yet** — no theme section, the converter skips it |
 | `Section/Content Frame` (`289:7300`) | Glass frame around a video or photo, Orientation Landscape / Portrait |
 
 Full Figma component → Shopify section table: see [`HANDOFF.md` §6](../HANDOFF.md#6-figma-component--shopify-section).

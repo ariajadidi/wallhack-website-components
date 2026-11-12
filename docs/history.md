@@ -87,3 +87,5 @@ What was built and decided, in order. Node ids refer to the Figma file `jBz28tmW
   is a plain aspect-locked frame bound to `breakpoint/mobile`. Cloning variants dropped the fade bottom link again — restored
   on all 243. Checked at Desktop/Mobile: Same = 16:9; 21:9 / 1:1 / 4:5 / 9:16 re-crop on Mobile only; fades work.
   Extractor reads the ratio from the variant value.
+- New `Section/Image + CTA` (`536:7613`, after Section/Image): Section/Image + 30% `color/wh-black` dim + centred exposed
+  Button/CTA. Figma only for now (no theme section / converter support).

@@ -66,6 +66,8 @@ Learned while building this system. Each line is a limit we hit and what works i
 ## Variables and modes
 
 - Variable aliases per mode: `{ type: 'VARIABLE_ALIAS', id }`. CSS name: `setVariableCodeSyntax('WEB', 'var(--wh-…)')`.
+- `setBoundVariableForPaint` on a paint with `opacity` returns it at opacity 1 — set the opacity again on the returned paint.
+  Main-component paint edits can show stale on instances made in the same session (plugin read only).
 - Bound gradient stops can't be transparent — fades use alpha masks instead.
 - After a plugin switches a frame's Responsive mode, Figma can keep drawing nested sizes from the old mode; switch to the
   other mode and back. `get_screenshot` also lags just after a mode switch.
